@@ -15,14 +15,14 @@ percent100 | A percentage value based on the range 0-100, 1.
 
 Unit | Description
 :---|:---
-bits |
-bytes |
-packets |
-frames |
-fragments |
-connections |
-sessions |
-segments |
+bits | 2.
+bytes | 2. 3.
+packets | 2.
+frames | 2.
+fragments | 2.
+connections | 2.
+sessions | 2.
+segments | 2.
 hops |
 
 ## Temperature Units
