@@ -416,8 +416,29 @@ Tier | common
 Data Type | unsigned
 Semantic | quantity
 Unit | values
-Reference | []()
-Description | 
+Description | A count of headers in the HTTP request or response message.
+
+### http.cache_control
+
+Attribute | Value
+--- | ---
+IE Name | http.cache_control
+Tier | common
+Data Type | string
+Semantic | default
+Reference | [RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://tools.ietf.org/html/rfc7234)
+Description | The `Cache-Control` HTTP header holds *directives* (instructions) for caching in both requests and responses. A given directive in a request does not mean the same directive should be in the response.
+
+### http.connection
+
+Attribute | Value
+--- | ---
+IE Name | http.connection
+Tier | common
+Data Type | string
+Semantic | default
+Reference | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection
+Description | The `Connection` general header controls whether or not the network connection stays open after the current transaction finishes. If the value sent is `keep-alive`, the connection is persistent and not closed, allowing for subsequent requests to the same server to be done.
 
 ## http.content_type
 
@@ -427,8 +448,8 @@ IE Name | http.content_type
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | [RFC 7231, section 3.1.1.5: Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5)
+Description | The `Content-Type` entity header is used to indicate the media type of the resource.
 
 ## http.content_encoding
 
@@ -438,8 +459,8 @@ IE Name | http.content_encoding
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | [RFC 7231, section 3.1.2.2: Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2)
+Description | The `Content-Encoding` entity header is used to compress the media-type. When present, its value indicates which encodings were applied to the entity-body.
 
 ## http.content_language
 
@@ -449,8 +470,8 @@ IE Name |  http.content_language
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | [RFC 7231, section 3.1.3.2: Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2)
+Description | The `Content-Language` entity header is used to describe the language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language.
 
 ## http.content_location
 
@@ -460,20 +481,20 @@ IE Name | http.content_location
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | [RFC 7231, section 3.1.4.2: Content-Location](https://tools.ietf.org/html/rfc7231#section-3.1.4.2)
+Description | The `Content-Location` header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of content negotiation.
 
 ## http.content_length
 
 Attribute | Value
 --- | ---
 IE Name | http.content_length
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Tier | common
+Data Type | unsigned
+Semantic | quantity
+Unit | bytes
+Reference | [RFC 7230, section 3.3.2: Content-Length](https://tools.ietf.org/html/rfc7230#section-3.3.2)
+Description | The `Content-Length` entity header indicates the size of the entity-body, in bytes, sent to the recipient.
 
 ## http.content_md5
 
@@ -494,8 +515,8 @@ IE Name | http.content_range
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | [RFC 7233, section 4.2: Content-Range](https://tools.ietf.org/html/rfc7233#section-4.2)
+Description | The `Content-Range` response HTTP header indicates where in a full body message a partial message belongs.
 
 ## http.date
 
@@ -504,9 +525,9 @@ Attribute | Value
 IE Name | http.date
 Tier | common
 Data Type | string
-Semantic | default
-Reference | []()
-Description | 
+Semantic | httpdate
+Reference | [RFC 7231, section 7.1.1.2: Date](https://tools.ietf.org/html/rfc7231#section-7.1.1.2)
+Description | The `Date` general HTTP header contains the date and time at which the message was originated.
 
 ## http.trailer
 
@@ -588,7 +609,7 @@ Tier | common
 Data Type | string
 Semantic | default
 Reference | [RFC 7231, section 5.3.2: Accept](https://tools.ietf.org/html/rfc7231#section-5.3.2)
-Description | Accept: This request header advertises which content types, expressed as MIME types, the client is able to understand.
+Description | The `Accept` request header advertises which content types, expressed as MIME types, the client is able to understand.
 
 ### http.req.accept_charset
 
@@ -599,7 +620,7 @@ Tier | common
 Data Type | string
 Semantic | default
 Reference | [RFC 7231, section 5.3.3: Accept-Charset](https://tools.ietf.org/html/rfc7231#section-5.3.3)
-Description | Accept-Charset: This request header advertises which character encodings the client understands.
+Description | The `Accept-Charset` request header advertises which character encodings the client understands.
 
 ### http.req.accept_datetime
 
@@ -607,9 +628,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.accept_datetime
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | httpdate
 Reference | []()
 Description | 
 
@@ -622,7 +642,7 @@ Tier | common
 Data Type | string
 Semantic | default
 Reference | [RFC 7231, section 5.3.4: Accept-Encoding](https://tools.ietf.org/html/rfc7231#section-5.3.4)
-Description | Accept-Encoding: This request header advertises which content encoding, usually a compression algorithm, the client is able to understand.
+Description | The `Accept-Encoding` request header advertises which content encoding, usually a compression algorithm, the client is able to understand.
 
 ### http.req.accept_language
 
@@ -633,7 +653,7 @@ Tier | common
 Data Type | string
 Semantic | default
 Reference | [RFC 7231, section 5.3.5: Accept-Language](https://tools.ietf.org/html/rfc7231#section-5.3.5)
-Description | Accept-Language: This request header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)
+Description | The `Accept-Language` request header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)
 
 ### http.req.access_control_request_headers
 
@@ -663,35 +683,10 @@ Attribute | Value
 --- | ---
 IE Name | http.req.authorization
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
-
-### http.req.cache_control
-
-Attribute | Value
---- | ---
-IE Name | http.req.cache_control
-Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
-
-### http.req.connection
-
-Attribute | Value
---- | ---
-IE Name | http.req.connection
-Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 7235, section 4.2: Authorization](https://tools.ietf.org/html/rfc7235#section-4.2)
+Description | The HTTP `Authorization` request header contains the credentials to authenticate a user agent with a server, usually, but not necessarily, after the server has responded with a `401 Unauthorized` status and the `WWW-Authenticate` header.
 
 ### http.req.cookie
 
@@ -701,8 +696,31 @@ IE Name | http.req.cookie
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | [RFC 6265, section 5.4: Cookie](https://tools.ietf.org/html/rfc6265#section-5.4)
+Description | The `Cookie` HTTP request header contains stored HTTP cookies previously sent by the server with the `Set-Cookie` header.
+
+### http.req.cookie2
+
+Attribute | Value
+--- | ---
+IE Name | http.req.cookie2
+Tier | common
+Data Type | string
+Semantic | default
+Reference | [RFC 2965: Cookie2](https://tools.ietf.org/html/rfc2965)
+Description | The obsolete `Cookie2` HTTP request header used to advise the server that the user agent understands *new-style* cookies, but nowadays user agents will use the `Cookie` header instead, not this one.
+
+### http.req.device_memory
+
+Attribute | Value
+--- | ---
+IE Name | http.req.device_memory
+Tier | common
+Data Type | unsigned
+Semantic | quantity
+Units | gibibytes
+Reference | [Device Memory 1](https://w3c.github.io/device-memory/#sec-device-memory-client-hint-header)
+Description | The `Device-Memory` header is a Device Memory API header that works like Client Hints header which represents the approximate amount of RAM client device has.
 
 ### http.req.dnt
 
@@ -710,10 +728,32 @@ Attribute | Value
 --- | ---
 IE Name | http.req.dnt
 Tier | common
+Data Type | unsigned
+Semantic | indicator
+Reference | [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dnt-header-field)
+Description | The `DNT` (Do Not Track) request header indicates the user's tracking preference. It lets users indicate whether they would prefer privacy rather than personalized content.
+
+### http.req.dpr
+
+Attribute | Value
+--- | ---
+IE Name | http.req.dpr
+Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
+Reference | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR
+Description | The `DPR` header is a Client Hints headers which represents the client device pixel ratio (DPR), which is the the number of physical device pixels corresponding to every CSS pixel.
+
+### http.req.early_data
+
+Attribute | Value
+--- | ---
+IE Name | http.req.early_data
+Tier | common
+Data Type | unsigned
+Semantic | identifier
+Reference | [RFC 8470, section 5.1: The Early-Data Header Field]()
+Description | The `Early-Data` header is set by an intermediary to indicate that the request has been conveyed in TLS early data, and also indicates that the intermediary understands the `425 (Too Early)` status code.
 
 ### http.req.expect
 
@@ -723,20 +763,8 @@ IE Name | http.req.expect
 Tier | common
 Data Type | string
 Semantic | default
-Reference | []()
-Description | 
-
-### http.req.early_data
-
-Attribute | Value
---- | ---
-IE Name | http.req.early_data
-Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Reference | [RFC 7231, section 5.1.1: Expect](https://tools.ietf.org/html/rfc7231#section-5.1.1)
+Description | The `Expect` HTTP request header indicates expectations that need to be fulfilled by the server in order to properly handle the request.
 
 ### http.req.forwarded
 
@@ -744,11 +772,10 @@ Attribute | Value
 --- | ---
 IE Name | http.req.forwarded
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 7239, section 4: Forwarded](https://tools.ietf.org/html/rfc7239#section-4)
+Description | The `Forwarded` header contains information from the client-facing side of proxy servers that is altered or lost when a proxy is involved in the path of the request.
 
 ### http.req.from
 
@@ -756,11 +783,10 @@ Attribute | Value
 --- | ---
 IE Name | http.req.from
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | emailaddress
+Reference | [RFC 7231, section 5.5.1: From](https://tools.ietf.org/html/rfc7231#section-5.5.1)
+Description | The `From` request header contains an Internet email address for a human user who controls the requesting user agent.
 
 ### http.req.front_end_https
 
@@ -768,9 +794,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.front_end_https
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -780,11 +805,10 @@ Attribute | Value
 --- | ---
 IE Name | http.req.host
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 7230, section 5.4: Host](https://tools.ietf.org/html/rfc7230#section-5.4)
+Description | The `Host` request header specifies the host and port number of the server to which the request is being sent. If no port is included, the default port for the service requested (e.g., 443 for an HTTPS URL, and 80 for an HTTP URL) is implied.
 
 ### http.req.http2_settings
 
@@ -792,9 +816,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.http2_settings
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -804,11 +827,10 @@ Attribute | Value
 --- | ---
 IE Name | http.req.if_match
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 7232, section 3.1: If-Match](https://tools.ietf.org/html/rfc7232#section-3.1)
+Description | The `If-Match` HTTP request header makes the request conditional. For `GET` and `HEAD` methods, the server will send back the requested resource only if it matches one of the listed `ETag`s. For `PUT` and other non-safe methods, it will only upload the resource in this case.
 
 ### http.req.if_modified_since
 
@@ -816,23 +838,21 @@ Attribute | Value
 --- | ---
 IE Name | http.req.if_modified_since
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | httpdate
+Reference | [RFC 7232, section 3.3: If-Modified-Since](https://tools.ietf.org/html/rfc7232#section-3.3)
+Description | The `If-Modified-Since` request HTTP header makes the request conditional: the server will send back the requested resource, with a `200` status, only if it has been last modified after the given date.
 
-### http.req.if_none_match
+### `http.req.if_none_match`
 
 Attribute | Value
 --- | ---
-IE Name | http.req.if_none_match
-Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+**IE Name** | `http.req.if_none_match`
+**Tier** | `common`
+Data Type | `string`
+Semantic | `default`
+Reference | [RFC 7232, section 3.2: If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2)
+Description | The `If-None-Match` HTTP request header makes the request conditional. For `GET` and `HEAD` methods, the server will send back the requested resource, with a `200` status, only if it doesn't have an `ETag` matching the given ones. For other methods, the request will be processed only if the eventually existing resource's `ETag` doesn't match any of the values listed.
 
 ### http.req.if_range
 
@@ -840,9 +860,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.if_range
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -852,9 +871,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.if_unmodified_since
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -888,9 +906,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.origin
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -900,9 +917,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.pragma
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -912,9 +928,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.proxy_authorization
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -924,9 +939,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.proxy_connection
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -936,9 +950,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.range
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -950,9 +963,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.referer.uri
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -961,10 +973,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.ip
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | ipaddress
+Semantic | default
 Reference | []()
 Description | 
 
@@ -973,10 +984,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.scheme
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -985,10 +995,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.domain
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -997,10 +1006,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.server
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1009,10 +1017,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.port
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | unsigned
+Semantic | identifier
 Reference | []()
 Description | 
 
@@ -1021,10 +1028,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.path
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1033,10 +1039,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.fragment
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1045,10 +1050,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.query
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1057,10 +1061,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.user
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1069,10 +1072,9 @@ Description |
 Attribute | Value
 --- | ---
 IE Name | http.req.referer.password
-Tier | 
-Data Type | 
-Semantic | 
-Unit | 
+Tier | custom
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1082,9 +1084,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.save_data
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1094,9 +1095,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.te
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1106,9 +1106,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.upgrade
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1118,9 +1117,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.upgrade_insecure_requests
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1132,9 +1130,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.agent
 Tier | core
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1144,9 +1141,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.device
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1156,9 +1152,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.os
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1168,9 +1163,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.os_ver
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1180,9 +1174,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.os_major
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1192,9 +1185,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.os_minor
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1204,9 +1196,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.os_build
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1216,9 +1207,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.sw
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1228,9 +1218,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.sw_ver
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1240,9 +1229,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.sw_major
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1252,9 +1240,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.sw_minor
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1264,9 +1251,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.user_agent.sw_build
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1276,9 +1262,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.via
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1288,9 +1273,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.warning
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1300,9 +1284,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_att_deviceid
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1312,9 +1295,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_attribute
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1324,9 +1306,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_attribute_cacheability
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1336,9 +1317,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_attribute_prefix
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1348,9 +1328,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_auth
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1360,9 +1339,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_authenticated_groups
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1372,9 +1350,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_authenticated_user
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1384,9 +1361,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_bluecoat_via
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1396,9 +1372,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_client_ip
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | ipaddress
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1408,9 +1383,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_content_digest
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1420,9 +1394,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_correlation_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1432,9 +1405,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_csrf_token
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1444,9 +1416,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_device_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1456,9 +1427,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_flash_version
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1468,9 +1438,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_forwarded_for
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1480,9 +1449,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_forwarded_host
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1492,9 +1460,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_forwarded_proto
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1504,9 +1471,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_forwarded_server
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1516,9 +1482,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_http_method_override
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1528,9 +1493,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_icap_profile
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1540,9 +1504,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_idfa
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1552,9 +1515,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_idfv
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1564,9 +1526,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_nonce
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1576,9 +1537,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_organization_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1588,9 +1548,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_profile
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1600,9 +1559,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_profile_token
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1612,9 +1570,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_request_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1624,9 +1581,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_requested_with
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1636,9 +1592,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_server_ip
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | ipaddress
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1648,9 +1603,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_subscriber_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1660,9 +1614,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_time
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | httpdate
 Reference | []()
 Description | 
 
@@ -1672,9 +1625,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_uidh
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1686,9 +1638,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.agent
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1698,9 +1649,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.device
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1710,9 +1660,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.os
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1722,9 +1671,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.os_ver
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1734,9 +1682,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.os_major
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1746,9 +1693,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.os_minor
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1758,9 +1704,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.os_build
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1770,9 +1715,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.sw
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1782,9 +1726,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.sw_ver
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1794,9 +1737,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.sw_major
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1806,9 +1748,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.sw_minor
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1818,9 +1759,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_user_agent.sw_build
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1830,9 +1770,8 @@ Attribute | Value
 --- | ---
 IE Name | http.req.x_wap_profile
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1854,9 +1793,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.status
 Tier | core
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | unsigned
+Semantic | identifier
 Reference | []()
 Description | 
 
@@ -1866,9 +1804,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.reason_phrase
 Tier | core
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -1878,9 +1815,9 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.bytes
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | unsigned
+Semantic | quantity
+Unit | bytes
 Reference | []()
 Description | 
 
@@ -1890,9 +1827,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.time
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | httpdate
 Reference | []()
 Description | 
 
@@ -2036,23 +1972,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.alt_svc
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
-
-### http.resp.cache_control
-
-Attribute | Value
---- | ---
-IE Name | http.resp.cache_control
-Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 7838](https://tools.ietf.org/html/rfc7838)
+Description | The `Alt-Svc` HTTP response header is used to advertise alternative services through which the same resource can be reached. An alternative service is defined by a protocol/host/port combination.
 
 ### http.resp.clear_site_data
 
@@ -2060,23 +1983,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.clear_site_data
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
-
-### http.resp.connection
-
-Attribute | Value
---- | ---
-IE Name | http.resp.connection
-Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [Clear Site Data](https://w3c.github.io/webappsec-clear-site-data)
+Description | The `Clear-Site-Data` header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins.
 
 ### http.resp.content_disposition
 
@@ -2084,11 +1994,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.content_disposition
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 6266](https://tools.ietf.org/html/rfc6266)
+Description | In a regular HTTP response, the `Content-Disposition` response header is a header indicating if the content is expected to be displayed inline in the browser, that is, as a Web page or as part of a Web page, or as an attachment, that is downloaded and saved locally.
 
 ### http.resp.content_security_policy
 
@@ -2096,11 +2005,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.content_security_policy
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [Content Security Policy Level 3](https://w3c.github.io/webappsec-csp/)
+Description | The HTTP `Content-Security-Policy` response header allows web site administrators to control resources the user agent is allowed to load for a given page.
 
 ### http.resp.content_security_policy_report_only
 
@@ -2108,11 +2016,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.content_security_policy_report_only
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [Content Security Policy Level 3](https://w3c.github.io/webappsec-csp/)
+Description | The HTTP `Content-Security-Policy-Report-Only` response header allows web developers to experiment with policies by monitoring (but not enforcing) their effects.
 
 ### http.resp.cross_origin_resource_policy
 
@@ -2120,11 +2027,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.cross_origin_resource_policy
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header
+Description | The HTTP `Cross-Origin-Resource-Policy` response header conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the given resource.
 
 ### http.resp.date
 
@@ -2132,9 +2038,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.date
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | httpdate
 Reference | []()
 Description | 
 
@@ -2150,17 +2055,27 @@ Unit |
 Reference | []()
 Description | 
 
+### http.resp.digest
+
+Attribute | Value
+--- | ---
+IE Name | http.resp.digest
+Tier | common
+Data Type | string
+Semantic | default
+Reference | [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers)
+Description | The `Digest` response HTTP header provides a digest of the requested resource.
+
 ### http.resp.etag
 
 Attribute | Value
 --- | ---
 IE Name | http.resp.etag
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [RFC 7232, section 2.3: ETag](https://tools.ietf.org/html/rfc7232#section-2.3)
+Description | The `ETag` HTTP response header is an identifier for a specific version of a resource. It lets caches be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
 
 ### http.resp.expect_ct
 
@@ -2168,11 +2083,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.expect_ct
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [Expect-CT Extension for HTTP](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08)
+Description | The `Expect-CT` header lets sites opt in to reporting and/or enforcement of Certificate Transparency requirements, to prevent the use of misissued certificates for that site from going unnoticed.
 
 ### http.resp.expires
 
@@ -2180,11 +2094,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.expires
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | httpdate
+Reference | [RFC 7234, section 5.3: Expires](https://tools.ietf.org/html/rfc7234#section-5.3)
+Description | The `Expires` header contains the date/time after which the response is considered stale. Invalid dates, like the value `0`, represent a date in the past and mean that the resource is already expired.
 
 ### http.resp.feature_policy
 
@@ -2192,11 +2105,10 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.feature_policy
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
-Reference | []()
-Description | 
+Data Type | string
+Semantic | default
+Reference | [Feature Policy](https://w3c.github.io/webappsec-feature-policy/#feature-policy-http-header-field)
+Description | The HTTP `Feature-Policy` header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any `<iframe>` elements in the document.
 
 ### http.resp.im
 
@@ -2264,9 +2176,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.location
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2276,9 +2187,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.p3p
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2288,9 +2198,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.pragma
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2300,9 +2209,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.proxy_authenticate
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2312,9 +2220,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.public_key_pins
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2324,9 +2231,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.public_key_pins_report_only
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2336,9 +2242,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.referrer_policy
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2348,9 +2253,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.refresh
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2372,9 +2276,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.sec_websocket_accept
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2384,9 +2287,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.server
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2408,9 +2310,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.set_cookie
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2420,9 +2321,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.set_cookie2
 Tier | custom
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2432,9 +2332,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.sourcemap
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2444,9 +2343,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.strict_transport_security
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2456,9 +2354,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.timing_allow_origin
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2468,9 +2365,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.tk
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2480,9 +2376,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.upgrade
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2492,9 +2387,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.vary
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2504,9 +2398,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.via
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2516,9 +2409,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.warning
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2528,9 +2420,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.www_authenticate
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2540,9 +2431,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_attribute
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2552,9 +2442,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_attribute_cacheability
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2564,9 +2453,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_attribute_prefix
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2576,9 +2464,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_authenticated_groups
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2588,9 +2475,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_authenticated_user
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2600,9 +2486,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_client_ip
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | ipaddress
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2624,9 +2509,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_content_security_policy
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2636,9 +2520,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_content_type_options
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2648,9 +2531,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_correlation_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2660,9 +2542,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_dns_prefetch_control
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2672,9 +2553,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_frame_options
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2684,9 +2564,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_icap_profile
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2696,9 +2575,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_infection_found
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2708,9 +2586,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_powered_by
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2720,9 +2597,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_request_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2732,9 +2608,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_response_desc
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2744,9 +2619,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_response_info
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2756,9 +2630,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_server_ip
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | ipaddress
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2768,9 +2641,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_subscriber_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2780,9 +2652,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_ua_compatible
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2792,9 +2663,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_violations_found
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2804,9 +2674,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_virus_id
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2816,9 +2685,8 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_webkit_csp
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
 
@@ -2828,8 +2696,7 @@ Attribute | Value
 --- | ---
 IE Name | http.resp.x_xss_protection
 Tier | common
-Data Type | 
-Semantic | 
-Unit | 
+Data Type | string
+Semantic | default
 Reference | []()
 Description | 
