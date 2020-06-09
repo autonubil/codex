@@ -257,156 +257,6 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-## `http.event`
-
-### `http.event.client_load_start`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.client_load_start`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.event.client_load_end`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.client_load_end`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.event.client_render_start`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.client_render_start`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.event.client_render_end`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.client_render_end`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.event.req`
-
-#### `http.event.req.first_byte_in`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.req.first_byte_in`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-#### `http.event.req.first_byte_out`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.req.first_byte_out`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-#### `http.event.req.last_byte_in`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.req.last_byte_in`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-#### `http.event.req.last_byte_out`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.req.last_byte_out`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.event.resp`
-
-#### `http.event.resp.first_byte_in`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.resp.first_byte_in`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-#### `http.event.resp.first_byte_out`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.resp.first_byte_out`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-#### `http.event.resp.last_byte_in`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.resp.last_byte_in`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-#### `http.event.resp.last_byte_out`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.event.resp.last_byte_out`
-**Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
 ## `http.headers`
 
 Attribute | Value
@@ -528,6 +378,28 @@ Attribute | Value
 **Semantic** | `httpdate`
 **Reference** | [RFC 7231, section 7.1.1.2: Date](https://tools.ietf.org/html/rfc7231#section-7.1.1.2)
 **Description** | The `Date` general HTTP header contains the date and time at which the message was originated.
+
+## `http.link`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.link`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 8288, section 3: Link Serialisation in HTTP Headers](https://tools.ietf.org/html/rfc8288#section-3)
+**Description** | The HTTP `Link` entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML `<link>` element.
+
+## `http.pragma`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.pragma`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7234, section 5.4: Pragma](https://tools.ietf.org/html/rfc7234#section-5.4)
+**Description** | The `Pragma` HTTP/1.0 general header is an implementation-specific header that may have various effects along the request-response chain. It is used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` HTTP/1.1 header is not yet present.
 
 ## `http.trailer`
 
@@ -750,8 +622,8 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.early_data`
 **Tier** | `common`
-**Data Type** | `unsigned
-**Semantic** | `identifier
+**Data Type** | `unsigned`
+**Semantic** | `identifier`
 **Reference** | [RFC 8470, section 5.1: The Early-Data Header Field]()
 **Description** | The `Early-Data` header is set by an intermediary to indicate that the request has been conveyed in TLS early data, and also indicates that the intermediary understands the `425 (Too Early)` status code.
 
@@ -873,8 +745,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7232, section 3.4: If-Unmodified-Since](https://tools.ietf.org/html/rfc7232#section-3.4)
+**Description** | The `If-Unmodified-Since` request HTTP header makes the request conditional: the server will send back the requested resource, or accept it in the case of a `POST` or another non-safe method, only if it has not been last modified after the given date. If the resource has been modified after the given date, the response will be a `412 (Precondition Failed)` error.
 
 ### `http.req.keep_alive`
 
@@ -882,11 +754,10 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.keep_alive`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7230, appendix A.1.2: Keep-Alive](https://tools.ietf.org/html/rfc7230#appendix-A.1.2)
+**Description** | The `Keep-Alive` general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.
 
 ### `http.req.max_forwards`
 
@@ -908,19 +779,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.req.pragma`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.pragma`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://fetch.spec.whatwg.org/#origin-header](https://fetch.spec.whatwg.org/#origin-header)
+**Description** | The `Origin` request header indicates where a fetch originates from. It doesn't include any path information, but only the server name. It is sent with `CORS` requests, as well as with `POST` requests. It is similar to the `Referer` header, but, unlike this header, it doesn't disclose the whole path.
 
 ### `http.req.proxy_authorization`
 
@@ -2139,12 +1999,12 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | `http.resp.large_allocation`
-**Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Tier** | `custom`
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `megabytes`
+**Reference** | [https://gist.github.com/mystor/5739e222e398efc6c29108be55eb6fe3](https://gist.github.com/mystor/5739e222e398efc6c29108be55eb6fe3)
+**Description** | The non-standard `Large-Allocation` response header tells the browser that the page being loaded is going to want to perform a large allocation. It is currently only implemented in Firefox, but is harmless to send to every browser.
 
 ### `http.resp.last_modified`
 
@@ -2152,23 +2012,10 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.last_modified`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.resp.link`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.link`
-**Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `string`
+**Semantic** | `httpdate`
+**Reference** | [RFC 7232, section 2.2: Last-Modified](https://tools.ietf.org/html/rfc7232#section-2.2)
+**Description** | The `Last-Modified` response HTTP header contains the date and time at which the origin server believes the resource was last modified. It is used as a validator to determine if a resource received or stored is the same. Less accurate than an `ETag` header, it is a fallback mechanism. Conditional requests containing `If-Modified-Since` or `If-Unmodified-Since` headers make use of this field.
 
 ### `http.resp.location`
 
@@ -2178,25 +2025,25 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7231, section 7.1.2: Location](https://tools.ietf.org/html/rfc7231#section-7.1.2)
+**Description** | The `Location` response header indicates the URL to redirect a page to. It only provides a meaning when served with a 3xx (redirection) or 201 (created) status response.
+
+### `http.resp.nel`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.nel`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Network Error Logging](https://w3c.github.io/network-error-logging/#nel-response-header), [Network Error Logging (NEL) explainer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging)
+**Description** | The HTTP `NEL` response header is used to configure network request logging.
 
 ### `http.resp.p3p`
 
 Attribute | Value
 --- | ---
 **IE Name** | `http.resp.p3p`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.resp.pragma`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.pragma`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
@@ -2211,8 +2058,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7235, section 4.3: Proxy-Authenticate](https://tools.ietf.org/html/rfc7235#section-4.3)
+**Description** | The HTTP `Proxy-Authenticate` response header defines the authentication method that should be used to gain access to a resource behind a proxy server. It authenticates the request to the proxy server, allowing it to transmit the request further.
 
 ### `http.resp.public_key_pins`
 
@@ -2698,5 +2545,155 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+## `http.event`
+
+### `http.event.client_load_start`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.client_load_start`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+### `http.event.client_load_end`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.client_load_end`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+### `http.event.client_render_start`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.client_render_start`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+### `http.event.client_render_end`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.client_render_end`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+### `http.event.req`
+
+#### `http.event.req.first_byte_in`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.req.first_byte_in`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+#### `http.event.req.first_byte_out`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.req.first_byte_out`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+#### `http.event.req.last_byte_in`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.req.last_byte_in`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+#### `http.event.req.last_byte_out`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.req.last_byte_out`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+### `http.event.resp`
+
+#### `http.event.resp.first_byte_in`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.resp.first_byte_in`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+#### `http.event.resp.first_byte_out`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.resp.first_byte_out`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+#### `http.event.resp.last_byte_in`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.resp.last_byte_in`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
+**Reference** | []()
+**Description** | 
+
+#### `http.event.resp.last_byte_out`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.event.resp.last_byte_out`
+**Tier** | `custom`
+**Data Type** | ``
+**Semantic** | ``
+**Unit** | ``
 **Reference** | []()
 **Description** | 
