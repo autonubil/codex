@@ -6,7 +6,7 @@ CODEX schemas are not the result of a theoretical exercise. The *core* informati
 
 A detailed analysis of multiple vendors' solutions is completed in order to arrive at the types and IEs. As a result CODEX will simplify the integration of real-world environments than even so-called *standards-based* solutions.
 
-## The THREE C's
+## Information Element Tiers - The THREE C's
 
 ### Core
 

@@ -6,6 +6,8 @@ This document describes the set of valid data type units.
 
 Unit | Description
 :---|:---
+none |
+values | Instances of a value.
 percent | A percentage value based on the range 0-1, 1.
 percent100 | A percentage value based on the range 0-100, 1.
 
@@ -13,7 +15,6 @@ percent100 | A percentage value based on the range 0-100, 1.
 
 Unit | Description
 :---|:---
-none |
 bits |
 bytes |
 packets |
