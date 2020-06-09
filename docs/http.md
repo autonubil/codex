@@ -5,13 +5,15 @@
 Attribute | Value
 --- | ---
 **IE Name** | `http.version`
-**Tier** | ``
+**Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Protocol Versioning](https://tools.ietf.org/html/rfc7230#section-2.6)
+**Description** | HTTP request and response messages include an HTTP protocol version using a `<major>.<minor>` numbering scheme.
 
 ## `http.url`
+
+Uniform Resource Identifiers (URIs) [RFC3986] are used throughout HTTP as the means for identifying resources (Section 2 of [RFC7231]). URI references are used to target requests, indicate redirects, and define relationships.
 
 ### `http.url.uri`
 
@@ -19,6 +21,76 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.url.uri`
 **Tier** | `core`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [URI Reference](https://tools.ietf.org/html/rfc3986#section-4.1)
+**Description** | The complete Uniform Resource Identifiers (URIs). A URI-reference is either a URI or a relative reference.
+
+### `http.url.scheme`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.url.scheme`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Scheme](https://tools.ietf.org/html/rfc3986#section-3.1)
+**Description** | Each URI begins with a scheme name that refers to a specification for assigning identifiers within that scheme. As such, the URI syntax is a federated and extensible naming system wherein each scheme's specification may further restrict the syntax and semantics of identifiers using that scheme. Exmaples are `http` and `https`.
+
+### `http.url.authority`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.url.authority`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Authority](https://tools.ietf.org/html/rfc3986#section-3.2)
+**Description** | Many URI schemes include a hierarchical element for a naming authority. The generic syntax provides a common means for distinguishing an authority based on a registered name or server address, along with optional port and user information. The authority component is preceded by a double slash (`//`) and is terminated by the next slash (`/`), question mark (`?`), or number sign (`#`), or by the end of the URI.
+
+### `http.url.userinfo`
+
+The userinfo subcomponent may consist of a user name and, optionally, scheme-specific information about how to gain authorization to access the resource. The user information, if present, is followed by a commercial at-sign ("@") that delimits it from the host.
+
+#### `http.url.userinfo.user`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.url.userinfo.user`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [User Information](https://tools.ietf.org/html/rfc3986#section-3.2.1)
+**Description** | The user name portion of the userinfo subcomponent.
+
+#### `http.url.userinfo.password`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.url.userinfo.password`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [User Information](https://tools.ietf.org/html/rfc3986#section-3.2.1)
+**Description** | The password portion of the userinfo subcomponent.
+
+### `http.url.host`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.url.host`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | The host subcomponent of authority is identified by an IP literal encapsulated within square brackets, an IPv4 address in dotted-decimal form, or a registered name.
+
+### `http.url.domain`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.url.domain`
+**Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | []()
@@ -29,41 +101,8 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | `http.url.ip`
-**Tier** | ``
+**Tier** | `custom`
 **Data Type** | `ipaddress`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.scheme`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.scheme`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.domain`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.domain`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.server`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.server`
-**Tier** | ``
-**Data Type** | `string`
 **Semantic** | `default`
 **Reference** | []()
 **Description** | 
@@ -73,7 +112,7 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | `http.url.port`
-**Tier** | ``
+**Tier** | `custom`
 **Data Type** | `unsigned`
 **Semantic** | `identifier`
 **Reference** | []()
@@ -106,28 +145,6 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | `http.url.query`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.user`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.user`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.password`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.password`
 **Tier** | ``
 **Data Type** | `string`
 **Semantic** | `default`
@@ -422,6 +439,39 @@ Attribute | Value
 **Semantic** | `default`
 **Reference** | []()
 **Description** | 
+
+## `http.via`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.via`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7230, section 5.7.1: Via](https://tools.ietf.org/html/rfc7230#section-5.7.1)
+**Description** | The `Via` general header is added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.
+
+## `http.want_digest`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.want_digest`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers)
+**Description** | The `Want-Digest` HTTP header is primarily used in a HTTP request, to ask the responder to provide a digest of the requested resource using the `Digest` response header.
+
+## `http.warning`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.warning`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7234, section 5.5: Warning](https://tools.ietf.org/html/rfc7234#section-5.5)
+**Description** | The `Warning` general HTTP header contains information about possible problems with the status of the message. More than one `Warning` header may appear in a response.
 
 ## `http.req`
 
@@ -790,8 +840,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7235, section 4.4: Proxy-Authorization](https://tools.ietf.org/html/rfc7235#section-4.4)
+**Description** | The HTTP `Proxy-Authorization` request header contains the credentials to authenticate a user agent to a proxy server, usually after the server has responded with a `407 Proxy Authentication Required` status and the `Proxy-Authenticate` header.
 
 ### `http.req.proxy_connection`
 
@@ -812,10 +862,12 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7233, section 3.1: Range](https://tools.ietf.org/html/rfc7233#section-3.1)
+**Description** | The `Range` HTTP request header indicates the part of a document that the server should return.
 
 ### `http.req.referer`
+
+The `Referer` header allows servers to identify where people are visiting them from and may use that data for analytics, logging, or optimized caching, for example.
 
 #### `http.req.referer.uri`
 
@@ -825,8 +877,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7231, section 5.5.2: Referer](https://tools.ietf.org/html/rfc7231#section-5.5.2)
+**Description** | The `Referer` request header contains the address of the previous web page from which a link to the currently requested page was followed.
 
 #### `http.req.referer.ip`
 
@@ -944,10 +996,54 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.save_data`
 **Tier** | `common`
+**Data Type** | `unsigned`
+**Semantic** | `identifier`
+**Reference** | [draft-grigorik-http-client-hints-03, section 7: Save-Data](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-7)
+**Description** | The `Save-Data` header field is a boolean which, in requests, indicates the client's preference for reduced data usage. A numerical value indicating whether the client wants to opt in to reduced data usage mode. on indicates yes, while off (the default) indicates no.
+
+### `http.req.sec_fetch_dest`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.req.sec_fetch_dest`
+**Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Fetch Metadata Request Headers](https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-dest-header)
+**Description** | The `Sec-Fetch-Dest` fetch metadata header indicates the request's destination, that is how the fetched data will be used.
+
+### `http.req.sec_fetch_mode`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.req.sec_fetch_mode`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Fetch Metadata Request Headers](https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-dest-header)
+**Description** | The `Sec-Fetch-Mode` fetch metadata header indicates the request's mode.
+
+### `http.req.sec_fetch_site`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.req.sec_fetch_site`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Fetch Metadata Request Headers](https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-dest-header)
+**Description** | The `Sec-Fetch-Site` fetch metadata header indicates the relationship between a request initiator's origin and the origin of the resource.
+
+### `http.req.sec_fetch_user`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.req.sec_fetch_user`
+**Tier** | `common`
+**Data Type** | `unsigned`
+**Semantic** | `identifier`
+**Reference** | [Fetch Metadata Request Headers](https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-dest-header)
+**Description** | The `Sec-Fetch-User` fetch metadata header indicates whether or not a navigation request was triggered by a user activation.
 
 ### `http.req.te`
 
@@ -957,8 +1053,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7230, section 4.3: TE](https://tools.ietf.org/html/rfc7230#section-4.3)
+**Description** | The `TE` request header specifies the transfer encodings the user agent is willing to accept.
 
 ### `http.req.upgrade`
 
@@ -977,12 +1073,14 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.upgrade_insecure_requests`
 **Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Data Type** | `unsigned`
+**Semantic** | `identifier`
+**Reference** | [Upgrade Insecure Requests](https://w3c.github.io/webappsec-upgrade-insecure-requests/#preference)
+**Description** | The HTTP `Upgrade-Insecure-Requests` request header sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the `upgrade-insecure-requests` CSP directive.
 
 ### `http.req.user_agent`
+
+The `User-Agent` request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.
 
 #### `http.req.user_agent.agent`
 
@@ -992,8 +1090,8 @@ Attribute | Value
 **Tier** | `core`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7231, section 5.5.3: User-Agent](https://tools.ietf.org/html/rfc7231#section-5.5.3)
+**Description** | The `User-Agent` request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.
 
 #### `http.req.user_agent.device`
 
@@ -1111,28 +1209,6 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.user_agent.sw_build`
 **Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.req.via`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.via`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.req.warning`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.warning`
-**Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | []()
@@ -1300,8 +1376,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For)
+**Description** | The `X-Forwarded-For` (XFF) header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or a load balancer. When traffic is intercepted between clients and servers, server access logs contain the IP address of the proxy or load balancer only. To see the original IP address of the client, the `X-Forwarded-For` request header is used.
 
 ### `http.req.x_forwarded_host`
 
@@ -1311,8 +1387,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host)
+**Description** | The `X-Forwarded-Host` (XFH) header is a de-facto standard header for identifying the original host requested by the client in the `Host` HTTP request header.
 
 ### `http.req.x_forwarded_proto`
 
@@ -1322,8 +1398,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto)
+**Description** | The `X-Forwarded-Proto` (XFP) header is a de-facto standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer. Your server access logs contain the protocol used between the server and the load balancer, but not the protocol used between the client and the load balancer. To determine the protocol used between the client and the load balancer, the `X-Forwarded-Proto` request header can be used.
 
 ### `http.req.x_forwarded_server`
 
@@ -1655,8 +1731,8 @@ Attribute | Value
 **Tier** | `core`
 **Data Type** | `unsigned`
 **Semantic** | `identifier`
-**Reference** | []()
-**Description** | 
+**Reference** | [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+**Description** | HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
 
 ### `http.resp.reason_phrase`
 
@@ -1666,8 +1742,8 @@ Attribute | Value
 **Tier** | `core`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+**Description** | The `Reason-Phrase` is intended to give a short textual description of the Status-Code.
 
 ### `http.resp.bytes`
 
@@ -2069,8 +2145,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7469, section 2.1: Public-Key-Pins](https://tools.ietf.org/html/rfc7469#section-2.1)
+**Description** | The HTTP `Public-Key-Pins` response header used to associate a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates, however, it has been removed from modern browsers and is no longer supported. Use Certificate Transparency and `Expect-CT` header instead.
 
 ### `http.resp.public_key_pins_report_only`
 
@@ -2080,8 +2156,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7469, section 2.1: Public-Key-Pins-Report-Only](https://tools.ietf.org/html/rfc7469#section-2.1)
+**Description** | The HTTP `Public-Key-Pins-Report-Only` response header was used to send reports of pinning violation to the report-uri specified in the header but, unlike Public-Key-Pins still allows browsers to connect to the server if the pinning is violated. The header is silently ignored in modern browsers as support for HPKP has been removed. Use Certificate Transparency and the `Expect-CT` header instead.
 
 ### `http.resp.referrer_policy`
 
@@ -2091,8 +2167,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Referrer Policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header)
+**Description** | The `Referrer-Policy` HTTP header controls how much referrer information (sent via the `Referer` header) should be included with requests.
 
 ### `http.resp.refresh`
 
@@ -2111,11 +2187,10 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.retry_after`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `string`
+**Semantic** | `httpdate`
+**Reference** | [RFC 7231, section 7.1.3: Retry-After](https://tools.ietf.org/html/rfc7231#section-7.1.3)
+**Description** | The `Retry-After` response HTTP header indicates how long the user agent should wait before making a follow-up request. This value may also contain a quantity of `seconds`.
 
 ### `http.resp.sec_websocket_accept`
 
@@ -2125,15 +2200,140 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 6455, section 11.3.3: Sec-WebSocket-Accept](https://tools.ietf.org/html/rfc6455#section-11.3.3)
+**Description** | The `Sec-WebSocket-Accept` header is used in the websocket opening handshake. It would appear in the response headers. That is, this is header is sent from server to client to inform that server is willing to initiate a websocket connection.
 
 ### `http.resp.server`
 
+The name of the software or product that handled the request. Usually in a format similar to `User-Agent`. How much detail to include is an interesting balance to strike; exposing the OS version is probably a bad idea, as mentioned in the earlier warning about overly-detailed values. However, exposed Apache versions helped browsers work around a bug those versions had with `Content-Encoding` combined with `Range`.
+
+#### `http.resp.server.agent`
+
 Attribute | Value
 --- | ---
-**IE Name** | `http.resp.server`
+**IE Name** | `http.resp.server.agent`
 **Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7231, section 7.4.2: Server](https://tools.ietf.org/html/rfc7231#section-7.4.2)
+**Description** | The `Server` header describes the software used by the origin server that handled the request — that is, the server that generated the response.
+
+#### `http.resp.server.device`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.device`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.os`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.os`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.os_ver`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.os_ver`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.os_major`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.os_major`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.os_minor`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.os_minor`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.os_build`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.os_build`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.sw`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.sw`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.sw_ver`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.sw_ver`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.sw_major`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.sw_major`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.sw_minor`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.sw_minor`
+**Tier** | `custom`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | []()
+**Description** | 
+
+#### `http.resp.server.sw_build`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.server.sw_build`
+**Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | []()
@@ -2145,11 +2345,10 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.server_timing`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Server Timing](https://w3c.github.io/server-timing/#the-server-timing-header-field)
+**Description** | The `Server-Timing` header communicates one or more metrics and descriptions for a given request-response cycle. It is used to surface any backend server timing metrics (e.g. database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the `PerformanceServerTiming` interface.
 
 ### `http.resp.set_cookie`
 
@@ -2159,8 +2358,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 6265, section 4.1: Set-Cookie](https://tools.ietf.org/html/rfc6265#section-4.1)
+**Description** | The `Set-Cookie` HTTP response header is used to send cookies from the server to the user agent, so the user agent can send them back to the server later.
 
 ### `http.resp.set_cookie2`
 
@@ -2170,8 +2369,8 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 2965: Set-Cookie2](https://tools.ietf.org/html/rfc2965)
+**Description** | The obsolete `Set-Cookie2` HTTP response header used to send cookies from the server to the user agent, but has been deprecated by the specification. Use `Set-Cookie` instead.
 
 ### `http.resp.sourcemap`
 
@@ -2181,8 +2380,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Source Map Revision 3 Proposal](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k)
+**Description** | The `SourceMap` HTTP response header links generated code to a source map, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
 
 ### `http.resp.strict_transport_security`
 
@@ -2192,8 +2391,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [HTTP Strict Transport Security (HSTS)](https://tools.ietf.org/html/rfc6797)
+**Description** | The HTTP `Strict-Transport-Security` response header lets a web site tell browsers that it should only be accessed using HTTPS, instead of using HTTP.
 
 ### `http.resp.timing_allow_origin`
 
@@ -2203,8 +2402,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Resource Timing Level 3](https://w3c.github.io/resource-timing/#sec-timing-allow-origin)
+**Description** | The `Timing-Allow-Origin` response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
 ### `http.resp.tk`
 
@@ -2214,8 +2413,30 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#Tk-header-defn)
+**Description** | The `Tk` response header indicates the tracking status that applied to the corresponding request.
+
+### `http.resp.trailer`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.trailer`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7230, section 4.4: Trailer](https://tools.ietf.org/html/rfc7230#section-4.4)
+**Description** | The `Trailer` response header allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent, such as a message integrity check, digital signature, or post-processing status.
+
+### `http.resp.transfer_encoding`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.transfer_encoding`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7230, section 3.3.1: Transfer-Encoding](https://tools.ietf.org/html/rfc7230#section-3.3.1)
+**Description** | The `Transfer-Encoding` header specifies the form of encoding used to safely transfer the payload body to the user.
 
 ### `http.resp.upgrade`
 
@@ -2236,30 +2457,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.resp.via`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.via`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.resp.warning`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.warning`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7231, section 7.1.4: Vary](https://tools.ietf.org/html/rfc7231#section-7.1.4)
+**Description** | The `Vary` HTTP response header determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server. It is used by the server to indicate which headers it used when selecting a representation of a resource in a content negotiation algorithm.
 
 ### `http.resp.www_authenticate`
 
@@ -2269,8 +2468,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://tools.ietf.org/html/rfc7235#section-4.1](https://tools.ietf.org/html/rfc7235#section-4.1)
+**Description** | The HTTP `WWW-Authenticate` response header defines the authentication method that should be used to gain access to a resource.
 
 ### `http.resp.x_attribute`
 
@@ -2369,8 +2568,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://fetch.spec.whatwg.org/#x-content-type-options-header](https://fetch.spec.whatwg.org/#x-content-type-options-header)
+**Description** | The `X-Content-Type-Options` response HTTP header is a marker used by the server to indicate that the MIME types advertised in the `Content-Type` headers should not be changed and be followed.
 
 ### `http.resp.x_correlation_id`
 
@@ -2391,8 +2590,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+**Description** | The `X-DNS-Prefetch-Control` HTTP response header controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 
 ### `http.resp.x_frame_options`
 
@@ -2402,8 +2601,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7034](https://tools.ietf.org/html/rfc7034)
+**Description** | The `X-Frame-Options` HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>`. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites.
 
 ### `http.resp.x_icap_profile`
 
@@ -2545,8 +2744,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+**Description** | The HTTP `X-XSS-Protection` response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.
 
 ## `http.event`
 
