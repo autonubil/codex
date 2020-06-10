@@ -218,6 +218,18 @@ Attribute | Value
 **Reference** | [RFC 7231, section 3.1.1.5: Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5)
 **Description** | The `Content-Type` entity header is used to indicate the media type of the resource.
 
+### `http.entity.delta_base`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.entity.delta_base`
+**Tier** | `common`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [Delta-Base](https://tools.ietf.org/html/rfc3229#section-10.5.1)
+**Description** | The `Delta-Base` entity header is used in a delta-encoded response to specify the entity tag of the base instance. A Delta-Base header field MUST be included in a response with an `IM` header that includes a delta-coding, if the request included more than one entity tag in its `If-None-Match` header.
+
 ### `http.entity.link`
 
 Attribute | Value
@@ -241,11 +253,10 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.timestamp`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `milliseconds`
+**Description** | The timestamp, expressed as milliseconds since epoch, when the HTTP request was observed.
 
 ### `http.req.method`
 
@@ -255,8 +266,8 @@ Attribute | Value
 **Tier** | `core`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7231, section 4: Request methods](https://tools.ietf.org/html/rfc7231#section-4)
+**Description** | The request method token is the primary source of request semantics; it indicates the purpose for which the client has made this request and what is expected by the client as a successful result.
 
 ### `http.req.bytes`
 
@@ -267,20 +278,18 @@ Attribute | Value
 **Data Type** | `unsigned`
 **Semantic** | `quantity`
 **Unit** | `bytes`
-**Reference** | []()
-**Description** | 
+**Description** | The size/length of the HTTP request.
 
 ### `http.req.a_im`
 
 Attribute | Value
 --- | ---
 **IE Name** | `http.req.a_im`
-**Tier** | `
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [A-IM](https://tools.ietf.org/html/rfc3229#section-10.5.3)
+**Description** | The `A-IM` request header is similar to `Accept`, but restricts the instance-manipulations that are acceptable in the response. A response may be the result of applying multiple instance-manipulations.
 
 ### `http.req.accept`
 
@@ -1107,11 +1116,21 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.timestamp`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `milliseconds`
+**Description** | The timestamp, expressed as milliseconds since epoch, when the HTTP response was observed.
+
+### `http.resp.bytes`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.bytes`
+**Tier** | `common`
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `bytes`
+**Description** | The size/length of the HTTP request.
 
 ### `http.resp.status`
 
@@ -1134,18 +1153,6 @@ Attribute | Value
 **Semantic** | `default`
 **Reference** | [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 **Description** | The `Reason-Phrase` is intended to give a short textual description of the Status-Code.
-
-### `http.resp.bytes`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.bytes`
-**Tier** | `common`
-**Data Type** | `unsigned`
-**Semantic** | `quantity`
-**Unit** | `bytes`
-**Reference** | []()
-**Description** | 
 
 ### `http.resp.time`
 
@@ -1358,18 +1365,6 @@ Attribute | Value
 **Reference** | [https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header)
 **Description** | The HTTP `Cross-Origin-Resource-Policy` response header conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the given resource.
 
-### `http.resp.delta_base`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.delta_base`
-**Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
 ### `http.resp.digest`
 
 Attribute | Value
@@ -1431,11 +1426,10 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.im`
 **Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [IM](https://tools.ietf.org/html/rfc3229#section-10.5.2)
+**Description** | The `IM` response header indicates the instance-manipulations, if any, that have been applied to the instance represented by the response. Typical instance manipulations include *delta encoding* and *compression*.
 
 ### `http.resp.large_allocation`
 
