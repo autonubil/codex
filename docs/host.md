@@ -75,7 +75,7 @@ Attribute | Value
 
 Attribute | Value
 --- | ---
-**IE Name** | `host.`
+**IE Name** | `host.subdomain`
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`

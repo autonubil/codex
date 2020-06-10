@@ -231,6 +231,8 @@ Attribute | Value
 
 ## `http.req`
 
+Contains *request headers* and additional attributes related to an HTTP request.
+
 A *request header* is an HTTP header that can be used in an HTTP request, and that doesn't relate to the content of the message. Not all headers appearing in a request are *request headers*.
 
 ### `http.req.timestamp`
@@ -1094,6 +1096,8 @@ Attribute | Value
 **Description** | 
 
 ## http.resp
+
+Contains *response headers* and additional attributes related to an HTTP response.
 
 A *response header* is an HTTP header that can be used in an HTTP response and that doesn't relate to the content of the message. Not all headers appearing in a response are response headers.
 
