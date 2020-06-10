@@ -10,7 +10,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Description** | The full reported name of the operating system. This may include codename and version. For example, macOS Catalina 10.15.5
+**Description** | The full name of the operating system. This may include codename and version. For example, `macOS Catalina 10.15.5`.
 
 ## `os.category`
 
@@ -49,7 +49,6 @@ Attribute | Value
 **IE Name** | `os.version`
 **Tier** | `common`
 **Data Type** | object: `version`
-**Semantic** | `default`
 **Description** | The version of the operating system.
 
 ## `os.kernel`
@@ -59,7 +58,6 @@ Attribute | Value
 **IE Name** | `os.kernel`
 **Tier** | `common`
 **Data Type** | object: `version`
-**Semantic** | `default`
 **Description** | The version of the kernel used by the operating system.
 
 ## `os.arch`
