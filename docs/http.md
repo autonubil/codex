@@ -1,4 +1,6 @@
-# HTTP Information Elements
+# `http`
+
+The `http` object contains information elements related to HTTP messages.
 
 ## `http.version`
 
@@ -13,266 +15,23 @@ Attribute | Value
 
 ## `http.url`
 
-Uniform Resource Identifiers (URIs) [RFC3986] are used throughout HTTP as the means for identifying resources (Section 2 of [RFC7231]). URI references are used to target requests, indicate redirects, and define relationships.
-
-### `http.url.uri`
-
 Attribute | Value
 --- | ---
-**IE Name** | `http.url.uri`
+**IE Name** | `http.url`
 **Tier** | `core`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [URI Reference](https://tools.ietf.org/html/rfc3986#section-4.1)
+**Data Type** | object: `uri`
+**Reference** | [Uniform Resource Identifiers](https://tools.ietf.org/html/rfc7230#section-2.7)
 **Description** | The complete Uniform Resource Identifiers (URIs). A URI-reference is either a URI or a relative reference.
-
-### `http.url.scheme`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.scheme`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [Scheme](https://tools.ietf.org/html/rfc3986#section-3.1)
-**Description** | Each URI begins with a scheme name that refers to a specification for assigning identifiers within that scheme. As such, the URI syntax is a federated and extensible naming system wherein each scheme's specification may further restrict the syntax and semantics of identifiers using that scheme. Exmaples are `http` and `https`.
-
-### `http.url.authority`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.authority`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [Authority](https://tools.ietf.org/html/rfc3986#section-3.2)
-**Description** | Many URI schemes include a hierarchical element for a naming authority. The generic syntax provides a common means for distinguishing an authority based on a registered name or server address, along with optional port and user information. The authority component is preceded by a double slash (`//`) and is terminated by the next slash (`/`), question mark (`?`), or number sign (`#`), or by the end of the URI.
-
-### `http.url.userinfo`
-
-The userinfo subcomponent may consist of a user name and, optionally, scheme-specific information about how to gain authorization to access the resource. The user information, if present, is followed by a commercial at-sign ("@") that delimits it from the host.
-
-#### `http.url.userinfo.user`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.userinfo.user`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [User Information](https://tools.ietf.org/html/rfc3986#section-3.2.1)
-**Description** | The user name portion of the userinfo subcomponent.
-
-#### `http.url.userinfo.password`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.userinfo.password`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [User Information](https://tools.ietf.org/html/rfc3986#section-3.2.1)
-**Description** | The password portion of the userinfo subcomponent.
-
-### `http.url.host`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.host`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | The host subcomponent of authority is identified by an IP literal encapsulated within square brackets, an IPv4 address in dotted-decimal form, or a registered name.
-
-### `http.url.domain`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.domain`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.ip`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.ip`
-**Tier** | `custom`
-**Data Type** | `ipaddress`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.port`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.port`
-**Tier** | `custom`
-**Data Type** | `unsigned`
-**Semantic** | `identifier`
-**Reference** | []()
-**Description** | 
-
-### `http.url.path`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.path`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.fragment`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.fragment`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.url.query`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.url.query`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
 
 ## `http.redir`
 
-### `http.redir.uri`
-
 Attribute | Value
 --- | ---
-**IE Name** | `http.redir.uri`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.ip`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.ip`
-**Tier** | ``
-**Data Type** | `ipaddress`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.scheme`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.scheme`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.domain`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.domain`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.server`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.server`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.port`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.port`
-**Tier** | ``
-**Data Type** | `unsigned`
-**Semantic** | `identifier`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.path`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.path`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.fragment`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.fragment`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.query`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.query`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.user`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.user`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `http.redir.password`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.redir.password`
-**Tier** | ``
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**IE Name** | `http.redir`
+**Tier** | `common`
+**Data Type** | object: `uri`
+**Reference** | [Redirections in HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections)
+**Description** | URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a HTTP redirect, for this operation. This IE contains the URL to which to which the client is redirected by the server.
 
 ## `http.headers`
 
@@ -280,82 +39,145 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.headers`
 **Tier** | `common`
-**Data Type** | `unsigned
-**Semantic** | `quantity
-Unit | values
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `values`
 **Description** | A count of headers in the HTTP request or response message.
 
-### `http.cache_control`
+## `http.gen`
+
+A *general header* is an HTTP header that can be used in both request and response messages but doesn't apply to the content itself. Depending on the context they are used in, general headers are either *response* or *request* headers. However, they are not *entity* headers.
+
+### `http.gen.cache_control`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.cache_control`
+**IE Name** | `http.gen.cache_control`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://tools.ietf.org/html/rfc7234)
 **Description** | The `Cache-Control` HTTP header holds *directives* (instructions) for caching in both requests and responses. A given directive in a request does not mean the same directive should be in the response.
 
-### `http.connection`
+### `http.gen.connection`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.connection`
+**IE Name** | `http.gen.connection`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection)
 **Description** | The `Connection` general header controls whether or not the network connection stays open after the current transaction finishes. If the value sent is `keep-alive`, the connection is persistent and not closed, allowing for subsequent requests to the same server to be done.
 
-## `http.content_type`
+### `http.gen.date`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.content_type`
+**IE Name** | `http.gen.date`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `httpdate`
+**Reference** | [RFC 7231, section 7.1.1.2: Date](https://tools.ietf.org/html/rfc7231#section-7.1.1.2)
+**Description** | The `Date` general HTTP header contains the date and time at which the message was originated.
+
+### `http.gen.keep_alive`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.gen.keep_alive`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | [RFC 7231, section 3.1.1.5: Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5)
-**Description** | The `Content-Type` entity header is used to indicate the media type of the resource.
+**Reference** | [RFC 7230, appendix A.1.2: Keep-Alive](https://tools.ietf.org/html/rfc7230#appendix-A.1.2)
+**Description** | The `Keep-Alive` general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.
 
-## `http.content_encoding`
+### `http.gen.pragma`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.content_encoding`
+**IE Name** | `http.gen.pragma`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7234, section 5.4: Pragma](https://tools.ietf.org/html/rfc7234#section-5.4)
+**Description** | The `Pragma` HTTP/1.0 general header is an implementation-specific header that may have various effects along the request-response chain. It is used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` HTTP/1.1 header is not yet present.
+
+### `http.gen.via`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.gen.via`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7230, section 5.7.1: Via](https://tools.ietf.org/html/rfc7230#section-5.7.1)
+**Description** | The `Via` general header is added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.
+
+### `http.gen.want_digest`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.gen.want_digest`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers)
+**Description** | The `Want-Digest` HTTP header is primarily used in a HTTP request, to ask the responder to provide a digest of the requested resource using the `Digest` response header.
+
+### `http.gen.warning`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.gen.warning`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7234, section 5.5: Warning](https://tools.ietf.org/html/rfc7234#section-5.5)
+**Description** | The `Warning` general HTTP header contains information about possible problems with the status of the message. More than one `Warning` header may appear in a response.
+
+## `http.entity`
+
+An *entity header* is an HTTP header describing the content of the body of the message. Entity headers are used in both, HTTP *requests* and *responses*.
+
+### `http.entity.allow`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.entity.allow`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7231, section 7.4.1: Allow](https://tools.ietf.org/html/rfc7231#section-7.4.1)
+**Description** | The `Allow` header lists the set of methods supported by a resource.
+
+### `http.entity.content_encoding`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.entity.content_encoding`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 7231, section 3.1.2.2: Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2)
 **Description** | The `Content-Encoding` entity header is used to compress the media-type. When present, its value indicates which encodings were applied to the entity-body.
 
-## `http.content_language`
+### `http.entity.content_language`
 
 Attribute | Value
 --- | ---
-**IE Name** | ` http.content_language`
+**IE Name** | `http.entity.content_language`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 7231, section 3.1.3.2: Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2)
 **Description** | The `Content-Language` entity header is used to describe the language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language.
 
-## `http.content_location`
+### `http.entity.content_length`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.content_location`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [RFC 7231, section 3.1.4.2: Content-Location](https://tools.ietf.org/html/rfc7231#section-3.1.4.2)
-**Description** | The `Content-Location` header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of content negotiation.
-
-## `http.content_length`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.content_length`
+**IE Name** | `http.entity.content_length`
 **Tier** | `common`
 **Data Type** | `unsigned`
 **Semantic** | `quantity`
@@ -363,117 +185,53 @@ Attribute | Value
 **Reference** | [RFC 7230, section 3.3.2: Content-Length](https://tools.ietf.org/html/rfc7230#section-3.3.2)
 **Description** | The `Content-Length` entity header indicates the size of the entity-body, in bytes, sent to the recipient.
 
-## `http.content_md5`
+### `http.entity.content_location`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.content_md5`
+**IE Name** | `http.entity.content_location`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [RFC 7231, section 3.1.4.2: Content-Location](https://tools.ietf.org/html/rfc7231#section-3.1.4.2)
+**Description** | The `Content-Location` header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of content negotiation.
 
-## `http.content_range`
+## `http.entity.content_md5`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.content_range`
+**IE Name** | `http.entity.content_md5`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | [RFC 7233, section 4.2: Content-Range](https://tools.ietf.org/html/rfc7233#section-4.2)
-**Description** | The `Content-Range` response HTTP header indicates where in a full body message a partial message belongs.
+**Reference** | [The Content-MD5 Header Field](https://tools.ietf.org/html/rfc1864)
+**Description** | The `Content-MD5` entity header is generated by only an originating user agent. Message relays and gateways are expressly forbidden from generating a Content-MD5 field. To generate the value of the Content-MD5 field, the MD5 algorithm is computed on the canonical form of the MIME entity's object.
 
-## `http.date`
+### `http.entity.content_type`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.date`
+**IE Name** | `http.entity.content_type`
 **Tier** | `common`
 **Data Type** | `string`
-**Semantic** | `httpdate`
-**Reference** | [RFC 7231, section 7.1.1.2: Date](https://tools.ietf.org/html/rfc7231#section-7.1.1.2)
-**Description** | The `Date` general HTTP header contains the date and time at which the message was originated.
+**Semantic** | `default`
+**Reference** | [RFC 7231, section 3.1.1.5: Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5)
+**Description** | The `Content-Type` entity header is used to indicate the media type of the resource.
 
-## `http.link`
+### `http.entity.link`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.link`
+**IE Name** | `http.entity.link`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 8288, section 3: Link Serialisation in HTTP Headers](https://tools.ietf.org/html/rfc8288#section-3)
 **Description** | The HTTP `Link` entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML `<link>` element.
 
-## `http.pragma`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.pragma`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [RFC 7234, section 5.4: Pragma](https://tools.ietf.org/html/rfc7234#section-5.4)
-**Description** | The `Pragma` HTTP/1.0 general header is an implementation-specific header that may have various effects along the request-response chain. It is used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` HTTP/1.1 header is not yet present.
-
-## `http.trailer`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.trailer`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `http.transfer_encoding`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.transfer_encoding`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `http.via`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.via`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [RFC 7230, section 5.7.1: Via](https://tools.ietf.org/html/rfc7230#section-5.7.1)
-**Description** | The `Via` general header is added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.
-
-## `http.want_digest`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.want_digest`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers)
-**Description** | The `Want-Digest` HTTP header is primarily used in a HTTP request, to ask the responder to provide a digest of the requested resource using the `Digest` response header.
-
-## `http.warning`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.warning`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [RFC 7234, section 5.5: Warning](https://tools.ietf.org/html/rfc7234#section-5.5)
-**Description** | The `Warning` general HTTP header contains information about possible problems with the status of the message. More than one `Warning` header may appear in a response.
-
 ## `http.req`
+
+A *request header* is an HTTP header that can be used in an HTTP request, and that doesn't relate to the content of the message. Not all headers appearing in a request are *request headers*.
 
 ### `http.req.timestamp`
 
@@ -504,8 +262,8 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.bytes`
 **Tier** | `common`
-**Data Type** | `unsigned
-**Semantic** | `quantity
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
 **Unit** | `bytes`
 **Reference** | []()
 **Description** | 
@@ -585,7 +343,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-request-headers
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-request-headers](https://fetch.spec.whatwg.org/#http-access-control-request-headers)
 **Description** | The `Access-Control-Request-Headers` request header is used by browsers when issuing a preflight request, to let the server know which HTTP headers the client might send when the actual request is made.
 
 ### `http.req.access_control_request_method`
@@ -596,7 +354,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-request-method
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-request-method](https://fetch.spec.whatwg.org/#http-access-control-request-method)
 **Description** | The `Access-Control-Request-Method` request header is used by browsers when issuing a preflight request, to let the server know which HTTP method will be used when the actual request is made. This header is necessary as the preflight request is always an `OPTIONS` and doesn't use the same method as the actual request.
 
 ### `http.req.authorization`
@@ -638,9 +396,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.device_memory`
 **Tier** | `common`
-**Data Type** | `unsigned
-**Semantic** | `quantity
-Units | gibibytes
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Units** | `gibibytes`
 **Reference** | [Device Memory 1](https://w3c.github.io/device-memory/#sec-device-memory-client-hint-header)
 **Description** | The `Device-Memory` header is a Device Memory API header that works like Client Hints header which represents the approximate amount of RAM client device has.
 
@@ -650,8 +408,8 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.dnt`
 **Tier** | `common`
-**Data Type** | `unsigned
-**Semantic** | `indicator
+**Data Type** | `unsigned`
+**Semantic** | `indicator`
 **Reference** | [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dnt-header-field)
 **Description** | The `DNT` (Do Not Track) request header indicates the user's tracking preference. It lets users indicate whether they would prefer privacy rather than personalized content.
 
@@ -663,7 +421,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR)
 **Description** | The `DPR` header is a Client Hints headers which represents the client device pixel ratio (DPR), which is the the number of physical device pixels corresponding to every CSS pixel.
 
 ### `http.req.early_data`
@@ -674,7 +432,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `unsigned`
 **Semantic** | `identifier`
-**Reference** | [RFC 8470, section 5.1: The Early-Data Header Field]()
+**Reference** | [RFC 8470, section 5.1: The Early-Data Header Field](https://tools.ietf.org/html/rfc8470#section-5.1)
 **Description** | The `Early-Data` header is set by an intermediary to indicate that the request has been conveyed in TLS early data, and also indicates that the intermediary understands the `425 (Too Early)` status code.
 
 ### `http.req.expect`
@@ -798,17 +556,6 @@ Attribute | Value
 **Reference** | [RFC 7232, section 3.4: If-Unmodified-Since](https://tools.ietf.org/html/rfc7232#section-3.4)
 **Description** | The `If-Unmodified-Since` request HTTP header makes the request conditional: the server will send back the requested resource, or accept it in the case of a `POST` or another non-safe method, only if it has not been last modified after the given date. If the resource has been modified after the given date, the response will be a `412 (Precondition Failed)` error.
 
-### `http.req.keep_alive`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.keep_alive`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [RFC 7230, appendix A.1.2: Keep-Alive](https://tools.ietf.org/html/rfc7230#appendix-A.1.2)
-**Description** | The `Keep-Alive` general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.
-
 ### `http.req.max_forwards`
 
 Attribute | Value
@@ -867,128 +614,13 @@ Attribute | Value
 
 ### `http.req.referer`
 
-The `Referer` header allows servers to identify where people are visiting them from and may use that data for analytics, logging, or optimized caching, for example.
-
-#### `http.req.referer.uri`
-
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.referer.uri`
+**IE Name** | `http.req.referer`
 **Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
+**Data Type** | object: `uri`
 **Reference** | [RFC 7231, section 5.5.2: Referer](https://tools.ietf.org/html/rfc7231#section-5.5.2)
 **Description** | The `Referer` request header contains the address of the previous web page from which a link to the currently requested page was followed.
-
-#### `http.req.referer.ip`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.ip`
-**Tier** | `custom`
-**Data Type** | `ipaddress`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.scheme`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.scheme`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.domain`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.domain`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.server`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.server`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.port`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.port`
-**Tier** | `custom`
-**Data Type** | `unsigned`
-**Semantic** | `identifier`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.path`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.path`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.fragment`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.fragment`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.query`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.query`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.user`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.user`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.referer.password`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.referer.password`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
 
 ### `http.req.save_data`
 
@@ -1080,139 +712,13 @@ Attribute | Value
 
 ### `http.req.user_agent`
 
-The `User-Agent` request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.
-
-#### `http.req.user_agent.agent`
-
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.user_agent.agent`
+**IE Name** | `http.req.user_agent`
 **Tier** | `core`
-**Data Type** | `string`
-**Semantic** | `default`
+**Data Type** | object: `user_agent`
 **Reference** | [RFC 7231, section 5.5.3: User-Agent](https://tools.ietf.org/html/rfc7231#section-5.5.3)
 **Description** | The `User-Agent` request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.
-
-#### `http.req.user_agent.device`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.device`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
 
 ### `http.req.x_att_deviceid`
 
@@ -1568,135 +1074,11 @@ Attribute | Value
 
 ### `http.req.x_user_agent`
 
-#### `http.req.x_user_agent.agent`
-
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.x_user_agent.agent`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.device`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.device`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.os`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.os`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.os_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.os_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.os_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.os_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.os_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.os_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.os_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.os_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.sw`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.sw`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.sw_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.sw_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.sw_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.sw_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.sw_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.sw_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.x_user_agent.sw_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.x_user_agent.sw_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
+**IE Name** | `http.req.x_user_agent`
+**Tier** | `core`
+**Data Type** | object: `user_agent`
 **Reference** | []()
 **Description** | 
 
@@ -1710,6 +1092,10 @@ Attribute | Value
 **Semantic** | `default`
 **Reference** | []()
 **Description** | 
+
+## http.resp
+
+A *response header* is an HTTP header that can be used in an HTTP response and that doesn't relate to the content of the message. Not all headers appearing in a response are response headers.
 
 ### `http.resp.timestamp`
 
@@ -1772,11 +1158,11 @@ Attribute | Value
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.resp.accept_patch`
+**IE Name** | `http.resp.accept_ch`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH)
 **Description** | The `Accept-CH` response header is set by the server to specify which Client Hints headers a client should include in subsequent requests.
 
 ### `http.resp.accept_ch_lifetime`
@@ -1787,7 +1173,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime)
 **Description** | The `Accept-CH-Lifetime` response header is set by the server to specify the persistence of Accept-CH header value that specifies for which Client Hints headers client should include in subsequent requests.
 
 ### `http.resp.accept_patch`
@@ -1820,7 +1206,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-allow-credentials
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-allow-credentials](https://fetch.spec.whatwg.org/#http-access-control-allow-credentials)
 **Description** | The `Access-Control-Allow-Credentials` response header tells browsers whether to expose the response to frontend JavaScript code when the request's credentials mode is `include`.
 
 ### `http.resp.access_control_allow_headers`
@@ -1831,7 +1217,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-allow-headers
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-allow-headers](https://fetch.spec.whatwg.org/#http-access-control-allow-headers)
 **Description** | The `Access-Control-Allow-Headers` response header is used in response to a preflight request which includes `Access-Control-Request-Headers` to indicate which HTTP headers can be used during the actual request.
 
 ### `http.resp.access_control_allow_methods`
@@ -1842,7 +1228,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-allow-methods
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-allow-methods](https://fetch.spec.whatwg.org/#http-access-control-allow-methods)
 **Description** | The `Access-Control-Allow-Methods` response header specifies the method or methods allowed when accessing the resource in response to a preflight request.
 
 ### `http.resp.access_control_allow_origin`
@@ -1853,7 +1239,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-allow-origin
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-allow-origin](https://fetch.spec.whatwg.org/#http-access-control-allow-origin)
 **Description** | The `Access-Control-Allow-Origin` response header indicates whether the response can be shared with requesting code from the given origin.
 
 ### `http.resp.access_control_expose_headers`
@@ -1864,7 +1250,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-expose-headers
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-expose-headers](https://fetch.spec.whatwg.org/#http-access-control-expose-headers)
 **Description** | The `Access-Control-Expose-Headers` response header indicates which headers can be exposed as part of the response by listing their names.
 
 ### `http.resp.access_control_max_age`
@@ -1876,7 +1262,7 @@ Attribute | Value
 **Data Type** | `unsigned`
 **Semantic** | `quantity`
 **Unit** | `seconds`
-**Reference** | https://fetch.spec.whatwg.org/#http-access-control-max-age
+**Reference** | [https://fetch.spec.whatwg.org/#http-access-control-max-age](https://fetch.spec.whatwg.org/#http-access-control-max-age)
 **Description** | The `Access-Control-Max-Age` response header indicates how long the results of a preflight request (that is the information contained in the `Access-Control-Allow-Methods` and `Access-Control-Allow-Headers` headers) can be cached.
 
 ### `http.resp.age`
@@ -1890,17 +1276,6 @@ Attribute | Value
 **Unit** | `seconds`
 **Reference** | [RFC 7234, section 5.1: Age](https://tools.ietf.org/html/rfc7234#section-5.1)
 **Description** | The `Age` header contains the time in seconds the object has been in a proxy cache.
-
-### `http.resp.allow`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.allow`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [RFC 7231, section 7.4.1: Allow](https://tools.ietf.org/html/rfc7231#section-7.4.1)
-**Description** | The `Allow` header lists the set of methods supported by a resource.
 
 ### `http.resp.alt_svc`
 
@@ -1935,6 +1310,17 @@ Attribute | Value
 **Reference** | [RFC 6266](https://tools.ietf.org/html/rfc6266)
 **Description** | In a regular HTTP response, the `Content-Disposition` response header is a header indicating if the content is expected to be displayed inline in the browser, that is, as a Web page or as part of a Web page, or as an attachment, that is downloaded and saved locally.
 
+### `http.resp.content_range`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.content_range`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [RFC 7233, section 4.2: Content-Range](https://tools.ietf.org/html/rfc7233#section-4.2)
+**Description** | The `Content-Range` response HTTP header indicates where in a full body message a partial message belongs.
+
 ### `http.resp.content_security_policy`
 
 Attribute | Value
@@ -1965,19 +1351,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header
+**Reference** | [https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header)
 **Description** | The HTTP `Cross-Origin-Resource-Policy` response header conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the given resource.
-
-### `http.resp.date`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.date`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `httpdate
-**Reference** | []()
-**Description** | 
 
 ### `http.resp.delta_base`
 
@@ -2051,18 +1426,6 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | `http.resp.im`
-**Tier** | `common`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
-**Description** | 
-
-### `http.resp.keep_alive`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.keep_alive`
 **Tier** | `common`
 **Data Type** | ``
 **Semantic** | ``
@@ -2205,139 +1568,13 @@ Attribute | Value
 
 ### `http.resp.server`
 
-The name of the software or product that handled the request. Usually in a format similar to `User-Agent`. How much detail to include is an interesting balance to strike; exposing the OS version is probably a bad idea, as mentioned in the earlier warning about overly-detailed values. However, exposed Apache versions helped browsers work around a bug those versions had with `Content-Encoding` combined with `Range`.
-
-#### `http.resp.server.agent`
-
 Attribute | Value
 --- | ---
-**IE Name** | `http.resp.server.agent`
+**IE Name** | `http.resp.server`
 **Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
+**Data Type** | object: `user_agent`
 **Reference** | [RFC 7231, section 7.4.2: Server](https://tools.ietf.org/html/rfc7231#section-7.4.2)
-**Description** | The `Server` header describes the software used by the origin server that handled the request — that is, the server that generated the response.
-
-#### `http.resp.server.device`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.device`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.os`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.os`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.os_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.os_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.os_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.os_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.os_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.os_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.os_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.os_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.sw`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.sw`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.sw_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.sw_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.sw_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.sw_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.sw_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.sw_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.resp.server.sw_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.server.sw_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `Server` header describes the software used by the origin server that handled the request, that is, the server that generated the response. The name of the software or product that handled the request. Usually in a format similar to `User-Agent`. How much detail to include is an interesting balance to strike; exposing the OS version is probably a bad idea, as mentioned in the earlier warning about overly-detailed values. However, exposed Apache versions helped browsers work around a bug those versions had with `Content-Encoding` combined with `Range`.
 
 ### `http.resp.server_timing`
 
@@ -2797,13 +2034,13 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-### `http.event.req`
+### `http.transact.req`
 
-#### `http.event.req.first_byte_in`
+#### `http.transact.req.first_byte_in`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.req.first_byte_in`
+**IE Name** | `http.transact.req.first_byte_in`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2811,11 +2048,11 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-#### `http.event.req.first_byte_out`
+#### `http.transact.req.first_byte_out`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.req.first_byte_out`
+**IE Name** | `http.transact.req.first_byte_out`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2823,11 +2060,11 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-#### `http.event.req.last_byte_in`
+#### `http.transact.req.last_byte_in`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.req.last_byte_in`
+**IE Name** | `http.transact.req.last_byte_in`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2835,11 +2072,11 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-#### `http.event.req.last_byte_out`
+#### `http.transact.req.last_byte_out`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.req.last_byte_out`
+**IE Name** | `http.transact.req.last_byte_out`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2847,13 +2084,13 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-### `http.event.resp`
+### `http.transact.resp`
 
-#### `http.event.resp.first_byte_in`
+#### `http.transact.resp.first_byte_in`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.resp.first_byte_in`
+**IE Name** | `http.transact.resp.first_byte_in`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2861,11 +2098,11 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-#### `http.event.resp.first_byte_out`
+#### `http.transact.resp.first_byte_out`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.resp.first_byte_out`
+**IE Name** | `http.transact.resp.first_byte_out`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2873,11 +2110,11 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-#### `http.event.resp.last_byte_in`
+#### `http.transact.resp.last_byte_in`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.resp.last_byte_in`
+**IE Name** | `http.transact.resp.last_byte_in`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
@@ -2885,11 +2122,11 @@ Attribute | Value
 **Reference** | []()
 **Description** | 
 
-#### `http.event.resp.last_byte_out`
+#### `http.transact.resp.last_byte_out`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.event.resp.last_byte_out`
+**IE Name** | `http.transact.resp.last_byte_out`
 **Tier** | `custom`
 **Data Type** | ``
 **Semantic** | ``
