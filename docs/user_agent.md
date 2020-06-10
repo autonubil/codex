@@ -1,140 +1,42 @@
-# User-Agent Information Elements
+# `user_agent`
 
-## `user_agent`
+The `user_agent` object contains information elements related to HTTP User-Agent header values, and other sources which contain similar information.
 
-
-### `http.req.user_agent`
-
-The `User-Agent` request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.
-
-#### `http.req.user_agent.agent`
+## `user_agent.agent`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.user_agent.agent`
+**IE Name** | `user_agent.agent`
 **Tier** | `core`
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 7231, section 5.5.3: User-Agent](https://tools.ietf.org/html/rfc7231#section-5.5.3)
 **Description** | The `User-Agent` request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.
 
-#### `http.req.user_agent.device`
+## `user_agent.device`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.user_agent.device`
+**IE Name** | `user_agent.device`
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | This information element describes device details extracted from the `User-Agent` header value. 
 
-#### `http.req.user_agent.os`
+## `user_agent.os`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.user_agent.os`
+**IE Name** | `user_agent.os`
 **Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Data Type** | object: `os`
+**Description** | This object describes operating system details extracted from the `User-Agent` header value.
 
-#### `http.req.user_agent.os_ver`
+## `user_agent.app`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.user_agent.os_ver`
+**IE Name** | `user_agent.app`
 **Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.os_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.os_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_ver`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_ver`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_major`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_major`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_minor`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_minor`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-#### `http.req.user_agent.sw_build`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.user_agent.sw_build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Data Type** | object: `app`
+**Description** | This object describes application details extracted from the `User-Agent` header value.
