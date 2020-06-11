@@ -13,3 +13,4 @@ flags | An integral value that represents a set of bit fields. Logical operation
 iso8601 | A string value that represents an ISO 8601 compliant timestamp.
 httpdate | A string value that represents an `HTTP-date` format as defined by RFC 7231 Date/Time Formats.
 emailaddress | A string value that represents an E-Mail address.
+uri | A string value that represents a Uniform Resource Identifier (URI - [RFC3986](https://tools.ietf.org/html/rfc3986)).
