@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.github.com/robcowart/codex/schemas/json/uri.json#",
+  "$id": "https://www.github.com/robcowart/codex/blob/master/schemas/json/uri.json#",
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "title": "URI",
@@ -59,7 +59,7 @@
       "additionalProperties": false
     },
     "host": {
-      "$ref": "https://www.github.com/robcowart/codex/schemas/json/host.json#",
+      "$ref": "https://www.github.com/robcowart/codex/blob/master/schemas/json/host.json#",
       "examples": [
         "demo.north.codex-test.org"
       ],
