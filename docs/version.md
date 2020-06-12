@@ -12,11 +12,11 @@ Given a version number *MAJOR.MINOR.PATCH*, increment the:
 
 Additional labels for *pre-release* and *build* metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-## `version.ver`
+## `version.version`
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.ver`
+**IE Name** | `version.version`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`

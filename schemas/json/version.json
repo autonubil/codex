@@ -1,0 +1,55 @@
+{
+  "$id": "https://www.github.com/robcowart/codex/schemas/json/http.json",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "examples": [
+        "1.2.3-beta+0023"
+      ],
+      "title": "version"
+    },
+    "major": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "title": "major"
+    },
+    "minor": {
+      "type": "integer",
+      "examples": [
+        2
+      ],
+      "title": "minor"
+    },
+    "patch": {
+      "type": "integer",
+      "examples": [
+        3
+      ],
+      "title": "patch"
+    },
+    "prerel": {
+      "type": "string",
+      "examples": [
+        "beta"
+      ],
+      "title": "pre-release"
+    },
+    "build": {
+      "type": "string",
+      "examples": [
+        "0023"
+      ],
+      "title": "build"
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "additionalProperties": false,
+  "description": "The version object contains information elements related to Semantic Versioning values.",
+  "title": "Semantic Version"
+}
