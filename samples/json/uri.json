@@ -1,0 +1,14 @@
+{
+  "ref": "http://username:password@demo.north.codex-test.org:9000/app/dashboard/eaa84cd0?_g=h@22cdd26&_a=h@ed7af2a#noc",
+  "scheme": "http",
+  "authority": "username:password@demo.north.codex-test.org:9000",
+  "userinfo": {
+    "user": "username",
+    "password": "password"
+  },
+  "host": "demo.north.codex-test.org",
+  "port": 9000,
+  "path": "/app/dashboard/eaa84cd0",
+  "query": "_g=h@22cdd26&_a=h@ed7af2a",
+  "fragment": "noc"
+}
