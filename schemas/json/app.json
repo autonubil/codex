@@ -26,10 +26,12 @@
       "type": "string",
       "maxLength": 64,
       "examples": [
-        "x86_64"
+        "x86_64",
+        "i386",
+        "ARMv8"
       ],
       "title": "architecture",
-      "description": "The processor architecture for which the application is compliled. "
+      "description": "The processor architecture for which the application is compliled."
     }
   },
   "additionalProperties": false

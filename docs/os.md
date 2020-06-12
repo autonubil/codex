@@ -30,7 +30,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Description** | The distribution of the operating system. This is a subcategory of `os.category` Examples include, *AIX*, *macOS*, *Ubuntu*, *Fedora*, *Windows Server*, etc.
+**Description** | The distribution of the operating system. This is a subcategory of `os.category`. Examples include, *AIX*, *macOS*, *Ubuntu*, *Fedora*, *Windows Server*, etc.
 
 ## `os.codename`
 
