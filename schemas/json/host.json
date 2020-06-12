@@ -1,0 +1,75 @@
+{
+  "$id": "https://www.github.com/robcowart/codex/schemas/json/host.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "Host",
+  "description": "The host object describes identifying attributes of host resource.",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "maxLength": 255,
+      "examples": [
+        "demo.north.codex-test.org"
+      ],
+      "title": "name",
+      "description": "An identifier by an IP literal encapsulated within square brackets, an IPv4 address in dotted-decimal form, or a registered name."
+    },
+    "ip": {
+      "type": "string",
+      "examples": [
+        "192.0.2.11"
+      ],
+      "title": "IP",
+      "description": "If host.name is an IP address, this field would contain that address. Otherwise it should contain the IP address obtained by resolving host.name to an IP address."
+    },
+    "hostname": {
+      "type": "string",
+      "maxLength": 63,
+      "examples": [
+        "demo"
+      ],
+      "description": "This IE contains a label that is assigned to a resource connected to a computer network and that is used to identify the resource. It is the final (left-most) label in the DNS resource record for this resource. This value is commonly assigned in the configuration of the resource itself as its hostname.",
+      "title": "hostname"
+    },
+    "fqdn": {
+      "type": "string",
+      "maxLength": 255,
+      "examples": [
+        "demo.north.codex-test.org"
+      ],
+      "title": "FQDN",
+      "description": "This IE contains the fully qualified domain name of the host indicated by host.name. It can usually be obtained via DNS."
+    },
+    "tld": {
+      "type": "string",
+      "maxLength": 63,
+      "examples": [
+        "org"
+      ],
+      "title": "TLD",
+      "description": "The top-level domain under which the resource record of the host is defined. A top-level domain (TLD) is one of the domains at the highest level in the hierarchical Domain Name System of the Internet. The top-level domain names are installed in the root zone of the name space."
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 253,
+      "examples": [
+        "codex-test.org"
+      ],
+      "title": "domain",
+      "description": "The registered domain under which the resource record of the host is defined. Registration of a domain name establishes a set of Start of Authority (SOA) records in the DNS servers of the parent domain."
+    },
+    "subdomain": {
+      "type": "string",
+      "maxLength": 253,
+      "examples": [
+        "north.codex-test.org"
+      ],
+      "title": "sub-domain",
+      "description": "This information includes all labels from the fully qualified domain name (host.fqdn) excluding the final (left-most) label (host.hostname)."
+    }
+  },
+  "additionalProperties": false
+}

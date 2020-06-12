@@ -1,0 +1,9 @@
+{
+  "name": "demo.north.codex-test.org",
+  "ip": "192.0.2.11",
+  "hostname": "demo",
+  "fqdn": "demo.north.codex-test.org",
+  "tld": "org",
+  "domain": "codex-test.org",
+  "subdomain": "north.codex-test.org"
+}

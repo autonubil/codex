@@ -2,7 +2,7 @@
 
 ## `uri`
 
-Uniform Resource Identifiers (URIs - [RFC3986](https://tools.ietf.org/html/rfc3986)) are used throughout HTTP as the means for identifying resources ([RFC7231 - Section 2](https://tools.ietf.org/html/rfc7231#section-2)). URI references are used to target requests, indicate redirects, and define relationships.
+A Uniform Resource Identifier (URI - [RFC3986](https://tools.ietf.org/html/rfc3986)) is a string of characters that unambiguously identifies a particular resource. URIs are used throughout HTTP as the means for identifying resources ([RFC7231 - Section 2](https://tools.ietf.org/html/rfc7231#section-2)). URI references are used to target requests, indicate redirects, and define relationships.
 
 The `uri` object may be contained with other parent objects, such as a `http.url`.
 
@@ -26,7 +26,7 @@ Attribute | Value
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [Scheme](https://tools.ietf.org/html/rfc3986#section-3.1)
-**Description** | Each URI begins with a scheme name that refers to a specification for assigning identifiers within that scheme. As such, the URI syntax is a federated and extensible naming system wherein each scheme's specification may further restrict the syntax and semantics of identifiers using that scheme. Exmaples are `http` and `https`.
+**Description** | Each URI begins with a scheme name that refers to a specification for assigning identifiers within that scheme. As such, the URI syntax is a federated and extensible naming system wherein each scheme's specification may further restrict the syntax and semantics of identifiers using that scheme. Examples are `http` and `https`.
 
 ### `uri.authority`
 
@@ -84,7 +84,7 @@ Attribute | Value
 **Data Type** | `unsigned`
 **Semantic** | `identifier`
 **Reference** | [RFC 3986, section 3.2.3: Port](https://tools.ietf.org/html/rfc3986#section-3.2.3)
-**Description** | The port subcomponent of authority is designated by an optional port number in decimal following the host and delimited from it by a single colon (`:`) character. A scheme may define a default port. For example, the "http" scheme defines a default port of "80", corresponding to its reserved TCP port number. The type of port designated by the port number (e.g., TCP, UDP, SCTP) is defined by the URI scheme.
+**Description** | The port subcomponent of authority is designated by an optional port number in decimal following the host and delimited from it by a single colon (`:`) character. A scheme may define a default port. For example, the `http` scheme defines a default port of `80`, corresponding to its reserved TCP port number. The type of port designated by the port number (e.g., TCP, UDP, SCTP) is defined by the URI scheme.
 
 ### `uri.path`
 
@@ -106,7 +106,7 @@ Attribute | Value
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 3986, section 3.4: Query](https://tools.ietf.org/html/rfc3986#section-3.4)
-**Description** | The query component contains non-hierarchical data that, along with data in the path component (`uri.path`), serves to identify a resource within the scope of the URI's scheme and naming authority (if any). The query component is indicated by the first question mark ("?") character and terminated by a number sign ("#") character or by the end of the URI.
+**Description** | The query component contains non-hierarchical data that, along with data in the path component (`uri.path`), serves to identify a resource within the scope of the URI's scheme and naming authority (if any). The query component is indicated by the first question mark (`?`) character and terminated by a number sign (`#`) character or by the end of the URI.
 
 ### `uri.fragment`
 
@@ -117,4 +117,4 @@ Attribute | Value
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [RFC 3986, section 3.5: Fragment](https://tools.ietf.org/html/rfc3986#section-3.5)
-**Description** | The fragment identifier component of a URI allows indirect identification of a secondary resource by reference to a primary resource and additional identifying information.  The identified secondary resource may be some portion or subset of the primary resource, some view on representations of the primary resource, or some other resource defined or described by those representations. A fragment identifier component is indicated by the presence of a number sign ("#") character and terminated by the end of the URI.
+**Description** | The fragment identifier component of a URI allows indirect identification of a secondary resource by reference to a primary resource and additional identifying information.  The identified secondary resource may be some portion or subset of the primary resource, some view on representations of the primary resource, or some other resource defined or described by those representations. A fragment identifier component is indicated by the presence of a number sign (`#`) character and terminated by the end of the URI.
