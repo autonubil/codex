@@ -34,6 +34,12 @@
     },
     "userinfo": {
       "type": "object",
+      "title": "user information",
+      "description": "The userinfo subcomponent may consist of a user name and, optionally, scheme-specific information about how to gain authorization to access the resource. The user information, if present, is followed by a commercial at-sign ( @ ) that delimits it from the host.",
+      "required": [
+        "user",
+        "password"
+      ],
       "properties": {
         "user": {
           "type": "string",
@@ -52,10 +58,6 @@
           "description": "The password portion of the userinfo subcomponent."
         }
       },
-      "required": [
-        "user",
-        "password"
-      ],
       "additionalProperties": false
     },
     "host": {

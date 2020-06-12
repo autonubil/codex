@@ -1,0 +1,325 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/http.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "",
+  "description": "",
+  "required": [
+    "url"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "maxLength": 16,
+      "examples": [
+        "1.1"
+      ],
+      "title": "version",
+      "description": "HTTP request and response messages include an HTTP protocol version using a <major>.<minor> numbering scheme."
+    },
+    "url": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/uri.json#",
+      "title": "URL",
+      "description": "The complete Uniform Resource Identifiers (URIs). A URI-reference is either a URI or a relative reference."
+    },
+    "redir": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/uri.json#",
+      "title": "redirect URL",
+      "description": "This IE contains the URL to which to which the client is redirected by the server."
+    },
+    "resp_time": {
+      "type": "integer",
+      "examples": [
+        40
+      ],
+      "title": "response time",
+      "description": "The time elapsed between the observation of an HTTP request from a client and the corresponding HTTP response from the server."
+    },
+    "rtt": {
+      "type": "integer",
+      "examples": [
+        55
+      ],
+      "title": "round-trip time",
+      "description": "The total round-trip time between when an HTTP request was sent from a client and the corresponding HTTP response was received from the server."
+    },
+    "headers": {
+      "type": "integer",
+      "examples": [
+        8
+      ],
+      "title": "headers",
+      "description": "A count of headers in the HTTP request or response message."
+    },
+    "gen": {
+      "type": "object",
+      "title": "general headers",
+      "description": "A general header is an HTTP header that can be used in both request and response messages but doesn't apply to the content itself. Depending on the context they are used in, general headers are either response or request headers. However, they are not entity headers.",
+      "properties": {
+        "cache_control": {
+          "type": "string",
+          "examples": [
+            "max-age=<seconds>",
+            "no-cache"
+          ],
+          "title": "Cache-Control",
+          "description": "The Cache-Control HTTP header holds directives (instructions) for caching in both requests and responses. A given directive in a request does not mean the same directive should be in the response."
+        },
+        "connection": {
+          "type": "string",
+          "examples": [
+            "keep-alive",
+            "close"
+          ],
+          "title": "Connection",
+          "description": "The Connection general header controls whether or not the network connection stays open after the current transaction finishes. If the value sent is keep-alive, the connection is persistent and not closed, allowing for subsequent requests to the same server to be done."
+        },
+        "date": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "Date",
+          "description": "The Date general HTTP header contains the date and time at which the message was originated."
+        },
+        "keep_alive": {
+          "type": "string",
+          "examples": [
+            "timeout=5, max=1000"
+          ],
+          "title": "Keep-Alive",
+          "description": "The Keep-Alive general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests."
+        },
+        "pragma": {
+          "type": "string",
+          "examples": [
+            "no-cache"
+          ],
+          "title": "Pragma",
+          "description": "The Pragma HTTP/1.0 general header is an implementation-specific header that may have various effects along the request-response chain. It is used for backwards compatibility with HTTP/1.0 caches where the Cache-Control HTTP/1.1 header is not yet present."
+        },
+        "upgrade": {
+          "type": "string",
+          "examples": [
+            "websocket"
+          ],
+          "title": "Upgrade",
+          "description": "The Upgrade header field is used by clients to invite the server to switch to one of the listed protocols, in descending preference order. The server, if it supports the protocol, replies with the same Upgrade header value as well as Connection: Upgrade. Once this handshake is completed successfully, data transfer begins."
+        },
+        "via": {
+          "type": "string",
+          "examples": [
+            "HTTP/1.1 GWA"
+          ],
+          "title": "Via",
+          "description": "The Via general header is added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain."
+        },
+        "want_digest": {
+          "type": "string",
+          "examples": [
+            "SHA-512;q=0.3, sha-256;q=1, md5;q=0"
+          ],
+          "title": "Want-Digest",
+          "description": "The Want-Digest HTTP header is primarily used in a HTTP request, to ask the responder to provide a digest of the requested resource using the Digest response header."
+        },
+        "warning": {
+          "type": "string",
+          "examples": [
+            "110 anderson/1.3.37 \"Response is stale\""
+          ],
+          "title": "Warning",
+          "description": "The Warning general HTTP header contains information about possible problems with the status of the message. More than one Warning header may appear in a response."
+        },
+        "x_auth_token": {
+          "type": "string",
+          "title": "X-Auth-Token",
+          "description": "The X-Auth-Token being an unregistered header, it is subject to no formal specification. Its presence and content is always tied to a respective application. A user initially logs in by supplying a username and password. The server returns an access-token in the X-Auth-Token header. For subsequent requests the token is sent by the client in the X-Auth-Token header."
+        }
+      },
+      "additionalProperties": false
+    },
+    "entity": {
+      "type": "object",
+      "title": "entity header",
+      "description": "An entity header is an HTTP header describing the content of the body of the message. Entity headers are used in both, HTTP requests and responses.",
+      "properties": {
+        "allow": {
+          "type": "string",
+          "examples": [
+            "GET, POST, HEAD"
+          ],
+          "title": "Allow",
+          "description": "The Allow header lists the set of methods supported by a resource."
+        },
+        "content_encoding": {
+          "type": "string",
+          "examples": [
+            "deflate, gzip"
+          ],
+          "title": "Content-Encoding",
+          "description": "The Content-Encoding entity header is used to compress the media-type. When present, its value indicates which encodings were applied to the entity-body."
+        },
+        "content_language": {
+          "type": "string",
+          "examples": [
+            "de-DE, en-CA"
+          ],
+          "title": "Content-Language",
+          "description": "The Content-Language entity header is used to describe the language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language."
+        },
+        "content_length": {
+          "type": "integer",
+          "examples": [
+            320
+          ],
+          "title": "Content-Length",
+          "description": "The Content-Length entity header indicates the size of the entity-body, in bytes, sent to the recipient."
+        },
+        "content_location": {
+          "type": "string",
+          "examples": [
+            "/documents/foo.json"
+          ],
+          "title": "Content-Location",
+          "description": "The Content-Location header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of content negotiation."
+        },
+        "content_md5": {
+          "type": "string",
+          "title": "Content-MD5",
+          "description": "The Content-MD5 entity header is generated by only an originating user agent. Message relays and gateways are expressly forbidden from generating a Content-MD5 field. To generate the value of the Content-MD5 field, the MD5 algorithm is computed on the canonical form of the MIME entity's object."
+        },
+        "content_type": {
+          "type": "string",
+          "examples": [
+            "text/html; charset=UTF-8"
+          ],
+          "title": "Content-Type",
+          "description": "The Content-Type entity header is used to indicate the media type of the resource."
+        },
+        "delta_base": {
+          "type": "string",
+          "title": "Delta-Base",
+          "description": "The Delta-Base entity header is used in a delta-encoded response to specify the entity tag of the base instance. "
+        },
+        "link": {
+          "type": "string",
+          "examples": [
+            "<https://example.com>; rel=\"preconnect\""
+          ],
+          "title": "Link",
+          "description": "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element."
+        }
+      },
+      "additionalProperties": false
+    },
+    "req": {
+      "type": "object",
+      "title": "request",
+      "description": "Contains request headers and additional attributes related to an HTTP request.",
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "datetime": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "date and time",
+          "description": "The timestamp, expressed as an HTTP-date value, when the HTTP request was observed."
+        },
+        "timestamp": {
+          "type": "integer",
+          "examples": [
+            1591974346603
+          ],
+          "title": "timestamp",
+          "description": "The timestamp, expressed as milliseconds since epoch, when the HTTP request was observed."
+        },
+        "method": {
+          "type": "string",
+          "examples": [
+            "GET",
+            "PUT",
+            "DELETE"
+          ],
+          "title": "request method",
+          "description": "The request method token is the primary source of request semantics; it indicates the purpose for which the client has made this request and what is expected by the client as a successful result."
+        },
+        "bytes": {
+          "type": "integer",
+          "examples": [
+            123
+          ],
+          "title": "request size/length",
+          "description": "The size/length of the HTTP request."
+        },
+        "user_agent": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
+          "title": "User-Agent",
+          "description": "The User-Agent request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent."
+        }
+      },
+      "additionalProperties": false
+    },
+    "resp": {
+      "type": "object",
+      "title": "response",
+      "description": "Contains response headers and additional attributes related to an HTTP response.",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "datetime": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "date and time",
+          "description": "The timestamp, expressed as an HTTP-date value, when the HTTP response was observed."
+        },
+        "timestamp": {
+          "type": "integer",
+          "examples": [
+            1591974346603
+          ],
+          "title": "timestamp",
+          "description": "The timestamp, expressed as milliseconds since epoch, when the HTTP response was observed."
+        },
+        "bytes": {
+          "type": "integer",
+          "examples": [
+            768
+          ],
+          "title": "response size/length",
+          "description": "The size/length of the HTTP request."
+        },
+        "status": {
+          "type": "string",
+          "examples": [
+            "200",
+            "404"
+          ],
+          "title": "status code",
+          "description": "HTTP response status codes indicate whether a specific HTTP request has been successfully completed."
+        },
+        "reason_phrase": {
+          "type": "string",
+          "examples": [
+            "OK",
+            "Not Found"
+          ],
+          "title": "Reason-Phrase",
+          "description": "The Reason-Phrase is intended to give a short textual description of the Status-Code."
+        },
+        "server": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
+          "title": "Server",
+          "description": "The Server header describes the software used by the origin server that handled the request, that is, the server that generated the response. The name of the software or product that handled the request. Usually in a format similar to User-Agent."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

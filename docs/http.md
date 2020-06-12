@@ -239,7 +239,7 @@ Attribute | Value
 **Reference** | [RFC 7231, section 3.1.4.2: Content-Location](https://tools.ietf.org/html/rfc7231#section-3.1.4.2)
 **Description** | The `Content-Location` header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of content negotiation.
 
-## `http.entity.content_md5`
+### `http.entity.content_md5`
 
 Attribute | Value
 --- | ---
@@ -266,7 +266,6 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | `http.entity.delta_base`
-**Tier** | `common`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
@@ -307,7 +306,7 @@ Attribute | Value
 **IE Name** | `http.req.timestamp`
 **Tier** | `common`
 **Data Type** | `unsigned`
-**Semantic** | `quantity`
+**Semantic** | `epochticks`
 **Unit** | `milliseconds`
 **Description** | The timestamp, expressed as milliseconds since epoch, when the HTTP request was observed.
 
@@ -1093,7 +1092,7 @@ Attribute | Value
 **IE Name** | `http.resp.timestamp`
 **Tier** | `common`
 **Data Type** | `unsigned`
-**Semantic** | `quantity`
+**Semantic** | `epochticks`
 **Unit** | `milliseconds`
 **Description** | The timestamp, expressed as milliseconds since epoch, when the HTTP response was observed.
 
