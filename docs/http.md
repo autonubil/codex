@@ -33,6 +33,28 @@ Attribute | Value
 **Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections)
 **Description** | URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a HTTP redirect, for this operation. This IE contains the URL to which to which the client is redirected by the server.
 
+## `http.resp_time`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp_time`
+**Tier** | `common`
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `milliseconds`
+**Description** | The time elapsed between the observation of an HTTP request from a client and the corresponding HTTP response from the server. If observed from the client application itself this value is the total round trip time. However this value may be provided by an observer on the network path between the client and server, and would only represent the time from observer to server and back to the observer.
+
+## `http.rtt`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.rtt`
+**Tier** | `common`
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
+**Unit** | `milliseconds`
+**Description** | The total round-trip time between when an HTTP request was sent from a client and the corresponding HTTP response was received from the server. By definition the this can only be observed from the client itself.
+
 ## `http.headers`
 
 Attribute | Value
@@ -102,6 +124,17 @@ Attribute | Value
 **Semantic** | `default`
 **Reference** | [RFC 7234, section 5.4: Pragma](https://tools.ietf.org/html/rfc7234#section-5.4)
 **Description** | The `Pragma` HTTP/1.0 general header is an implementation-specific header that may have various effects along the request-response chain. It is used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` HTTP/1.1 header is not yet present.
+
+### `http.gen.upgrade`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.gen.upgrade`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism](https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+**Description** | The `Upgrade` header field is used by clients to invite the server to switch to one of the listed protocols, in descending preference order. The server, if it supports the protocol, replies with the same `Upgrade` header value as well as `Connection: Upgrade`. Once this handshake is completed successfully, data transfer begins.
 
 ### `http.gen.via`
 
@@ -256,6 +289,16 @@ Attribute | Value
 Contains *request headers* and additional attributes related to an HTTP request.
 
 A *request header* is an HTTP header that can be used in an HTTP request, and that doesn't relate to the content of the message. Not all headers appearing in a request are *request headers*.
+
+### `http.req.datetime`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.req.datetime`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `httpdate`
+**Description** | The timestamp, expressed as an `HTTP-date` value, when the HTTP request was observed.
 
 ### `http.req.timestamp`
 
@@ -709,17 +752,6 @@ Attribute | Value
 **Reference** | [RFC 7230, section 4.3: TE](https://tools.ietf.org/html/rfc7230#section-4.3)
 **Description** | The `TE` request header specifies the transfer encodings the user agent is willing to accept.
 
-### `http.req.upgrade`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.req.upgrade`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism](https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
-**Description** | The `Upgrade` header field is used by clients to invite the server to switch to one of the listed protocols, in descending preference order.
-
 ### `http.req.upgrade_insecure_requests`
 
 Attribute | Value
@@ -815,8 +847,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-Device-ID` header contains an identifier for the device sending the request.
 
 ### `http.req.x_flash_version`
 
@@ -826,8 +857,8 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://www.aqtronix.com/headers/?Action=ShowDetails&Name=X%2DFlash%2DVersion](https://www.aqtronix.com/headers/?Action=ShowDetails&Name=X%2DFlash%2DVersion)
+**Description** | The `X-Flash-Version` request header contains the version of Adobe Flash running on the client.
 
 ### `http.req.x_forwarded_for`
 
@@ -870,8 +901,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-Forwarded-Server` header contains the hostname of the proxy server.
 
 ### `http.req.x_http_method_override`
 
@@ -881,8 +911,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://www.ibm.com/support/knowledgecenter/SSQP76_8.9.0/com.ibm.odm.dserver.rules.res.managing/topics/con_res_restapi_rsrcmng_methods.html](https://www.ibm.com/support/knowledgecenter/SSQP76_8.9.0/com.ibm.odm.dserver.rules.res.managing/topics/con_res_restapi_rsrcmng_methods.html)
+**Description** | The `X-HTTP-Method-Override` header is used to override the HTTP method of the request. It can be used to channel a PUT or DELETE request through a POST request.
 
 ### `http.req.x_idfa`
 
@@ -892,8 +922,7 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-IDFA` request header contains an Identifier for Advertising (IDFA).
 
 ### `http.req.x_idfv`
 
@@ -903,8 +932,18 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-IDFV` request header contains an Identifier for Vendor (IDFV).
+
+### `http.req.x_method_override`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.req.x_method_override`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [https://www.ibm.com/support/knowledgecenter/SSQP76_8.9.0/com.ibm.odm.dserver.rules.res.managing/topics/con_res_restapi_rsrcmng_methods.html](https://www.ibm.com/support/knowledgecenter/SSQP76_8.9.0/com.ibm.odm.dserver.rules.res.managing/topics/con_res_restapi_rsrcmng_methods.html)
+**Description** | The `X-Method-Override` header is used to override the HTTP method of the request. It can be used to channel a PUT or DELETE request through a POST request.
 
 ### `http.req.x_nonce`
 
@@ -914,8 +953,7 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-Nonce` header contains a base64-encoded client nonce.
 
 ### `http.req.x_organization_id`
 
@@ -925,8 +963,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-Organization-ID` contains the UUID for an organization.
 
 ### `http.req.x_profile`
 
@@ -936,8 +973,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-Profile` request header.
 
 ### `http.req.x_profile_token`
 
@@ -947,8 +983,7 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Description** | The `X-Profile-Token` request header.
 
 ### `http.req.x_request_id`
 
@@ -1000,9 +1035,9 @@ Attribute | Value
 **IE Name** | `http.req.x_time`
 **Tier** | `common`
 **Data Type** | `string`
-**Semantic** | `httpdate`
-**Reference** | []()
-**Description** | 
+**Semantic** | `quantity`
+**Unit**: | `seconds`
+**Description** | The `X-Time` request header.
 
 ### `http.req.x_uidh`
 
@@ -1012,8 +1047,8 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [http://webpolicy.org/2014/10/24/how-verizons-advertising-header-works/](http://webpolicy.org/2014/10/24/how-verizons-advertising-header-works/)
+**Description** | The `X-UIDH` request header contains Verizon's Advertising ID Header.
 
 ### `http.req.x_user_agent`
 
@@ -1035,11 +1070,21 @@ Attribute | Value
 **Reference** | [http://www.aqtronix.com/headers/?Action=ShowDetails&Name=X%2DWAP%2DProfile](http://www.aqtronix.com/headers/?Action=ShowDetails&Name=X%2DWAP%2DProfile)
 **Description** | The `X-Wap-Profile` request header is typically used to link to an XML file on the Internet with a full description and details about the device currently connecting.
 
-## http.resp
+## `http.resp`
 
 Contains *response headers* and additional attributes related to an HTTP response.
 
 A *response header* is an HTTP header that can be used in an HTTP response and that doesn't relate to the content of the message. Not all headers appearing in a response are response headers.
+
+### `http.resp.datetime`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.datetime`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `httpdate`
+**Description** | The timestamp, expressed as an `HTTP-date` value, when the HTTP response was observed.
 
 ### `http.resp.timestamp`
 
@@ -1084,17 +1129,6 @@ Attribute | Value
 **Semantic** | `default`
 **Reference** | [IANA: Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 **Description** | The `Reason-Phrase` is intended to give a short textual description of the Status-Code.
-
-### `http.resp.time`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.time`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `httpdate`
-**Reference** | []()
-**Description** | 
 
 ### `http.resp.accept_ch`
 
@@ -1481,8 +1515,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [http://www.otsukare.info/2015/03/26/refresh-http-header](http://www.otsukare.info/2015/03/26/refresh-http-header)
+**Description** | The `Refresh` response header instructs the client to refresh a given URL at a specified interval. This behavior is similar to the `<meta http-equiv="refresh" …/>` method.
 
 ### `http.resp.retry_after`
 
@@ -1614,17 +1648,6 @@ Attribute | Value
 **Semantic** | `default`
 **Reference** | [RFC 7230, section 3.3.1: Transfer-Encoding](https://tools.ietf.org/html/rfc7230#section-3.3.1)
 **Description** | The `Transfer-Encoding` header specifies the form of encoding used to safely transfer the payload body to the user.
-
-### `http.resp.upgrade`
-
-Attribute | Value
---- | ---
-**IE Name** | `http.resp.upgrade`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
 
 ### `http.resp.vary`
 
@@ -1788,8 +1811,8 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | []()
-**Description** | 
+**Reference** | [https://en.wikipedia.org/wiki/List_of_HTTP_header_fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+**Description** | The `X-Powered-By` header specifies the technology (e.g. ASP.NET, PHP, JBoss) supporting the web application (version details are often in `X-Runtime`, `X-Version`, or `X-AspNet-Version`).
 
 ### `http.resp.x_response_desc`
 
@@ -1800,7 +1823,7 @@ Attribute | Value
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [draft-stecher-icap-subid-00, section-4.9: X-Response-Desc](https://tools.ietf.org/html/draft-stecher-icap-subid-00#section-4.9)
-**Description** | The `X-Response-Desc` is a one line description about the action that the ICAP service applied on the content.
+**Description** | The `X-Response-Desc` header contains a one line description about the action that the ICAP service applied on the content.
 
 ### `http.resp.x_response_info`
 
@@ -1811,7 +1834,18 @@ Attribute | Value
 **Data Type** | `string`
 **Semantic** | `default`
 **Reference** | [draft-stecher-icap-subid-00, section-4.8: X-Response-Info](https://tools.ietf.org/html/draft-stecher-icap-subid-00#section-4.8)
-**Description** | The `X-Response-Info` is a one word description of the action that the ICAP service applied to the content.
+**Description** | The `X-Response-Info` header contains a one word description of the action that the ICAP service applied to the content.
+
+### `http.resp.x_response_time`
+
+Attribute | Value
+--- | ---
+**IE Name** | `http.resp.x_response_time`
+**Tier** | `common`
+**Data Type** | `string`
+**Semantic** | `default`
+**Reference** | [draft-stecher-icap-subid-00, section-4.8: X-Response-Info](https://tools.ietf.org/html/draft-stecher-icap-subid-00#section-4.8)
+**Description** | The `X-Response-Info` header is produced by the *response-time* npm module. This module creates a middleware that records the response time for requests in HTTP servers, and adds an X-Response-Time header to responses. The *response time* is defined here as the elapsed time from when a request enters this middleware to when the headers are written out to the client.
 
 ### `http.resp.x_ua_compatible`
 
@@ -1870,16 +1904,17 @@ Attribute | Value
 
 ## `http.transact`
 
+The `http.transact` object contains information elements related to an HTTP transaction, i.e. the full request/response process.
+
 ### `http.transact.client_load_start`
 
 Attribute | Value
 --- | ---
 **IE Name** | `http.transact.client_load_start`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 ### `http.transact.client_load_end`
@@ -1888,10 +1923,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.client_load_end`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 ### `http.transact.client_render_start`
@@ -1900,10 +1934,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.client_render_start`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 ### `http.transact.client_render_end`
@@ -1912,10 +1945,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.client_render_end`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 ### `http.transact.req`
@@ -1926,10 +1958,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.req.first_byte_in`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 #### `http.transact.req.first_byte_out`
@@ -1938,10 +1969,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.req.first_byte_out`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 #### `http.transact.req.last_byte_in`
@@ -1950,10 +1980,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.req.last_byte_in`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 #### `http.transact.req.last_byte_out`
@@ -1962,10 +1991,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.req.last_byte_out`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 ### `http.transact.resp`
@@ -1976,10 +2004,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.resp.first_byte_in`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 #### `http.transact.resp.first_byte_out`
@@ -1988,10 +2015,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.resp.first_byte_out`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 #### `http.transact.resp.last_byte_in`
@@ -2000,10 +2026,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.resp.last_byte_in`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
 
 #### `http.transact.resp.last_byte_out`
@@ -2012,8 +2037,7 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.transact.resp.last_byte_out`
 **Tier** | `custom`
-**Data Type** | ``
-**Semantic** | ``
-**Unit** | ``
-**Reference** | []()
+**Data Type** | `unsigned`
+**Semantic** | `epochticks`
+**Unit** | `microseconds`
 **Description** | 
