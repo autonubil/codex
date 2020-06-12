@@ -1,0 +1,36 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/app.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "Application",
+  "description": "The app object contains information elements related to Applications.",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "maxLength": 255,
+      "examples": [
+        "Google Chrome Version 83.0.4103.97 (Official Build) (64-bit)"
+      ],
+      "title": "name",
+      "description": "The full name of the application. This may include version details. For example, Google Chrome Version 83.0.4103.97 (Official Build) (64-bit)."
+    },
+    "version": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/version.json#",
+      "title": "version",
+      "description": "The version of the application."
+    },
+    "arch": {
+      "type": "string",
+      "maxLength": 64,
+      "examples": [
+        "x86_64"
+      ],
+      "title": "architecture",
+      "description": "The processor architecture for which the application is compliled. "
+    }
+  },
+  "additionalProperties": false
+}

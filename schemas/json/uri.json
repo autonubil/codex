@@ -60,9 +60,6 @@
     },
     "host": {
       "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
-      "examples": [
-        "demo.north.codex-test.org"
-      ],
       "title": "host",
       "description": "The host subcomponent of authority is identified by an IP literal encapsulated within square brackets, an IPv4 address in dotted-decimal form, or a registered name."
     },

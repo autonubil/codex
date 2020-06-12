@@ -19,7 +19,7 @@ Attribute | Value
 **IE Name** | `app.version`
 **Tier** | `common`
 **Data Type** | object: `version`
-**Description** | The version of the operating system.
+**Description** | The version of the application.
 
 ## `app.arch`
 
@@ -29,4 +29,4 @@ Attribute | Value
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`
-**Description** | The processor architecture for which the operating system is compliled. Examples include `x86_64`, `i386`, `ARMv8`, etc.
+**Description** | The processor architecture for which the application is compliled. Examples include `x86_64`, `i386`, `ARMv8`, etc.
