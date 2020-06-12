@@ -1,0 +1,41 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "User Agent",
+  "description": "The user_agent object contains information elements related to HTTP User-Agent header values, and other sources which contain similar information.",
+  "required": [
+    "agent"
+  ],
+  "properties": {
+    "agent": {
+      "type": "string",
+      "maxLength": 255,
+      "examples": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+      ],
+      "title": "agent",
+      "description": "The User-Agent request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent."
+    },
+    "device": {
+      "type": "string",
+      "maxLength": 64,
+      "examples": [
+        "Macintosh"
+      ],
+      "title": "device",
+      "description": "This information element describes device details extracted from the User-Agent header value."
+    },
+    "os": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/os.json#",
+      "title": "os",
+      "description": "This object describes operating system details extracted from the User-Agent header value."
+    },
+    "app": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/app.json#",
+      "title": "app",
+      "description": "This object describes application details extracted from the User-Agent header value."
+    }
+  },
+  "additionalProperties": false
+}
