@@ -5,10 +5,10 @@
   "title": "Semantic Version",
   "description": "The version object contains information elements related to Semantic Versioning values.",
   "required": [
-    "version"
+    "ver"
   ],
   "properties": {
-    "version": {
+    "ver": {
       "type": "string",
       "maxLength": 255,
       "examples": [

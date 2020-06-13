@@ -1429,7 +1429,7 @@ Attribute | Value
 **Reference** | [RFC 7231, section 7.1.2: Location](https://tools.ietf.org/html/rfc7231#section-7.1.2)
 **Description** | The `Location` response header indicates the URL to redirect a page to. It only provides a meaning when served with a 3xx (redirection) or 201 (created) status response.
 
-### `http.req.memento_datetime`
+### `http.resp.memento_datetime`
 
 Attribute | Value
 --- | ---
@@ -1703,11 +1703,11 @@ Attribute | Value
 **Reference** | [draft-stecher-icap-subid-00, section-4.4: X-Attribute-Prefix](https://tools.ietf.org/html/draft-stecher-icap-subid-00#section-4.4)
 **Description** | The `X-Attribute-Prefix` header is used by the ICAP server to tell the client how many characters of the original URL's path (not the host name) are significant.
 
-### `http.req.x_content_digest`
+### `http.resp.x_content_digest`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.req.x_content_digest`
+**IE Name** | `http.resp.x_content_digest`
 **Tier** | `common`
 **Data Type** | `string`
 **Semantic** | `default`

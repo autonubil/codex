@@ -68,7 +68,7 @@ Attribute | Value
 **Tier** | `custom`
 **Data Type** | `string`
 **Semantic** | `default`
-**Reference** | [iCAAN: domain name](https://www.icann.org/icann-acronyms-and-terms/en/G0168)
+**Reference** | [iCANN: domain name](https://www.icann.org/icann-acronyms-and-terms/en/G0168)
 **Description** | The registered domain under which the resource record of the host is defined. Registration of a domain name establishes a set of Start of Authority (SOA) records in the DNS servers of the parent domain.
 
 ### `host.subdomain`
