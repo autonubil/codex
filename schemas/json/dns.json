@@ -1,0 +1,289 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "DNS",
+  "description": "Domain Name Service",
+  "definitions": {
+    "domain": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
+      "title": "Domain Name",
+      "description": "The domain name represented as a \"host\" object."
+    },
+    "digest": {
+      "type": "object",
+      "title": "Digest",
+      "description": "DNS Digest",
+      "required": [
+        "rdata"
+      ],
+      "properties": {
+        "rdata": {
+          "type": "string",
+          "examples": [
+            "2371 13 1 1F987CC6583E92DF0890718C42"
+          ],
+          "title": "RDATA",
+          "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+        },
+        "key_tag": {
+          "type": "integer",
+          "examples": [
+            2371
+          ],
+          "title": "Key Tag",
+          "description": "The key tag of the DNSKEY RR referred to by the record"
+        },
+        "algo": {
+          "type": "object",
+          "title": "algorithm",
+          "description": "",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "examples": [
+                13
+              ],
+              "title": "Algorithm ID",
+              "description": "Identifies the cryptographic algorithm used to create the key."
+            },
+            "txt": {
+              "type": "string",
+              "examples": [
+                "ECDSA Curve P-256 with SHA-256"
+              ],
+              "title": "Algorithm Text",
+              "description": "The textual name of the Algorithm used to create the key."
+            }
+          },
+          "additionalProperties": true
+        },
+        "digest_type": {
+          "type": "object",
+          "title": "Digest Type",
+          "description": "",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "examples": [
+                1
+              ],
+              "title": "Digest Type ID",
+              "description": "The digest algorithm used to construct the digest."
+            },
+            "txt": {
+              "type": "string",
+              "examples": [
+                "SHA-1"
+              ],
+              "title": "Digest Type Text",
+              "description": "The textual name of the digest algorithm with which the key is used."
+            }
+          },
+          "additionalProperties": true
+        },
+        "digest": {
+          "type": "string",
+          "examples": [
+            "1F987CC6583E92DF0890718C42"
+          ],
+          "title": "Digest",
+          "description": "The digest calculated by applying the digest algorithm."
+        }
+      },
+      "additionalProperties": true
+    },
+    "key": {
+      "type": "object",
+      "title": "Key",
+      "description": "DNS Key",
+      "required": [
+        "rdata"
+      ],
+      "properties": {
+        "rdata": {
+          "type": "string",
+          "examples": [
+            "257 3 5 ZhCa3rGLofZcndFN2aVd=="
+          ],
+          "title": "RDATA",
+          "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+        },
+        "flags": {
+          "type": "integer",
+          "examples": [
+            257
+          ],
+          "title": "Flags",
+          "description": "Key flags. (https://tools.ietf.org/html/rfc2535#section-3.1.2)"
+        },
+        "proto": {
+          "type": "object",
+          "title": "Protocol",
+          "description": "",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "examples": [
+                3
+              ],
+              "title": "Protocol ID",
+              "description": "Identifies the protocol with which the key is used."
+            },
+            "txt": {
+              "type": "string",
+              "examples": [
+                "DNSSEC"
+              ],
+              "title": "Protocol Text",
+              "description": "The textual name of the protocol with which the key is used."
+            }
+          },
+          "additionalProperties": true
+        },
+        "algo": {
+          "type": "object",
+          "title": "Algorithm",
+          "description": "",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "examples": [
+                5
+              ],
+              "title": "Algorithm ID",
+              "description": "Identifies the cryptographic algorithm used to create the key."
+            },
+            "txt": {
+              "type": "string",
+              "examples": [
+                "RSA/SHA-1"
+              ],
+              "title": "Algorithm Text",
+              "description": "The textual name of the Algorithm used to create the key."
+            }
+          },
+          "additionalProperties": true
+        },
+        "pub_key": {
+          "type": "string",
+          "examples": [
+            "ZhCa3rGLofZcndFN2aVd=="
+          ],
+          "title": "Public Key",
+          "description": "The public key. The format of the public key is algorithm dependent."
+        }
+      },
+      "additionalProperties": true
+    },
+    "signature": {
+      "type": "object",
+      "title": "Signature",
+      "description": "A signature is a fundamental way that data is authenticated in the secure Domain Name System (DNS).",
+      "required": [
+        "rdata"
+      ],
+      "properties": {
+        "rdata": {
+          "type": "string",
+          "examples": [
+            "A 5 3 86400 20030322173103 20030220173103 2642 example.com. oJB1W6WNGv+ldvQ3WDG0MQkg5IEhjRip8WTrPYGv07h108dUKGMeDPKijVCHX3DDKdfb+v6oB9wfuh3DTJXUAfI/M0zmO/zz8bW0Rznl8O3tGNazPwQKkRN20XPXV6nwwfoXmJQbsLNrLfkGJ5D6fwFm8nN+6pBzeDQfsS3Ap3o="
+          ],
+          "title": "RDATA",
+          "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+        },
+        "type_covered": {
+          "type": "string",
+          "examples": [
+            "A"
+          ],
+          "title": "Type Covered",
+          "description": "Identifies the type of the other RRs that is covered by this SIG record."
+        },
+        "algo": {
+          "type": "object",
+          "title": "algorithm",
+          "description": "",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "examples": [
+                5
+              ],
+              "title": "Algorithm ID",
+              "description": "Identifies the cryptographic algorithm used to create the signature."
+            },
+            "txt": {
+              "type": "string",
+              "examples": [
+                "RSA/SHA-1"
+              ],
+              "title": "Algorithm Text",
+              "description": "The textual name of the Algorithm."
+            }
+          },
+          "additionalProperties": true
+        },
+        "labels": {
+          "type": "integer",
+          "examples": [
+            3
+          ],
+          "title": "Labels",
+          "description": "The number of labels in the original SIG RR owner name."
+        },
+        "ttl_orig": {
+          "type": "integer",
+          "examples": [
+            86400
+          ],
+          "title": "Original TTL",
+          "description": "The TTL of the covered RRset as it appears in the authoritative zone."
+        },
+        "expire_timestamp": {
+          "type": "integer",
+          "examples": [
+            20030322173103
+          ],
+          "title": "Signature Expiration",
+          "description": "The timestamp, expressed as seconds since epoch, for when the signature will expire."
+        },
+        "incept_timestamp": {
+          "type": "integer",
+          "examples": [
+            20030220173103
+          ],
+          "title": "Signature Inception",
+          "description": "The timestamp, expressed as seconds since epoch, for when the signature was created."
+        },
+        "key_tag": {
+          "type": "integer",
+          "examples": [
+            2642
+          ],
+          "title": "Key Tag",
+          "description": "The \"key Tag\" is a two octet quantity that is used to efficiently select between multiple keys which may be applicable and thus check that a public key about to be used for the computationally expensive effort to check the signature is possibly valid."
+        },
+        "signer": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
+          "title": "Signer's Name",
+          "description": "The domain name of the signer generating the SIG RR. This is the owner name of the public KEY RR that can be used to verify the signature."
+        },
+        "signature": {
+          "type": "string",
+          "examples": [
+            "oJB1W6WNGv+ldvQ3WDG0MQkg5IEhjRip8WTrPYGv07h108dUKGMeDPKijVCHX3DDKdfb+v6oB9wfuh3DTJXUAfI/M0zmO/zz8bW0Rznl8O3tGNazPwQKkRN20XPXV6nwwfoXmJQbsLNrLfkGJ5D6fwFm8nN+6pBzeDQfsS3Ap3o="
+          ],
+          "title": "Signature",
+          "description": "The actual signature portion of the SIG RR binds the other RDATA fields to the RRset of the \"type covered\" RRs with that owner name and class. This covered RRset is thereby authenticated."
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "required": [ ],
+  "properties": {
+
+  },
+  "additionalProperties": true
+}
