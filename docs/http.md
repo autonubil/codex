@@ -42,7 +42,7 @@ Attribute | Value
 **Data Type** | `unsigned`
 **Semantic** | `quantity`
 **Unit** | `milliseconds`
-**Description** | The time elapsed between the observation of an HTTP request from a client and the corresponding HTTP response from the server. If observed from the client application itself this value is the total round trip time. However this value may be provided by an observer on the network path between the client and server, and would only represent the time from observer to server and back to the observer.
+**Description** | The time elapsed between the observation of an HTTP request from a client and the corresponding HTTP response from the server. If observed from the client application itself this value is the total round-trip time. However this value may be provided by an observer on the network path between the client and server, and would only represent the time from observer to server and back to the observer.
 
 ## `http.rtt`
 
