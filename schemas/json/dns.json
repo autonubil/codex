@@ -5,6 +5,30 @@
   "title": "DNS",
   "description": "Domain Name Service",
   "definitions": {
+    "algorithm": {
+      "type": "object",
+      "title": "Algorithm",
+      "description": "An algorithm.",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "examples": [
+            13
+          ],
+          "title": "Algorithm ID",
+          "description": "Identifies the cryptographic algorithm used to create the key."
+        },
+        "txt": {
+          "type": "string",
+          "examples": [
+            "ECDSA Curve P-256 with SHA-256"
+          ],
+          "title": "Algorithm Text",
+          "description": "The textual name of the Algorithm used to create the key."
+        }
+      },
+      "additionalProperties": true
+    },
     "domain": {
       "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
       "title": "Domain Name",
@@ -19,44 +43,13 @@
       ],
       "properties": {
         "rdata": {
-          "type": "string",
-          "examples": [
-            "2371 13 1 1F987CC6583E92DF0890718C42"
-          ],
-          "title": "RDATA",
-          "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+          "$ref": "#/definitions/rdata"
         },
         "key_tag": {
-          "type": "integer",
-          "examples": [
-            2371
-          ],
-          "title": "Key Tag",
-          "description": "The key tag of the DNSKEY RR referred to by the record"
+          "$ref": "#/definitions/algorithm"
         },
         "algo": {
-          "type": "object",
-          "title": "algorithm",
-          "description": "",
-          "properties": {
-            "id": {
-              "type": "integer",
-              "examples": [
-                13
-              ],
-              "title": "Algorithm ID",
-              "description": "Identifies the cryptographic algorithm used to create the key."
-            },
-            "txt": {
-              "type": "string",
-              "examples": [
-                "ECDSA Curve P-256 with SHA-256"
-              ],
-              "title": "Algorithm Text",
-              "description": "The textual name of the Algorithm used to create the key."
-            }
-          },
-          "additionalProperties": true
+          "$ref": "#/definitions/algorithm"
         },
         "digest_type": {
           "type": "object",
@@ -102,12 +95,7 @@
       ],
       "properties": {
         "rdata": {
-          "type": "string",
-          "examples": [
-            "257 3 5 ZhCa3rGLofZcndFN2aVd=="
-          ],
-          "title": "RDATA",
-          "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+          "$ref": "#/definitions/rdata"
         },
         "flags": {
           "type": "integer",
@@ -142,28 +130,7 @@
           "additionalProperties": true
         },
         "algo": {
-          "type": "object",
-          "title": "Algorithm",
-          "description": "",
-          "properties": {
-            "id": {
-              "type": "integer",
-              "examples": [
-                5
-              ],
-              "title": "Algorithm ID",
-              "description": "Identifies the cryptographic algorithm used to create the key."
-            },
-            "txt": {
-              "type": "string",
-              "examples": [
-                "RSA/SHA-1"
-              ],
-              "title": "Algorithm Text",
-              "description": "The textual name of the Algorithm used to create the key."
-            }
-          },
-          "additionalProperties": true
+          "$ref": "#/definitions/algorithm"
         },
         "pub_key": {
           "type": "string",
@@ -176,6 +143,22 @@
       },
       "additionalProperties": true
     },
+    "key_tag": {
+      "type": "integer",
+      "examples": [
+        2642
+      ],
+      "title": "Key Tag",
+      "description": "The \"key Tag\" is a two octet quantity that is used to efficiently select between multiple keys which may be applicable and thus check that a public key about to be used for the computationally expensive effort to check the signature is possibly valid."
+    },
+    "rdata": {
+      "type": "string",
+      "examples": [
+        "2371 13 1 1F987CC6583E92DF0890718C42"
+      ],
+      "title": "RDATA",
+      "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+    },
     "signature": {
       "type": "object",
       "title": "Signature",
@@ -185,12 +168,7 @@
       ],
       "properties": {
         "rdata": {
-          "type": "string",
-          "examples": [
-            "A 5 3 86400 20030322173103 20030220173103 2642 example.com. oJB1W6WNGv+ldvQ3WDG0MQkg5IEhjRip8WTrPYGv07h108dUKGMeDPKijVCHX3DDKdfb+v6oB9wfuh3DTJXUAfI/M0zmO/zz8bW0Rznl8O3tGNazPwQKkRN20XPXV6nwwfoXmJQbsLNrLfkGJ5D6fwFm8nN+6pBzeDQfsS3Ap3o="
-          ],
-          "title": "RDATA",
-          "description": "A variable length string of octets that describes the resource. The format of this information varies according to the TYPE and CLASS of the resource record."
+          "$ref": "#/definitions/rdata"
         },
         "type_covered": {
           "type": "string",
@@ -201,28 +179,7 @@
           "description": "Identifies the type of the other RRs that is covered by this SIG record."
         },
         "algo": {
-          "type": "object",
-          "title": "algorithm",
-          "description": "",
-          "properties": {
-            "id": {
-              "type": "integer",
-              "examples": [
-                5
-              ],
-              "title": "Algorithm ID",
-              "description": "Identifies the cryptographic algorithm used to create the signature."
-            },
-            "txt": {
-              "type": "string",
-              "examples": [
-                "RSA/SHA-1"
-              ],
-              "title": "Algorithm Text",
-              "description": "The textual name of the Algorithm."
-            }
-          },
-          "additionalProperties": true
+          "$ref": "#/definitions/algorithm"
         },
         "labels": {
           "type": "integer",
@@ -257,12 +214,7 @@
           "description": "The timestamp, expressed as seconds since epoch, for when the signature was created."
         },
         "key_tag": {
-          "type": "integer",
-          "examples": [
-            2642
-          ],
-          "title": "Key Tag",
-          "description": "The \"key Tag\" is a two octet quantity that is used to efficiently select between multiple keys which may be applicable and thus check that a public key about to be used for the computationally expensive effort to check the signature is possibly valid."
+          "$ref": "#/definitions/algorithm"
         },
         "signer": {
           "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
