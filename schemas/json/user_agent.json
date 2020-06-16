@@ -37,5 +37,5 @@
       "description": "This object describes application details extracted from the User-Agent header value."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

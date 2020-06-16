@@ -58,7 +58,7 @@
           "description": "The password portion of the userinfo subcomponent."
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "host": {
       "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
@@ -98,5 +98,5 @@
       "description": "The fragment identifier component of a URI allows indirect identification of a secondary resource by reference to a primary resource and additional identifying information. A fragment identifier component is indicated by the presence of a number sign (#) character and terminated by the end of the URI."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

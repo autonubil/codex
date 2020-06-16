@@ -58,5 +58,5 @@
       "description": "The build value from the semantic version."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

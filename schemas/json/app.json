@@ -34,5 +34,5 @@
       "description": "The processor architecture for which the application is compliled."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

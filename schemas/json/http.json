@@ -136,7 +136,7 @@
           "description": "The X-Auth-Token being an unregistered header, it is subject to no formal specification. Its presence and content is always tied to a respective application. A user initially logs in by supplying a username and password. The server returns an access-token in the X-Auth-Token header. For subsequent requests the token is sent by the client in the X-Auth-Token header."
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "entity": {
       "type": "object",
@@ -210,7 +210,7 @@
           "description": "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element."
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "req": {
       "type": "object",
@@ -260,7 +260,7 @@
           "description": "The User-Agent request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent."
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "resp": {
       "type": "object",
@@ -318,8 +318,8 @@
           "description": "The Server header describes the software used by the origin server that handled the request, that is, the server that generated the response. The name of the software or product that handled the request. Usually in a format similar to User-Agent."
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

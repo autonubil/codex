@@ -78,5 +78,5 @@
       "description": "The processor architecture for which the operating system is compliled."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

@@ -71,5 +71,5 @@
       "description": "This information includes all labels from the fully qualified domain name (host.fqdn) excluding the final (left-most) label (host.hostname)."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }
