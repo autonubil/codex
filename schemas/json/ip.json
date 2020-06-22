@@ -1,0 +1,92 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/ip.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "IP Address",
+  "description": "An IPv4 or IPv6 Address and related information elements.",
+  "required": [
+    "addr"
+  ],
+  "properties": {
+    "addr": {
+      "type": "string",
+      "maxLength": 39,
+      "examples": [
+        "2001:0db8:ac10:fe01:0000:0000:0000:0000",
+        "2001:0db8:ac10:fe01::",
+        "192.168.1.11"
+      ],
+      "title": "IP Address",
+      "description": "An IPv4 or IPv6 Address"
+    },
+    "subnet": {
+      "type": "object",
+      "title": "subnet",
+      "description": "An IP subnet.",
+      "required": [ ],
+      "properties": {
+        "mask": {
+          "type": "string",
+          "examples": [
+            "255.255.255.0"
+          ],
+          "title": "subnet mask",
+          "description": "The subnet mask/"
+        },
+        "mask_size": {
+          "type": "integer",
+          "examples": [
+            24
+          ],
+          "title": "subnet mask size",
+          "description": "The length in bits of the subnet mask."
+        },
+        "prefix": {
+          "type": "string",
+          "examples": [
+            "192.168.1.0"
+          ],
+          "title": "subnet prefix",
+          "description": "The subnet address."
+        },
+        "bcast": {
+          "type": "string",
+          "examples": [
+            "192.168.1.255"
+          ],
+          "title": "broadcast address",
+          "description": "The address on the subnet which handles broadcast traffic."
+        }
+      },
+      "additionalProperties": true
+    },
+    "version": {
+      "type": "object",
+      "title": "version",
+      "description": "IP version",
+      "required": [ ],
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "examples": [
+            4,
+            6
+          ],
+          "title": "version",
+          "description": "The IP version as an integer."
+        },
+        "name": {
+          "type": "string",
+          "examples": [
+            "IPv4",
+            "IPv6"
+          ],
+          "title": "version",
+          "description": "The IP version as a string."
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
