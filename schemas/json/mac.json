@@ -1,0 +1,52 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/mac.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "MAC Address",
+  "description": "MAC address-related Information Elements",
+  "required": [ ],
+  "properties": {
+    "addr": {
+      "type": "string",
+      "examples": [
+        "14:c1:26:1a:2b:3c"
+      ],
+      "title": "MAC Address",
+      "description": "MAC address-related Information Elements"
+    },
+    "oui": {
+      "type": "object",
+      "title": "OUI",
+      "description": "Organization Unit Identifier",
+      "required": [ ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "examples": [
+            "14:c1:26"
+          ],
+          "title": "OUI ID",
+          "description": "MAC Address OUI Identifier."
+        },
+        "org": {
+          "type": "string",
+          "examples": [
+            "Nokia Corporation"
+          ],
+          "title": "OUI Organization",
+          "description": "MAC Address OUI Organization."
+        }
+      },
+      "additionalProperties": true
+    },
+    "size": {
+      "type": "integer",
+      "examples": [
+        6
+      ],
+      "title": "MAC Address Size",
+      "description": "The size of the MAC address in bytes."
+    }
+  },
+  "additionalProperties": true
+}
