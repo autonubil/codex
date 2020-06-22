@@ -18,7 +18,7 @@
           "title": "Algorithm ID",
           "description": "Identifies the cryptographic algorithm used to create the key."
         },
-        "txt": {
+        "name": {
           "type": "string",
           "examples": [
             "ECDSA Curve P-256 with SHA-256"
@@ -64,7 +64,7 @@
               "title": "Digest Type ID",
               "description": "The digest algorithm used to construct the digest."
             },
-            "txt": {
+            "name": {
               "type": "string",
               "examples": [
                 "SHA-1"
@@ -118,7 +118,7 @@
               "title": "Protocol ID",
               "description": "Identifies the protocol with which the key is used."
             },
-            "txt": {
+            "name": {
               "type": "string",
               "examples": [
                 "DNSSEC"
