@@ -18,7 +18,7 @@
       "description": "An identifier by an IP literal encapsulated within square brackets, an IPv4 address in dotted-decimal form, or a registered name."
     },
     "ip": {
-      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/ip_addr.json#",
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/ip.json#",
       "type": "string",
       "title": "IP"
     },
