@@ -2,8 +2,8 @@
   "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/http.json#",
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
-  "title": "",
-  "description": "",
+  "title": "HTTP",
+  "description": "HTTP request and response messages.",
   "required": [
     "url"
   ],
@@ -402,9 +402,6 @@
         },
         "front_end_https": {
           "type": "string",
-          "examples": [
-            ""
-          ],
           "title": "Front-End-Https",
           "description": "Front-End-Https is a Non-standard header field used by Microsoft applications and load-balancers."
         },
@@ -442,10 +439,326 @@
           "title": "If-Modified-Since",
           "description": "The If-Modified-Since request HTTP header makes the request conditional: the server will send back the requested resource, with a 200 status, only if it has been last modified after the given date."
         },
+        "if_none_match": {
+          "type": "string",
+          "examples": [
+            "\"bfc13a64729c4290ef5b2c2730249c88ca92d82d\"",
+            "W/\"67ab43\", \"54ed21\", \"7892dd\"",
+            "*"
+          ],
+          "title": "If-None-Match",
+          "description": "The If-None-Match HTTP request header makes the request conditional. For GET and HEAD methods, the server will send back the requested resource, with a 200 status, only if it doesn't have an ETag matching the given ones. For other methods, the request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed."
+        },
+        "if_range": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "If-Range",
+          "description": "The If-Range HTTP request header makes a range request conditional: if the condition is fulfilled, the range request will be issued and the server sends back a 206 Partial Content answer with the appropriate body. If the condition is not fulfilled, the full resource is sent back, with a 200 OK status."
+        },
+        "if_unmodified_since": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "If-Unmodified-Since",
+          "description": "The If-Unmodified-Since request HTTP header makes the request conditional: the server will send back the requested resource, or accept it in the case of a POST or another non-safe method, only if it has not been last modified after the given date. If the resource has been modified after the given date, the response will be a 412 (Precondition Failed) error."
+        },
+        "max_forwards": {
+          "type": "integer",
+          "examples": [
+            3
+          ],
+          "title": "Max-Forwards",
+          "description": "The Max-Forwards request-header field provides a mechanism with the TRACE and OPTIONS methods to limit the number of proxies or gateways that can forward the request to the next inbound server. This can be useful when the client is attempting to trace a request chain which appears to be failing or looping in mid-chain."
+        },
+        "origin": {
+          "type": "string",
+          "title": "Origin",
+          "description": "The Origin request header indicates where a fetch originates from. It doesn't include any path information, but only the server name. It is sent with CORS requests, as well as with POST requests. It is similar to the Referer header, but, unlike this header, it doesn't disclose the whole path."
+        },
+        "proxy_authorization": {
+          "type": "string",
+          "examples": [
+            "Basic YWxhZGRpbjpvcGVuc2VzYW1l"
+          ],
+          "title": "Proxy-Authorization",
+          "description": "The HTTP Proxy-Authorization request header contains the credentials to authenticate a user agent to a proxy server, usually after the server has responded with a 407 Proxy Authentication Required status and the Proxy-Authenticate header."
+        },
+        "proxy_connection": {
+          "type": "string",
+          "title": "Proxy-Connection",
+          "description": "The Proxy-Connection element contains a string value that specifies whether the connection is to be kept open after the request has been sent. If the value indicates that the connection can be kept open, the HTTP 1.1 proxy will accept subsequent requests that can be executed against the server URI."
+        },
+        "range": {
+          "type": "string",
+          "examples": [
+            "bytes=200-1000, 2000-6576, 19000- "
+          ],
+          "title": "Range",
+          "description": "The Range HTTP request header indicates the part of a document that the server should return."
+        },
+        "referer": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/uri.json#",
+          "title": "Referer",
+          "description": "The Referer request header contains the address of the previous web page from which a link to the currently requested page was followed."
+        },
+        "save_data": {
+          "type": "integer",
+          "examples": [
+            1
+          ],
+          "title": "Save-Data",
+          "description": "The Save-Data header field is a boolean which, in requests, indicates the client's preference for reduced data usage. A numerical value indicating whether the client wants to opt in to reduced data usage mode. on indicates yes, while off (the default) indicates no."
+        },
+        "sec_fetch_dest": {
+          "type": "string",
+          "examples": [
+            "script"
+          ],
+          "title": "Sec-Fetch-Dest",
+          "description": "The Sec-Fetch-Dest fetch metadata header indicates the request's destination, that is how the fetched data will be used."
+        },
+        "sec_fetch_mode": {
+          "type": "string",
+          "examples": [
+            "cors",
+            "navigate",
+            "no-cors",
+            "same-origin",
+            "websocket"
+          ],
+          "title": "Sec-Fetch-Mode",
+          "description": "The Sec-Fetch-Mode fetch metadata header indicates the request's mode."
+        },
+        "sec_fetch_site": {
+          "type": "string",
+          "examples": [
+            "cross-site",
+            "same-origin",
+            "same-site",
+            "none"
+          ],
+          "title": "Sec-Fetch-Site",
+          "description": "The Sec-Fetch-Site fetch metadata header indicates the relationship between a request initiator's origin and the origin of the resource."
+        },
+        "sec_fetch_user": {
+          "type": "integer",
+          "examples": [
+            1
+          ],
+          "title": "Sec-Fetch-User",
+          "description": "The Sec-Fetch-User fetch metadata header indicates whether or not a navigation request was triggered by a user activation."
+        },
+        "te": {
+          "type": "string",
+          "examples": [
+            "trailers, deflate;q=0.5"
+          ],
+          "title": "TE",
+          "description": "The TE request header specifies the transfer encodings the user agent is willing to accept."
+        },
+        "upgrade_insecure_requests": {
+          "type": "integer",
+          "examples": [
+            1
+          ],
+          "title": "Upgrade-Insecure-Requests",
+          "description": "The HTTP Upgrade-Insecure-Requests request header sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the upgrade-insecure-requests CSP directive."
+        },
         "user_agent": {
           "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
           "title": "User-Agent",
           "description": "The User-Agent request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent."
+        },
+        "x_att_deviceid": {
+          "type": "string",
+          "examples": [
+            "LG-LG306G/V100",
+            "SAMSUNG-SM-N900A/N900AUCUCNC2"
+          ],
+          "title": "X-ATT-DeviceId",
+          "description": "The X-ATT-DeviceId request header is typically used to identify the make, model, and firmware of AT&T devices."
+        },
+        "x_authenticated_groups": {
+          "type": "string",
+          "examples": [
+            "TERBUDovLzE5Mi4xNjguMTIuMTAwL289bXljb21wYW55LCBvdT1lbmdpbmVlcmluZw=="
+          ],
+          "title": "X-Authenticated-Groups",
+          "description": "The X-Authenticated-Groups header is a base-64 encoded representation of the groups to which the authenticated user belongs."
+        },
+        "x_authenticated_user": {
+          "type": "string",
+          "examples": [
+            "TERBUDovLzE5Mi4xNjguMTIuMTAwL289bXljb21wYW55LCBvdT1lbmdpbmVlcmluZw=="
+          ],
+          "title": "X-Authenticated-User",
+          "description": "The X-Authenticated-User header is a base-64 encoded representation of the authenticated user name."
+        },
+        "x_bluecoat_via": {
+          "type": "string",
+          "title": "X-Bluecoat-Via",
+          "description": "The purpose of the X-Bluecoat-Via header is to detect loops in the network. If the proxy receives a request with the exact same X-Bluecoat-Via header that it generates on the server-side, it knows that the request was generated from itself and it will not be propagated. Each proxy generates a different X-Bluecoat-Via header."
+        },
+        "x_client_ip": {
+          "type": "string",
+          "examples": [
+            "192.168.1.11"
+          ],
+          "title": "X-Client-IP",
+          "description": "The X-Client-IP header field is the IP source address of the encapsulated HTTP request. The IP address MUST be a dotted-decimal IPv4 address or an IPv6 hex address."
+        },
+        "x_csrf_token": {
+          "type": "string",
+          "examples": [
+            "i8XNjC4b8KVok4uw5RftR38Wgp2BFwql"
+          ],
+          "title": "X-Csrf-Token",
+          "description": "The X-Csrf-Token request header contains a value previously provided in the server cookie which can be used to prevent CSRF attacks."
+        },
+        "x_device_id": {
+          "type": "string",
+          "title": "X-Device-ID",
+          "description": "The X-Device-ID header contains an identifier for the device sending the request."
+        },
+        "x_flash_version": {
+          "type": "string",
+          "examples": [
+            "10,0,32,18"
+          ],
+          "title": "X-Flash-Version",
+          "description": "The X-Flash-Version request header contains the version of Adobe Flash running on the client."
+        },
+        "x_forwarded_for": {
+          "type": "string",
+          "examples": [
+            "203.0.113.195, 70.41.3.18, 150.172.238.178"
+          ],
+          "title": "X-Forwarded-For",
+          "description": "The X-Forwarded-For (XFF) header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or a load balancer. When traffic is intercepted between clients and servers, server access logs contain the IP address of the proxy or load balancer only. To see the original IP address of the client, the X-Forwarded-For request header is used."
+        },
+        "x_forwarded_host": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/host.json#",
+          "examples": [
+            "id42.example-cdn.com"
+          ],
+          "title": "X-Forwarded-Host",
+          "description": "The X-Forwarded-Host (XFH) header is a de-facto standard header for identifying the original host requested by the client in the Host HTTP request header."
+        },
+        "x_forwarded_proto": {
+          "type": "string",
+          "examples": [
+            "https"
+          ],
+          "title": "X-Forwarded-Proto",
+          "description": "The X-Forwarded-Proto (XFP) header is a de-facto standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer. Your server access logs contain the protocol used between the server and the load balancer, but not the protocol used between the client and the load balancer. To determine the protocol used between the client and the load balancer, the X-Forwarded-Proto request header can be used."
+        },
+        "x_forwarded_server": {
+          "type": "string",
+          "title": "X-Forwarded-Server",
+          "description": "The X-Forwarded-Server header contains the hostname of the proxy server."
+        },
+        "x_http_method_override": {
+          "type": "string",
+          "examples": [
+            "PUT",
+            "DELETE"
+          ],
+          "title": "X-HTTP-Method-Override",
+          "description": "The X-HTTP-Method-Override header is used to override the HTTP method of the request. It can be used to channel a PUT or DELETE request through a POST request."
+        },
+        "x_idfa": {
+          "type": "string",
+          "title": "X-IDFA",
+          "description": "The X-IDFA request header contains an Identifier for Advertising (IDFA)."
+        },
+        "x_idfv": {
+          "type": "string",
+          "title": "X-IDFV",
+          "description": "The X-IDFV request header contains an Identifier for Vendor (IDFV)."
+        },
+        "x_method_override": {
+          "type": "string",
+          "examples": [
+            "PUT",
+            "DELETE"
+          ],
+          "title": "X-Method-Override",
+          "description": "The X-Method-Override header is used to override the HTTP method of the request. It can be used to channel a PUT or DELETE request through a POST request."
+        },
+        "x_nonce": {
+          "type": "string",
+          "title": "X-Nonce",
+          "description": "The X-Nonce header contains a base64-encoded client nonce."
+        },
+        "x_organization_id": {
+          "type": "string",
+          "title": "X-Organization-ID",
+          "description": "The X-Organization-ID contains the UUID for an organization."
+        },
+        "x_profile": {
+          "type": "string",
+          "title": "X-Profile",
+          "description": "The X-Profile request header."
+        },
+        "x_profile_token": {
+          "type": "string",
+          "title": "X-Profile-Token",
+          "description": "The X-Profile-Token request header."
+        },
+        "x_request_id": {
+          "type": "string",
+          "title": "X-Request-ID",
+          "description": "The X-Request-ID request header contains an ID sent by a client to the server. Messages from the server may include this value in the X-Correlation-ID of any response which is related to the request."
+        },
+        "x_requested_with": {
+          "type": "string",
+          "examples": [
+            "XMLHttpRequest"
+          ],
+          "title": "X-Requested-With",
+          "description": "The X-Requested-With request header is typically used to identify Ajax requests."
+        },
+        "x_server_ip": {
+          "type": "string",
+          "examples": [
+            "10.10.199.199"
+          ],
+          "title": "X-Server-IP",
+          "description": "The X-Server-IP header is the IP destination address of the encapsulated HTTP request. It specifies the HTTP destination host and not the IP address of any intermediate proxy server. The IP address MUST be a dotted-decimal IPv4 address or an IPv6 hex address."
+        },
+        "x_subscriber_id": {
+          "type": "string",
+          "title": "X-Subscriber-ID",
+          "description": "The X-Subscriber-ID header contains a unique subscriber ID of the user who issued the HTTP request. This MAY be an e-mail address but the exact format of the subscriber ID is not specified by ICAP or this document."
+        },
+        "x_time": {
+          "type": "string",
+          "examples": [
+            3600
+          ],
+          "title": "X-Time",
+          "description": "The X-Time request header."
+        },
+        "x_uidh": {
+          "type": "string",
+          "title": "X-UIDH",
+          "description": "The X-UIDH request header contains Verizon's Advertising ID Header."
+        },
+        "x_user_agent": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
+          "title": "X-User-Agent",
+          "description": "The X-User-Agent header is often inserted by some independent messenger between the actual client and the server, like a proxy, load balancer or transcoder, but also some *XMLHttpRequest* based libraries. It often identifies the messenger itself. The User-Agent header should still represent the actual client. You also see this header sometimes in emails, this then represents the email program/software responsible for sending the message."
+        },
+        "x_wap_profile": {
+          "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/uri.json#",
+          "examples": [
+            "http://www.spreadtrum.com/wap/8810G_UAProfile.xml"
+          ],
+          "title": "X-Wap-Profile",
+          "description": "The X-Wap-Profile request header is typically used to link to an XML file on the Internet with a full description and details about the device currently connecting."
         }
       },
       "additionalProperties": true
