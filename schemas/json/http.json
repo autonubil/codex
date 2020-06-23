@@ -254,6 +254,194 @@
           "title": "request size/length",
           "description": "The size/length of the HTTP request."
         },
+        "a_im": {
+          "type": "string",
+          "examples": [
+            "vcdiff, gdiff;q=0.3"
+          ],
+          "title": "A-IM",
+          "description": "The A-IM request header is similar to Accept, but restricts the instance-manipulations that are acceptable in the response. A response may be the result of applying multiple instance-manipulations."
+        },
+        "accept": {
+          "type": "string",
+          "examples": [
+            "text/plain; q=0.5, text/html"
+          ],
+          "title": "Accept",
+          "description": "The Accept request header advertises which content types, expressed as MIME types, the client is able to understand."
+        },
+        "accept_charset": {
+          "type": "string",
+          "examples": [
+            "iso-8859-5, unicode-1-1;q=0.8"
+          ],
+          "title": "Accept-Charset",
+          "description": "The Accept-Charset request header advertises which character encodings the client understands."
+        },
+        "accept_datetime": {
+          "type": "string",
+          "examples": [
+            "Thu, 31 May 2007 20:35:00 GMT"
+          ],
+          "title": "Accept-Datetime",
+          "description": "The Accept-Datetime request header is transmitted by a user agent to indicate it wants to access a past state of an Original Resource."
+        },
+        "accept_encoding": {
+          "type": "string",
+          "examples": [
+            "compress;q=0.5, gzip;q=1.0"
+          ],
+          "title": "Accept-Encoding",
+          "description": "The Accept-Encoding request header advertises which content encoding, usually a compression algorithm, the client is able to understand."
+        },
+        "accept_language": {
+          "type": "string",
+          "examples": [
+            "da, en-gb;q=0.8, en;q=0.7"
+          ],
+          "title": "Accept-Language",
+          "description": "The Accept-Language request header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)"
+        },
+        "access_control_request_headers": {
+          "type": "string",
+          "examples": [
+            "X-Custom-Header, Upgrade-Insecure-Requests"
+          ],
+          "title": "Access-Control-Request-Headers",
+          "description": "The Access-Control-Request-Headers request header is used by browsers when issuing a preflight request, to let the server know which HTTP headers the client might send when the actual request is made."
+        },
+        "access_control_request_method": {
+          "type": "string",
+          "examples": [
+            "POST"
+          ],
+          "title": "Access-Control-Request-Method",
+          "description": "The Access-Control-Request-Method request header is used by browsers when issuing a preflight request, to let the server know which HTTP method will be used when the actual request is made. This header is necessary as the preflight request is always an OPTIONS and doesn't use the same method as the actual request."
+        },
+        "authorization": {
+          "type": "string",
+          "examples": [
+            "Basic YWxhZGRpbjpvcGVuc2VzYW1l"
+          ],
+          "title": "Authorization",
+          "description": "The HTTP Authorization request header contains the credentials to authenticate a user agent with a server, usually, but not necessarily, after the server has responded with a 401 Unauthorized status and the WWW-Authenticate header."
+        },
+        "cookie": {
+          "type": "string",
+          "examples": [
+            "PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;"
+          ],
+          "title": "Cookie",
+          "description": "The Cookie HTTP request header contains stored HTTP cookies previously sent by the server with the Set-Cookie header."
+        },
+        "cookie2": {
+          "type": "string",
+          "examples": [
+            "$Version=\"1\""
+          ],
+          "title": "Cookie2",
+          "description": "The obsolete Cookie2 HTTP request header used to advise the server that the user agent understands *new-style* cookies, but nowadays user agents will use the Cookie header instead, not this one."
+        },
+        "device_memory": {
+          "type": "integer",
+          "examples": [
+            8
+          ],
+          "title": "Device-Memory",
+          "description": "The Device-Memory header is a Device Memory API header that works like Client Hints header which represents the approximate amount of RAM client device has."
+        },
+        "dnt": {
+          "type": "integer",
+          "examples": [
+            0,
+            1,
+            null
+          ],
+          "title": "DNT",
+          "description": "The DNT (Do Not Track) request header indicates the user's tracking preference. It lets users indicate whether they would prefer privacy rather than personalized content."
+        },
+        "dpr": {
+          "type": "number",
+          "examples": [
+            "1.0"
+          ],
+          "title": "DPR",
+          "description": "The DPR header is a Client Hints headers which represents the client device pixel ratio (DPR), which is the the number of physical device pixels corresponding to every CSS pixel."
+        },
+        "early_data": {
+          "type": "integer",
+          "examples": [
+            1
+          ],
+          "title": "Early-Data",
+          "description": "The Early-Data header is set by an intermediary to indicate that the request has been conveyed in TLS early data, and also indicates that the intermediary understands the 425 (Too Early) status code."
+        },
+        "expect": {
+          "type": "string",
+          "examples": [
+            "100-continue"
+          ],
+          "title": "Expect",
+          "description": "The Expect HTTP request header indicates expectations that need to be fulfilled by the server in order to properly handle the request."
+        },
+        "forwarded": {
+          "type": "string",
+          "examples": [
+            "for=192.0.2.60;proto=http;by=203.0.113.43"
+          ],
+          "title": "Forwarded",
+          "description": "The Forwarded header contains information from the client-facing side of proxy servers that is altered or lost when a proxy is involved in the path of the request."
+        },
+        "from": {
+          "type": "string",
+          "examples": [
+            "webmaster@example.org"
+          ],
+          "title": "From",
+          "description": "The From request header contains an Internet email address for a human user who controls the requesting user agent."
+        },
+        "front_end_https": {
+          "type": "string",
+          "examples": [
+            ""
+          ],
+          "title": "Front-End-Https",
+          "description": "Front-End-Https is a Non-standard header field used by Microsoft applications and load-balancers."
+        },
+        "host": {
+          "type": "string",
+          "examples": [
+            "www.example.org"
+          ],
+          "title": "Host",
+          "description": "The Host request header specifies the host and port number of the server to which the request is being sent. If no port is included, the default port for the service requested (e.g., 443 for an HTTPS URL, and 80 for an HTTP URL) is implied."
+        },
+        "http2_settings": {
+          "type": "string",
+          "examples": [
+            "token68"
+          ],
+          "title": "HTTP2-Settings",
+          "description": "The HTTP2-Settings header field is a connection-specific header field that includes parameters that govern the HTTP/2 connection, provided in anticipation of the server accepting the request to upgrade."
+        },
+        "if_match": {
+          "type": "string",
+          "examples": [
+            "\"bfc13a64729c4290ef5b2c2730249c88ca92d82d\"",
+            "\"67ab43\", \"54ed21\", \"7892dd\"",
+            "*"
+          ],
+          "title": "If-Match",
+          "description": "The If-Match HTTP request header makes the request conditional. For GET and HEAD methods, the server will send back the requested resource only if it matches one of the listed ETags. For PUT and other non-safe methods, it will only upload the resource in this case."
+        },
+        "if_modified_since": {
+          "type": "string",
+          "examples": [
+            "Sat, 29 Oct 1994 19:43:31 GMT"
+          ],
+          "title": "If-Modified-Since",
+          "description": "The If-Modified-Since request HTTP header makes the request conditional: the server will send back the requested resource, with a 200 status, only if it has been last modified after the given date."
+        },
         "user_agent": {
           "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
           "title": "User-Agent",
