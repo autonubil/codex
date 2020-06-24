@@ -615,7 +615,7 @@ Attribute | Value
 **IE Name** | `http.req.if_unmodified_since`
 **Tier** | `common`
 **Data Type** | `string`
-**Semantic** | `default`
+**Semantic** | `httpdate`
 **Reference** | [RFC 7232, section 3.4: If-Unmodified-Since](https://tools.ietf.org/html/rfc7232#section-3.4)
 **Description** | The `If-Unmodified-Since` request HTTP header makes the request conditional: the server will send back the requested resource, or accept it in the case of a `POST` or another non-safe method, only if it has not been last modified after the given date. If the resource has been modified after the given date, the response will be a `412 (Precondition Failed)` error.
 
@@ -876,7 +876,7 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.req.x_forwarded_host`
 **Tier** | `common`
-**Data Type** | `string`
+**Data Type** | object: `host`
 **Semantic** | `default`
 **Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host)
 **Description** | The `X-Forwarded-Host` (XFH) header is a de-facto standard header for identifying the original host requested by the client in the `Host` HTTP request header.
@@ -1146,8 +1146,9 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.accept_ch_lifetime`
 **Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
+**Data Type** | `integer`
+**Semantic** | `quantity`
+**Unit** | `seconds`
 **Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime)
 **Description** | The `Accept-CH-Lifetime` response header is set by the server to specify the persistence of Accept-CH header value that specifies for which Client Hints headers client should include in subsequent requests.
 
@@ -1698,8 +1699,8 @@ Attribute | Value
 --- | ---
 **IE Name** | `http.resp.x_attribute_prefix`
 **Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
+**Data Type** | `unsigned`
+**Semantic** | `quantity`
 **Reference** | [draft-stecher-icap-subid-00, section-4.4: X-Attribute-Prefix](https://tools.ietf.org/html/draft-stecher-icap-subid-00#section-4.4)
 **Description** | The `X-Attribute-Prefix` header is used by the ICAP server to tell the client how many characters of the original URL's path (not the host name) are significant.
 

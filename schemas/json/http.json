@@ -813,10 +813,588 @@
           "title": "Reason-Phrase",
           "description": "The Reason-Phrase is intended to give a short textual description of the Status-Code."
         },
+        "accept_ch": {
+          "type": "string",
+          "examples": [
+            "DPR, Viewport-Width"
+          ],
+          "title": "Accept-CH",
+          "description": "The Accept-CH response header is set by the server to specify which Client Hints headers a client should include in subsequent requests."
+        },
+        "accept_ch_lifetime": {
+          "type": "string",
+          "examples": [
+            86400
+          ],
+          "title": "Accept-CH-Lifetime",
+          "description": "The Accept-CH-Lifetime response header is set by the server to specify the persistence of Accept-CH header value that specifies for which Client Hints headers client should include in subsequent requests."
+        },
+        "accept_patch": {
+          "type": "string",
+          "examples": [
+            "text/example;charset=utf-8"
+          ],
+          "title": "Accept-Patch",
+          "description": "The Accept-Patch response header advertises which media-type the server is able to understand."
+        },
+        "accept_ranges": {
+          "type": "string",
+          "examples": [
+            "bytes",
+            "none"
+          ],
+          "title": "Accept-Ranges",
+          "description": "The Accept-Ranges response HTTP header is a marker used by the server to advertise its support of partial requests. The value of this field indicates the unit that can be used to define a range."
+        },
+        "access_control_allow_credentials": {
+          "type": "string",
+          "examples": [
+            "true",
+            "false"
+          ],
+          "title": "Access-Control-Allow-Credentials",
+          "description": "The Access-Control-Allow-Credentials response header tells browsers whether to expose the response to frontend JavaScript code when the request's credentials mode is include."
+        },
+        "access_control_allow_headers": {
+          "type": "string",
+          "examples": [
+            "X-Custom-Header, Upgrade-Insecure-Requests"
+          ],
+          "title": "Access-Control-Allow-Headers",
+          "description": "The Access-Control-Allow-Headers response header is used in response to a preflight request which includes Access-Control-Request-Headers to indicate which HTTP headers can be used during the actual request."
+        },
+        "access_control_allow_methods": {
+          "type": "string",
+          "examples": [
+            "POST, GET, OPTIONS",
+            "*"
+          ],
+          "title": "Access-Control-Allow-Methods",
+          "description": "The Access-Control-Allow-Methods response header specifies the method or methods allowed when accessing the resource in response to a preflight request."
+        },
+        "access_control_allow_origin": {
+          "type": "string",
+          "examples": [
+            "https://developer.mozilla.org",
+            "*"
+          ],
+          "title": "Access-Control-Allow-Origin",
+          "description": "The Access-Control-Allow-Origin response header indicates whether the response can be shared with requesting code from the given origin."
+        },
+        "access_control_expose_headers": {
+          "type": "string",
+          "examples": [
+            "Content-Length, X-Kuma-Revision",
+            "*",
+            "*, Authorization"
+          ],
+          "title": "Access-Control-Expose-Headers",
+          "description": "The Access-Control-Expose-Headers response header indicates which headers can be exposed as part of the response by listing their names."
+        },
+        "access_control_max_age": {
+          "type": "integer",
+          "examples": [
+            5,
+            300
+          ],
+          "title": "Access-Control-Max-Age",
+          "description": "The Access-Control-Max-Age response header indicates how long the results of a preflight request (that is the information contained in the Access-Control-Allow-Methods and Access-Control-Allow-Headers headers) can be cached."
+        },
+        "age": {
+          "type": "integer",
+          "examples": [
+            24
+          ],
+          "title": "Age",
+          "description": "The Age header contains the time in seconds the object has been in a proxy cache."
+        },
+        "alt_svc": {
+          "type": "string",
+          "examples": [
+            "h3-25=\":443\"; ma=3600, h2=\":443\"; ma=3600"
+          ],
+          "title": "Alt-Svc",
+          "description": "The Alt-Svc HTTP response header is used to advertise alternative services through which the same resource can be reached. An alternative service is defined by a protocol/host/port combination."
+        },
+        "clear_site_data": {
+          "type": "string",
+          "examples": [
+            "\"cache\", \"cookies\"",
+            "*"
+          ],
+          "title": "Clear-Site-Data",
+          "description": "The Clear-Site-Data header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins."
+        },
+        "content_disposition": {
+          "type": "string",
+          "examples": [
+            "form-data; name=\"fieldName\"; filename=\"filename.jpg\""
+          ],
+          "title": "Content-Disposition",
+          "description": "In a regular HTTP response, the Content-Disposition response header is a header indicating if the content is expected to be displayed inline in the browser, that is, as a Web page or as part of a Web page, or as an attachment, that is downloaded and saved locally."
+        },
+        "content_range": {
+          "type": "string",
+          "examples": [
+            "bytes 200-1000/67589"
+          ],
+          "title": "Content-Range",
+          "description": "The Content-Range response HTTP header indicates where in a full body message a partial message belongs."
+        },
+        "content_security_policy": {
+          "type": "string",
+          "examples": [
+            "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+          ],
+          "title": "Content-Security-Policy",
+          "description": "The HTTP Content-Security-Policy response header allows web site administrators to control resources the user agent is allowed to load for a given page."
+        },
+        "content_security_policy_report_only": {
+          "type": "string",
+          "examples": [
+            "default-src https:; report-uri /csp-violation-report-endpoint/"
+          ],
+          "title": "Content-Security-Policy-Report-Only",
+          "description": "The HTTP Content-Security-Policy-Report-Only response header allows web developers to experiment with policies by monitoring (but not enforcing) their effects."
+        },
+        "cross_origin_resource_policy": {
+          "type": "string",
+          "examples": [
+            "same-origin"
+          ],
+          "title": "Cross-Origin-Resource-Policy",
+          "description": "The HTTP Cross-Origin-Resource-Policy response header conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the given resource."
+        },
+        "digest": {
+          "type": "string",
+          "examples": [
+            "sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637"
+          ],
+          "title": "Digest",
+          "description": "The Digest response HTTP header provides a digest of the requested resource."
+        },
+        "etag": {
+          "type": "string",
+          "examples": [
+            "W/\"0815\""
+          ],
+          "title": "ETag",
+          "description": "The ETag HTTP response header is an identifier for a specific version of a resource. It lets caches be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed."
+        },
+        "expect_ct": {
+          "type": "string",
+          "examples": [
+            "max-age=86400, enforce, report-uri=\"https://foo.example/report\""
+          ],
+          "title": "Expect-CT",
+          "description": "The Expect-CT header lets sites opt in to reporting and/or enforcement of Certificate Transparency requirements, to prevent the use of misissued certificates for that site from going unnoticed."
+        },
+        "expires": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "Expires",
+          "description": "The Expires header contains the date/time after which the response is considered stale. Invalid dates, like the value 0, represent a date in the past and mean that the resource is already expired."
+        },
+        "feature_policy": {
+          "type": "string",
+          "examples": [
+            "microphone 'none'; geolocation 'none'"
+          ],
+          "title": "Feature-Policy",
+          "description": "The HTTP Feature-Policy header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any <iframe> elements in the document."
+        },
+        "im": {
+          "type": "string",
+          "examples": [
+            "diffe, deflate, range"
+          ],
+          "title": "IM",
+          "description": "The IM response header indicates the instance-manipulations, if any, that have been applied to the instance represented by the response. Typical instance manipulations include *delta encoding* and *compression*."
+        },
+        "large_allocation": {
+          "type": "integer",
+          "examples": [
+            0,
+            500
+          ],
+          "title": "Large-Allocation",
+          "description": "The non-standard Large-Allocation response header tells the browser that the page being loaded is going to want to perform a large allocation. It is currently only implemented in Firefox, but is harmless to send to every browser."
+        },
+        "last_modified": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "Last-Modified",
+          "description": "The Last-Modified response HTTP header contains the date and time at which the origin server believes the resource was last modified. It is used as a validator to determine if a resource received or stored is the same. Less accurate than an ETag header, it is a fallback mechanism. Conditional requests containing If-Modified-Since or If-Unmodified-Since headers make use of this field."
+        },
+        "location": {
+          "type": "string",
+          "examples": [
+            "/index.html"
+          ],
+          "title": "Location",
+          "description": "The Location response header indicates the URL to redirect a page to. It only provides a meaning when served with a 3xx (redirection) or 201 (created) status response."
+        },
+        "memento_datetime": {
+          "type": "string",
+          "examples": [
+            "Wed, 30 May 2007 18:47:52 GMT"
+          ],
+          "title": "Memento-Datetime",
+          "description": "The Memento-Datetime response header response header is used by a server to indicate that a response reflects a prior state of an Original Resource. Its value expresses the datetime of that state."
+        },
+        "nel": {
+          "type": "string",
+          "examples": [
+            "{ \"report_to\": \"nel\", \"max_age\": 31556952 }"
+          ],
+          "title": "NEL",
+          "description": "The HTTP NEL response header is used to configure network request logging."
+        },
+        "p3p": {
+          "type": "string",
+          "examples": [
+            "policyref=\"http://catalog.example.com/P3P/PolicyReferences.xml\""
+          ],
+          "title": "P3P",
+          "description": "The P3P response header sets P3P policy to be used by the browser."
+        },
+        "proxy_authenticate": {
+          "type": "string",
+          "examples": [
+            "Basic realm=\"Access to the internal site\""
+          ],
+          "title": "Proxy-Authenticate",
+          "description": "The HTTP Proxy-Authenticate response header defines the authentication method that should be used to gain access to a resource behind a proxy server. It authenticates the request to the proxy server, allowing it to transmit the request further."
+        },
+        "public_key_pins": {
+          "type": "string",
+          "examples": [
+            "pin-sha256=\"cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=\"; pin-sha256=\"M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=\"; max-age=5184000; includeSubDomains; report-uri=\"https://www.example.org/hpkp-report\""
+          ],
+          "title": "Public-Key-Pins",
+          "description": "The HTTP Public-Key-Pins response header used to associate a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates, however, it has been removed from modern browsers and is no longer supported. Use Certificate Transparency and Expect-CT header instead."
+        },
+        "public_key_pins_report_only": {
+          "type": "string",
+          "examples": [
+            "pin-sha256=\"cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=\"; pin-sha256=\"M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=\"; max-age=5184000; includeSubDomains; report-uri=\"https://www.example.org/hpkp-report\""
+          ],
+          "title": "Public-Key-Pins-Report-Only",
+          "description": "The HTTP Public-Key-Pins-Report-Only response header was used to send reports of pinning violation to the report-uri specified in the header but, unlike Public-Key-Pins still allows browsers to connect to the server if the pinning is violated. The header is silently ignored in modern browsers as support for HPKP has been removed. Use Certificate Transparency and the Expect-CT header instead."
+        },
+        "referrer_policy": {
+          "type": "string",
+          "examples": [
+            "no-referrer",
+            "no-referrer-when-downgrade",
+            "origin",
+            "origin-when-cross-origin",
+            "same-origin",
+            "strict-origin",
+            "strict-origin-when-cross-origin",
+            "unsafe-url"
+          ],
+          "title": "Referrer-Policy",
+          "description": "The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should be included with requests."
+        },
+        "refresh": {
+          "type": "string",
+          "examples": [
+            "5; url=http://www.example.org/fresh-as-a-summer-breeze"
+          ],
+          "title": "Refresh",
+          "description": "The Refresh response header instructs the client to refresh a given URL at a specified interval. This behavior is similar to the <meta http-equiv=\"refresh\" …/> method."
+        },
+        "retry_after": {
+          "type": "string",
+          "examples": [
+            "Wed, 21 Oct 2015 07:28:00 GMT",
+            "120"
+          ],
+          "title": "Retry-After",
+          "description": "The Retry-After response HTTP header indicates how long the user agent should wait before making a follow-up request. This value may also contain a quantity of seconds."
+        },
+        "sec_websocket_accept": {
+          "type": "string",
+          "examples": [
+            "s3pPLMBiTxaQ9kYGzzhZRbK+xOo="
+          ],
+          "title": "Sec-WebSocket-Accept",
+          "description": "The Sec-WebSocket-Accept header is used in the websocket opening handshake. It would appear in the response headers. That is, this is header is sent from server to client to inform that server is willing to initiate a websocket connection."
+        },
         "server": {
           "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/user_agent.json#",
           "title": "Server",
           "description": "The Server header describes the software used by the origin server that handled the request, that is, the server that generated the response. The name of the software or product that handled the request. Usually in a format similar to User-Agent."
+        },
+        "server_timing": {
+          "type": "string",
+          "examples": [
+            "cache;desc=\"Cache Read\";dur=23.2"
+          ],
+          "title": "Server-Timing",
+          "description": "The Server-Timing header communicates one or more metrics and descriptions for a given request-response cycle. It is used to surface any backend server timing metrics (e.g. database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the PerformanceServerTiming interface."
+        },
+        "set_cookie": {
+          "type": "string",
+          "examples": [
+            "id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT"
+          ],
+          "title": "Set-Cookie",
+          "description": "The Set-Cookie HTTP response header is used to send cookies from the server to the user agent, so the user agent can send them back to the server later."
+        },
+        "set_cookie2": {
+          "type": "string",
+          "examples": [
+            "Customer=\"WILE_E_COYOTE\"; Version=\"1\"; Path=\"/acme\""
+          ],
+          "title": "Set-Cookie2",
+          "description": "The obsolete Set-Cookie2 HTTP response header used to send cookies from the server to the user agent, but has been deprecated by the specification. Use Set-Cookie instead."
+        },
+        "sourcemap": {
+          "type": "string",
+          "examples": [
+            "/path/to/file.js.map"
+          ],
+          "title": "SourceMap",
+          "description": "The SourceMap HTTP response header links generated code to a source map, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger."
+        },
+        "strict_transport_security": {
+          "type": "string",
+          "examples": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "title": "Strict-Transport-Security",
+          "description": "The Strict-Transport-Security HTTP response header field (STS header field) indicates to a UA that it MUST enforce the HSTS Policy in regards to the host emitting the response message containing this header field."
+        },
+        "timing_allow_origin": {
+          "type": "string",
+          "examples": [
+            "*",
+            "https://developer.mozilla.org"
+          ],
+          "title": "Timing-Allow-Origin",
+          "description": "The Timing-Allow-Origin response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions."
+        },
+        "tk": {
+          "type": "string",
+          "examples": [
+            "!",
+            "?",
+            "G",
+            "N",
+            "T",
+            "C",
+            "P",
+            "D",
+            "U"
+          ],
+          "title": "Tk",
+          "description": "The Tk response header indicates the tracking status that applied to the corresponding request."
+        },
+        "trailer": {
+          "type": "string",
+          "title": "Trailer",
+          "description": "The Trailer response header allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent, such as a message integrity check, digital signature, or post-processing status."
+        },
+        "transfer_encoding": {
+          "type": "string",
+          "examples": [
+            "chunked",
+            "compress",
+            "deflate",
+            "gzip",
+            "identity",
+            "gzip, chunked"
+          ],
+          "title": "Transfer-Encoding",
+          "description": "The Transfer-Encoding header specifies the form of encoding used to safely transfer the payload body to the user."
+        },
+        "vary": {
+          "type": "string",
+          "examples": [
+            "*",
+            "User-Agent"
+          ],
+          "title": "Vary",
+          "description": "The Vary HTTP response header determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server. It is used by the server to indicate which headers it used when selecting a representation of a resource in a content negotiation algorithm."
+        },
+        "www_authenticate": {
+          "type": "string",
+          "examples": [
+            "Basic realm=\"Access to the staging site\", charset=\"UTF-8\""
+          ],
+          "title": "WWW-Authenticate",
+          "description": "The HTTP WWW-Authenticate response header defines the authentication method that should be used to gain access to a resource."
+        },
+        "x_attribute": {
+          "type": "string",
+          "examples": [
+            "sport, online-sales"
+          ],
+          "title": "X-Attribute",
+          "description": "The X-Attribute header SHOULD be used to return a list of attributes to the ICAP client."
+        },
+        "x_attribute_cacheability": {
+          "type": "string",
+          "examples": [
+            "group=TERBUDovLzE5Mi4xNjguMTIuMTAwL289bXljb21wYW55LCBvdT1lbmdpbmVlcmluZw=="
+          ],
+          "title": "X-Attribute-Cacheability",
+          "description": "The X-Attribute-Cacheability header can specify that the X-Attribute response is valid for all clients or only valid for one user or one user group."
+        },
+        "x_attribute_prefix": {
+          "type": "integer",
+          "examples": [
+            10
+          ],
+          "title": "X-Attribute-Prefix",
+          "description": "The X-Attribute-Prefix header is used by the ICAP server to tell the client how many characters of the original URL's path (not the host name) are significant."
+        },
+        "x_content_digest": {
+          "type": "string",
+          "examples": [
+            "9e107d9d372bb6826bd81d3542a419d6"
+          ],
+          "title": "X-Content-Digest",
+          "description": "The X-Content-Digest response header contains a hex-encoded digest value, which is returned when the client can request that the server calculate a digest on the content with the X-Digest request header."
+        },
+        "x_content_duration": {
+          "type": "number",
+          "examples": [
+            92.6
+          ],
+          "title": "X-Content-Duration",
+          "description": "The X-Content-Duration header contains the duration of the video in seconds when serving Ogg media files."
+        },
+        "x_content_security_policy": {
+          "type": "string",
+          "examples": [
+            "default-src 'self';"
+          ],
+          "title": "X-Content-Security-Policy",
+          "description": "The X-Content-Security-Policy response header is deprecated and has been replaced by the Content-Security-Policy header. It is known that having both Content-Security-Policy and X-Content-Security-Policy or X-Webkit-CSP causes unexpected behaviours on certain versions of browsers. Please avoid using deprecated X-* headers."
+        },
+        "x_content_type_options": {
+          "type": "string",
+          "examples": [
+            "\"nosniff\""
+          ],
+          "title": "X-Content-Type-Options",
+          "description": "The X-Content-Type-Options response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed."
+        },
+        "x_correlation_id": {
+          "type": "string",
+          "title": "X-Request-ID",
+          "description": "The X-Request-ID request header contains an ID sent by a client to the server. Messages from the server may include this value in the X-Correlation-ID of any response which is related to the request."
+        },
+        "x_dns_prefetch_control": {
+          "type": "string",
+          "examples": [
+            "on",
+            "off"
+          ],
+          "title": "X-DNS-Prefetch-Control",
+          "description": "The X-DNS-Prefetch-Control HTTP response header controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth."
+        },
+        "x_frame_options": {
+          "type": "string",
+          "examples": [
+            "DENY",
+            "SAMEORIGIN"
+          ],
+          "title": "X-Frame-Options",
+          "description": "The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <frame>, <iframe>, <embed> or <object>. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites."
+        },
+        "x_icap_profile": {
+          "type": "string",
+          "examples": [
+            "default"
+          ],
+          "title": "X-ICAP-Profile",
+          "description": "The X-ICAP-Profile response header contains the applied user profile."
+        },
+        "x_infection_found": {
+          "type": "string",
+          "examples": [
+            "Type=0; Resolution=0; Threat=EICAR Test String;"
+          ],
+          "title": "X-Infection-Found",
+          "description": "The X-Infection-Found header is a semicolon-separated parameter list used to inform the ICAP client about the threats that have been found in the ICAP message body of the request."
+        },
+        "x_powered_by": {
+          "type": "string",
+          "examples": [
+            "PHP/5.4.0"
+          ],
+          "title": "X-Powered-By",
+          "description": "The X-Powered-By header specifies the technology (e.g. ASP.NET, PHP, JBoss) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)."
+        },
+        "x_response_desc": {
+          "type": "string",
+          "examples": [
+            "URL category policy envoked"
+          ],
+          "title": "X-Response-Desc",
+          "description": "The X-Response-Desc header contains a one line description about the action that the ICAP service applied on the content."
+        },
+        "x_response_info": {
+          "type": "string",
+          "examples": [
+            "Blocked"
+          ],
+          "title": "X-Response-Info",
+          "description": "The X-Response-Info header contains a one word description of the action that the ICAP service applied to the content."
+        },
+        "x_response_time": {
+          "type": "string",
+          "title": "X-Response-Time",
+          "description": "The X-Response-Time header is produced by the *response-time* npm module. This module creates a middleware that records the response time for requests in HTTP servers, and adds an X-Response-Time header to responses. The *response time* is defined here as the elapsed time from when a request enters this middleware to when the headers are written out to the client."
+        },
+        "x_ua_compatible": {
+          "type": "string",
+          "examples": [
+            "IE=11",
+            "IE=EmulateIE7"
+          ],
+          "title": "X-UA-Compatible",
+          "description": "The X-UA-Compatible response header allows web authors to choose for which version of Internet Explorer the page should be rendered. As of Internet Explorer 11, document modes have been deprecated and are no longer used. IE11 has updated support for web standards that caused issues with older websites."
+        },
+        "x_violations_found": {
+          "type": "string",
+          "examples": [
+            "2  test.zip/dir1/eicar.com  EICAR Test String  11101  2  test.zip/dir2/eicar.com  EICAR Test String  11101  2"
+          ],
+          "title": "X-Violations-Found",
+          "description": "The X-Violations-Found header provides a detailed description of all the policy violations that occurred while handling the request."
+        },
+        "x_virus_id": {
+          "type": "string",
+          "examples": [
+            "EICAR Test String"
+          ],
+          "title": "X-Virus-ID",
+          "description": "The X-Virus-ID header is a shorter alternative to the X-Infection-Found header. It can contain any virus or threat description."
+        },
+        "x_webkit_csp": {
+          "type": "string",
+          "title": "X-Webkit-CSP",
+          "description": "The X-Webkit-CSP response header is deprecated and has been replaced by the Content-Security-Policy header. It is known that having both Content-Security-Policy and X-Content-Security-Policy or X-Webkit-CSP causes unexpected behaviours on certain versions of browsers. Please avoid using deprecated X-* headers."
+        },
+        "x_xss_protection": {
+          "type": "string",
+          "examples": [
+            "0",
+            "1",
+            "1; mode=block",
+            "1; report=<reporting-uri>"
+          ],
+          "title": "X-XSS-Protection",
+          "description": "The HTTP X-XSS-Protection response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks."
         }
       },
       "additionalProperties": true
