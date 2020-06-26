@@ -1,1045 +1,538 @@
 # DNS Information Elements
 
-## `dns.version`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.version`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.payload_size`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.payload_size`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.name_server`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.name_server`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.upstream_server`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.upstream_server`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.hosts_file`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.hosts_file`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.rtt`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rtt`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.ip`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ip`
-**Tier** | `common`
-**Data Type** | `ipaddress`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.fqdn`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.fqdn`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.subdomain`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.subdomain`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.domain`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.domain`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.sld`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.sld`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.tld`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.tld`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.host`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.host`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.id`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.id`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.qr`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.qr`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.opcode`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.opcode`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.flags`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flags`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.flag`
-
-### `dns.flag.aa`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.aa`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.flag.tc`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.tc`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.flag.rd`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.rd`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.flag.ra`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.ra`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.flag.z`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.z`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.flag.ad`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.ad`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.flag.cd`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.flag.cd`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.rcode`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rcode`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.queries`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.queries`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.answers`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answers`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.authorities`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authorities`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.additionals`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additionals`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.zones`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.zones`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.prereqs`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.prereqs`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.updates`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.updates`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.query`
-
-### `dns.query.name`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.query.name`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.query.type`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.query.type`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.query.class`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.query.class`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.answer`
-
-### `dns.answer.name`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.name`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.type`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.type`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.class`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.class`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.ttl`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.ttl`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.rdlength`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.rdlength`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.rdata`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.rdata`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.a`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.a`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.answer.aaaa`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.answer.aaaa`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.authority`
-
-### `dns.authority.name`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authority.name`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.authority.type`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authority.type`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.authority.class`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authority.class`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.authority.ttl`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authority.ttl`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.authority.rdlength`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authority.rdlength`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.authority.rdata`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.authority.rdata`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.additional`
-
-### `dns.additional.name`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additional.name`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.additional.type`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additional.type`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.additional.class`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additional.class`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.additional.ttl`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additional.ttl`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.additional.rdlength`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additional.rdlength`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.additional.rdata`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.additional.rdata`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.cname`
-
-### `dns.cname.name`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.cname.name`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.dnskey`
-
-### `dns.dnskey.digest`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.dnskey.digest`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.dnskey.digest_type`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.dnskey.digest_type`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.dnskey.proto_id`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.dnskey.proto_id`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.dnskey.public_key`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.dnskey.public_key`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.ds`
-
-### `dns.ds.key_tag`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ds.key_tag`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.mx`
-
-### `dns.mx.exchange`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.mx.exchange`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.mx.preference`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.mx.preference`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.ns`
-
-### `dns.ns.dname`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ns.dname`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.nsec3`
-
-### `dns.nsec3.hash_algorithm`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.nsec3.hash_algorithm`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.nsec3.hash_data`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.nsec3.hash_data`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.nsec3.iterations`
-
-Attribute | Value
---- | ---
-**IE Name** | 
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | `dns.nsec3.iterations`
-
-### `dns.nsec3.salt`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.nsec3.salt`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.ptr.dname`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ptr.dname`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.rrsig`
-
-### `dns.rrsig.expiration`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rrsig.expiration`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.rrsig.inception`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rrsig.inception`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.rrsig.labels`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rrsig.labels`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.rrsig.signature`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rrsig.signature`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.rrsig.signer`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rrsig.signer`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.rrsig.type_covered`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.rrsig.type_covered`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.soa`
-
-### `dns.soa.expire`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.expire`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.soa.minimum`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.minimum`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.soa.mname`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.mname`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.soa.refresh`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.refresh`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.soa.retry`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.retry`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.soa.rname`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.rname`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.soa.serial`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.soa.serial`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.srv`
-
-### `dns.srv.port`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.srv.port`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.srv.priority`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.srv.priority`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.srv.target`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.srv.target`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.srv.weight`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.srv.weight`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.txt`
-
-### `dns.txt.data`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.txt.data`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.txt.attr_name`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.txt.attr_name`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.txt.attr_value`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.txt.attr_value`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-## `dns.ext`
-
-### `dns.ext.flags`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ext.flags`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.ext.flag.do`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ext.flag.do`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
-
-### `dns.ext.rcode`
-
-Attribute | Value
---- | ---
-**IE Name** | `dns.ext.rcode`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
-**Reference** | []()
-**Description** | 
+dns.version
+dns.payload_size
+dns.name_server
+dns.upstream_server
+dns.hosts_file
+dns.resp_time
+dns.rtt
+
+dns.tid
+dns.qr.id
+dns.qr.name
+dns.opcode.id
+dns.opcode.name
+dns.flags
+dns.flag.aa
+dns.flag.tc
+dns.flag.rd
+dns.flag.ra
+dns.flag.z
+dns.flag.ad
+dns.flag.cd
+dns.rcode.id
+dns.rcode.name
+
+dns.queries
+dns.answers
+dns.authorities
+dns.additionals
+dns.zones
+dns.prereqs
+dns.updates
+
+dns.query.name
+dns.query.type.id
+dns.query.type.name
+dns.query.class.id
+dns.query.class.name
+
+dns.answer.name
+dns.answer.type.id
+dns.answer.type.name
+dns.answer.class.id
+dns.answer.class.name
+dns.answer.ttl
+dns.answer.rdlength
+dns.answer.rdata
+dns.answer.[DNSType].[RDATA-related]
+
+dns.authority.name
+dns.authority.type.id
+dns.authority.type.name
+dns.authority.class.id
+dns.authority.class.name
+dns.authority.ttl
+dns.authority.rdlength
+dns.authority.rdata
+dns.authority.[DNSType].[RDATA-related]
+
+dns.additional.name
+dns.additional.type.id
+dns.additional.type.name
+dns.additional.class.id
+dns.additional.class.name
+dns.additional.ttl
+dns.additional.rdlength
+dns.additional.rdata
+dns.additional.[DNSType].[RDATA-related]
+
+a.rdata
+a.ip.addr
+
+a6.rdata
+a6.prefix_size
+a6.ipv6_suffix
+a6.prefix_name
+
+aaaa.rdata
+aaaa.ip.addr
+
+afsdb.rdata
+afsdb.subtype.id
+afsdb.subtype.name
+afsdb.host (host)
+
+amtrelay.rdata
+amtrelay.prec
+amtrelay.d
+amtrelay.type.id
+amtrelay.type.name
+amtrelay.relay
+
+apl.rdata
+apl.addr_family
+apl.prefix
+apl.n
+apl.afd_size
+apl.afd_part
+
+atma.rdata
+atma.addr
+
+avc.rdata
+
+caa.rdata
+caa.flags
+caa.tag
+caa.value
+
+cdnskey (dns.definitions.key)
+cdnskey.rdata
+cdnskey.flags
+cdnskey.proto.id
+cdnskey.proto.name
+cdnskey.algo.id
+cdnskey.algo.name
+cdnskey.pub_key
+
+cds (dns.definitions.digest)
+cds.rdata
+cds.key_tag
+cds.algo.id
+cds.algo.name
+cds.digest_type.id
+cds.digest_type.name
+cds.digest
+
+cert.rdata
+cert.cert_type.id
+cert.cert_type.name
+cert.key_tag
+cert.algo.id
+cert.algo.name
+cert.cert
+
+cname.rdata
+cname.domain (host)
+
+csync.rdata
+csync.soa_serial
+csync.flags
+csync.flag.immediate
+csync.flag.soaminimum
+csync.type_bitmap
+
+dhcid.rdata
+dhcid.id_type.id
+dhcid.id_type.name
+dhcid.digest_type.id
+dhcid.digest_type.name
+dhcid.digest
+
+dlv (dns.definitions.digest)
+dlv.rdata
+dlv.key_tag
+dlv.algo.id
+dlv.algo.name
+dlv.digest_type.id
+dlv.digest_type.name
+dlv.digest
+
+dname.rdata
+dname.target (host)
+
+dnskey (dns.definitions.key)
+dnskey.rdata
+dnskey.flags
+dnskey.proto.id
+dnskey.proto.name
+dnskey.algo.id
+dnskey.algo.name
+dnskey.pub_key
+
+doa.rdata
+doa.pen.id
+doa.pen.name
+doa.type.id
+doa.type.name
+doa.location.id
+doa.location.name
+doa.media_type
+doa.data
+
+ds.rdata
+ds.key_tag
+ds.algo.id
+ds.algo.name
+ds.digest_type.id
+ds.digest_type.name
+ds.digest
+
+eid.rdata
+eid.id
+
+eui48.rdata
+eui48.addr
+
+eui64.rdata
+eui64.addr
+
+gid.rdata
+
+gpos.rdata
+gpos.longitude
+gpos.latitude
+gpos.altitude
+
+hinfo.rdata
+hinfo.cpu
+hinfo.os
+
+hip.rdata
+hip.algo.id
+hip.algo.name
+hip.pub_key_size
+hip.hit
+hip.pub_key
+hip.rendezvous_server
+
+ipseckey.rdata
+ipseckey.prec
+ipseckey.gw_type.id
+ipseckey.gw_type.name
+ipseckey.algo.id
+ipseckey.algo.name
+ipseckey.gw
+ipseckey.pub_key
+
+isdn.rdata
+isdn.addr
+isdn.subaddr
+
+key (dns.definitions.key)
+key.rdata
+key.flags
+key.proto.id
+key.proto.name
+key.algo.id
+key.algo.name
+key.pub_key
+
+kx.rdata
+kx.pref
+kx.exch (host)
+
+l32.rdata
+l32.pref
+l32.locator
+
+l64.rdata
+l64.pref
+l64.locator
+
+loc.rdata
+loc.ver
+loc.horiz_precision
+loc.vert_precision
+loc.latitude
+loc.longitude
+loc.altitude
+
+lp.rdata
+lp.pref
+lp.fqdn (host)
+
+mb.rdata
+mb.domain (host)
+
+md.rdata
+md.domain (host)
+
+mf.rdata
+mf.domain (host)
+
+mg.rdata
+mg.domain (host)
+
+minfo.rdata
+minfo.rmailbx (host)
+minfo.emailbx (host)
+
+mr.rdata
+mr.domain (host)
+
+mx.rdata
+mx.pref
+mx.exch (host)
+
+naptr.rdata
+naptr.order
+naptr.pref
+naptr.flags
+naptr.services
+naptr.regex
+naptr.replacement (host)
+
+nid.rdata
+nid.pref
+nid.node_id
+
+nimloc.rdata
+nimloc.locator
+
+ninfo.rdata
+ninfo.zs_data
+
+ns.rdata
+ns.domain (host)
+
+nsap.rdata
+nsap.addr
+
+nsap_ptr.rdata
+nsap_ptr.domain (host)
+
+nsec.rdata
+nsec.domain_next (host)
+nsec.type_bitmap
+
+nsec3.rdata
+nsec3.algo.id
+nsec3.algo.name
+nsec3.flags
+nsec3.iterations
+nsec3.salt_size
+nsec3.salt
+nsec3.hash_size
+nsec3.next_hashed_owner
+nsec3.type_bitmap
+
+nsec3param.rdata
+nsec3param.algo.id
+nsec3param.algo.name
+nsec3param.flags
+nsec3param.iterations
+nsec3param.salt_size
+nsec3param.salt
+
+null.rdata
+
+nxt.rdata
+nxt.next (host)
+nxt.type_bitmap
+
+openpgpkey.rdata
+openpgpkey.key
+
+opt.rdata
+opt.code
+opt.size
+opt.data
+opt.rcode_ext.id
+opt.rcode_ext.name
+opt.ver
+opt.flag.do
+opt.z
+
+ptr.rdata
+ptr.domain (host)
+
+px.rdata
+px.pref
+px.map822 (host)
+px.mapx400 (host)
+
+rkey (dns.definitions.key)
+rkey.rdata
+rkey.flags
+rkey.proto.id
+rkey.proto.name
+rkey.algo.id
+rkey.algo.name
+rkey.pub_key
+
+rp.rdata
+rp.mbox (host)
+rp.txt (host)
+
+rrsig.rdata
+rrsig.type_covered
+rrsig.algo_num
+rrsig.labels
+rrsig.ttl_orig
+rrsig.expire_timestamp
+rrsig.create_timestamp
+rrsig.key_tag
+rrsig.signer (host)
+rrsig.signature
+
+rt.rdata
+rt.pref
+rt.inter_host (host)
+
+sig (signature)
+sig.rdata
+sig.type_covered
+sig.algo.id
+sig.algo.name
+sig.labels
+sig.ttl_orig
+sig.expire_timestamp
+sig.create_timestamp
+sig.key_tag
+sig.signer (host)
+sig.signature
+
+sink.rdata
+sink.coding
+sink.subcoding
+sink.data
+
+smimea.rdata
+smimea.cert_usage.id
+smimea.cert_usage.name
+smimea.selector
+smimea.match_type.id
+smimea.match_type.name
+smimea.cert_assoc_data
+
+soa.rdata
+soa.mname (host)
+soa.rname (host)
+soa.serial
+soa.refresh_interval
+soa.retry_interval
+soa.expire_interval
+soa.ttl_min
+
+spf.rdata
+
+srv.rdata
+srv.prio
+srv.weight
+srv.port.id
+srv.port.name
+srv.target (host)
+
+sshfp.rdata
+sshfp.algo.id
+sshfp.algo.name
+sshfp.fingerprint_type.id
+sshfp.fingerprint_type.name
+sshfp.fingerprint
+
+ta (dns.definitions.digest)
+ta.rdata
+ta.key_tag
+ta.algo.id
+ta.algo.name
+ta.digest_type.id
+ta.digest_type.name
+ta.digest
+
+talink.rdata
+talink.prev (host)
+talink.next (host)
+
+tkey.rdata
+tkey.algo.id
+tkey.algo.name
+tkey.create_timestamp
+tkey.expire_timestamp
+tkey.mode.id
+tkey.mode.name
+tkey.rcode_ext
+tkey.key_size
+tkey.key_data
+tkey.other_size
+tkey.other_data
+
+tlsa.rdata
+tlsa.cert_usage.id
+tlsa.cert_usage.name
+tlsa.selector
+tlsa.match_type.id
+tlsa.match_type.name
+tlsa.cert_assoc_data
+
+tsig.rdata
+tsig.algo.id
+tsig.algo.name
+tsig.fudge
+tsig.mac.size
+tsig.mac.addr
+tsig.orig_id
+tsig.error
+tsig.other_size
+tsig.other_data
+
+txt.rdata
+
+uid.rdata
+
+uinfo.rdata
+
+unspec.rdata
+
+uri.rdata
+uri.prio
+uri.weight
+uri.target (host)
+
+wins.rdata
+wins.lookup_timeout
+wins.cache_timeout
+wins.server.ip.addr
+
+wins_r.rdata
+wins_r.lookup_timeout
+wins_r.cache_timeout
+wins_r.server.domain (host)
+
+wks.rdata
+wks.ip
+wks.l4.proto.id
+wks.l4.proto.name
+wks.bitmap
+
+x25.rdata
+x25.psdn.addr
+
+xpf.rdata
+xpf.ip.ver
+xpf.l4.proto.id
+xpf.l4.proto.name
+xpf.src.ip.addr
+xpf.src.l4.port.id
+xpf.src.l4.port.name
+xpf.dst.ip.addr
+xpf.dst.l4.port.id
+xpf.dst.l4.port.name
+
+zonemd.rdata
+zonemd.soa_serial
+zonemd.digest_type.id
+zonemd.digest_type.name
+zonemd.digest

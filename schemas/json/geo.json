@@ -1,0 +1,55 @@
+{
+  "$id": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/.json#",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "title": "",
+  "description": "",
+  "required": [
+    ""
+  ],
+  "properties": {
+    "": {
+      "type": "string",
+      "maxLength": 255,
+      "examples": [
+        ""
+      ],
+      "title": "",
+      "description": ""
+    },
+    "": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "title": "",
+      "description": ""
+    },
+    "": {
+      "$ref": "https://raw.githubusercontent.com/robcowart/codex/master/schemas/json/.json#",
+      "title": "",
+      "description": ""
+    },
+    "": {
+      "type": "object",
+      "title": "",
+      "description": "",
+      "required": [
+        "",
+        ""
+      ],
+      "properties": {
+        "": {
+          "type": "string",
+          "examples": [
+            ""
+          ],
+          "title": "",
+          "description": ""
+        }
+      },
+      "additionalProperties": true
+    },
+  },
+  "additionalProperties": true
+}
