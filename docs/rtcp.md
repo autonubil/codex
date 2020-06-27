@@ -64,6 +64,7 @@ rtcp.xr.voip.esd
 rtcp.xr.voip.latency (calculated from rtt and esd)
 rtcp.xr.voip.signal
 rtcp.xr.voip.noise
+rtcp.xr.voip.snr (calculated from signal and noise)
 rtcp.xr.voip.rerl
 rtcp.xr.voip.gmin
 rtcp.xr.voip.r_factor

@@ -31,6 +31,7 @@ tcp.max_seg_size
 
 tcp.options
 tcp.option.window_scale
+tcp.option.max_segment_size
 
 tcp.handshake_rtt
 tcp.rtt

@@ -50,6 +50,7 @@ prio | priority
 priv | private
 proto | protocol
 pub | public
+rcvr | receiver
 regex | regular expression
 rel | relative
 req | request
@@ -64,6 +65,7 @@ time | timestamp (since epoch)
 trans | transport
 transact | transaction
 txt | text
+xmitr | transmitter
 ucast | unicast
 undef | undefined
 ver | version
