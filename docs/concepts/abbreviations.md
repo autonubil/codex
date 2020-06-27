@@ -41,6 +41,7 @@ opt | option
 org | organization
 orig | original
 oui | organizational unit identifier
+params | parameters
 pen | private enterprise number
 pref | preference
 prec | precedence
@@ -53,10 +54,12 @@ regex | regular expression
 rel | relative
 req | request
 resp | response
+rtt | round-trip time
 seg | segment
 seq | sequence
 stor | storage
 struct | structure
+thresh | threshold
 time | timestamp (since epoch)
 trans | transport
 transact | transaction

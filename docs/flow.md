@@ -14,3 +14,6 @@ flow.next_hop.host [host]
 
 flow.in.ip [ip]
 flow.out.ip [ip]
+
+flow.first.
+flow.last.
