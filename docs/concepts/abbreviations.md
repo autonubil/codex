@@ -92,5 +92,3 @@ undef | undefined
 util | utilization
 var | variance
 ver | version
-
-^.*Name: "[^.]+".*$
