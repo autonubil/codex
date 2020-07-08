@@ -16,7 +16,12 @@ rtp.interval
 rtp.payload.codec
 rtp.payload.clockrate
 
+rtp.bytes
+rtp.packets
+rtp.flows
 
+rtp.packets_ooo
+rtp.packets_ooo_total
 
 RTP Fixed Header Fields
 
@@ -34,7 +39,6 @@ RTP Fixed Header Fields
    |            contributing source (CSRC) identifiers             |
    |                             ....                              |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
 
    0                   1                   2                   3
    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1

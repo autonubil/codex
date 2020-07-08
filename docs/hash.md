@@ -1,5 +1,5 @@
 # `hash`
 
-hash.type.id
-hash.type.name
+hash.func.id
+hash.func.name
 hash.value
