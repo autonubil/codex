@@ -96,3 +96,5 @@ app.proc.file. {file}
 app.proc.file.atime
 app.proc.file.ctime
 app.proc.file.mtime
+
+app.resp_time

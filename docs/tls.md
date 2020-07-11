@@ -40,6 +40,14 @@ tls.ec_point.name
 
 tls.ja3
 
+tls.heartbeat.type.id
+tls.heartbeat.type.name
+tls.heartbeat.mode.id
+tls.heartbeat.mode.name
+tls.heartbeat.size
+tls.heartbeat.payload
+tls.heartbeat.payload_size
+
 tls.cert.certificate
 tls.cert.hash
 tls.cert.md5

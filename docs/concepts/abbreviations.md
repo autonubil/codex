@@ -21,13 +21,17 @@ bcast | broadcast
 cert | certificate
 cmd | command
 cntrl | control
+coord | coordinates
 db | database
 descr | description
 dup | duplicate
 encrypt | encryption
+equip | equipment
 ext | extension
 frag | fragment
 func | function
+fw | firmware
+hw | hardware
 id | identifier
 indef | indefinite
 inst | instance
@@ -37,6 +41,7 @@ l2 | OSI layer-2
 l3 | OSI layer-3
 l4 | OSI layer-4
 l7 | OSI layer-7
+loc |location
 mac | MAC address
 max | maximum
 mcast | multicast
@@ -81,6 +86,7 @@ sig | signature
 stddev | standard deviation
 stor | storage
 struct | structure
+sw | software
 thresh | threshold
 time | timestamp (since epoch)
 trans | transport
