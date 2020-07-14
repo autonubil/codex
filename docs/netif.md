@@ -7,9 +7,11 @@ netif.alias
 netif.mtu
 netif.type.id
 netif.type.name
+netif.promisc_mode.id
+netif.promisc_mode.name
 netif.mac. {mac}
 netif.ip. {ip}
-
+s
 netif.driver.name
 netif.driver.version.ver
 netif.firmware.version.ver

@@ -1,23 +1,15 @@
 # `flow`
 
 flow.
-flow.src.ip [ip]
-flow.src.host [host]
-flow.dst.ip [ip]
-flow.dst.host [host]
-flow.client.ip [ip]
-flow.client.host [host]
-flow.server.ip [ip]
-flow.server.host [host]
-flow.next_hop.ip [ip]
-flow.next_hop.host [host]
 
-flow.in.ip [ip]
-flow.out.ip [ip]
-
+flow.src.
+flow.dst.
+flow.client.
+flow.server.
+flow.in.
+flow.out.
 flow.first.
 flow.last.
-
 
 flow.common_props
 flow.direction.id
@@ -197,3 +189,22 @@ flow.export.msgs
 flow.collect.ip.addr
 flow.collect.l4.port
 flow.collect.timestamp
+
+
+
+
+
+
+flow.src.ip {ip}
+flow.src.host {host}
+flow.dst.ip {ip}
+flow.dst.host {host}
+flow.client.ip {ip}
+flow.client.host {host}
+flow.server.ip {ip}
+flow.server.host {host}
+flow.next_hop.ip {ip}
+flow.next_hop.host {host}
+
+flow.in.ip {ip}
+flow.out.ip {ip}

@@ -6,6 +6,9 @@ vlan.tag.pcp.id
 vlan.tag.pcp.name
 vlan.tag.dei
 
+vlan.ether_type.id
+vlan.ether_type.name
+
 vlan.s_tag.id
 vlan.s_tag.name
 vlan.s_tag.pcp.id
