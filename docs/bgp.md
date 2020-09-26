@@ -15,7 +15,7 @@ bgp.as_path.hop_8_as [as]
 bgp.as_path.hop_9_as [as]
 bgp.as_path.hop_10_as [as]
 
-bgp.next_hop.addr
+bgp.next_hop.ip.addr
 bgp.origin.
 
 bgp.route_valid.id

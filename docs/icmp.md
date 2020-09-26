@@ -8,7 +8,7 @@ icmp.seq_num
 icmp.datagram
 icmp.pointer
 
-icmp.redirect.next_hop.addr
+icmp.redirect.next_hop.ip.addr
 
 icmp.echo.data
 
