@@ -25,3 +25,7 @@ gtp.ext.type.name
 
 gtp.ext.size
 gtp.ext.content
+
+
+Routing Area Indentity (RAI)
+

@@ -9,4 +9,3 @@ mobile.apn
 
 
 
-Routing Area Indentity (RAI)

@@ -15,7 +15,10 @@ flow.common_props
 flow.direction.id
 flow.direction.name
 flow.flows
-flow.forwarding_status
+flow.forwarding.status.id
+flow.forwarding.status.name
+flow.forwarding.reason.id
+flow.forwarding.reason.name
 flow.id
 flow.padding_size
 flow.key_indicator
@@ -33,6 +36,7 @@ flow.confidence.limit.lower
 flow.confidence.level
 flow.error.absolute
 flow.error.relative
+flow.seq_num
 
 flow.start.sysuptime
 flow.start.timestamp
@@ -160,13 +164,15 @@ flow.meter.l2.frames_drop
 flow.meter.l2.bytes_drop
 
 
+flow.export.type
+
 flow.export.engine.id
 flow.export.engine.type.id
 flow.export.engine.type.name
 flow.export.start.timestamp
 
 flow.export.proc.pid
-flow.export.flow_version
+flow.export.version
 
 flow.export.ip.addr {ip}
 flow.export.orig_ip.addr {ip}

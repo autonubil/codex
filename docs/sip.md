@@ -2,6 +2,9 @@
 
 sip.version
 
+sip.observ.type.id
+sip.observ.type.name
+
 sip.resp_time
 sip.rtt
 sip.sess_dialed
@@ -208,7 +211,8 @@ sip.header.content_length
 sip.header.content_type
 sip.header.cseq.value
 sip.header.cseq.num
-sip.header.cseq.method
+sip.header.cseq.method.id
+sip.header.cseq.method.name
 sip.header.date
 sip.header.encryption
 sip.header.error_info
