@@ -19,6 +19,24 @@ dhcp.server.name
 dhcp.relay.ip.addr
 dhcp.file
 
+dhcp.pool.id
+dhcp.pool.name
+dhcp.pool.size.config
+dhcp.pool.size.actual
+dhcp.leases.in_grace
+dhcp.leases.active
+dhcp.leases.expire
+dhcp.leases.grace_expire
+dhcp.leases.renew
+dhcp.leases.max
+dhcp.leases.min
+dhcp.leases.avg
+dhcp.offers.sent
+dhcp.offers.accept
+dhcp.reqs.grant
+dhcp.reqs.decline
+dhcp.reqs.timeout
+
 dhcp.opt.id
 dhcp.opt.name
 dhcp.opt.msg_type.id
