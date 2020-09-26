@@ -6,6 +6,7 @@ Abbreviation | Full Word
 :---|:---
 abs | absolute
 addr | address (other than IP or MAC addresses)
+admit | admitted
 advert | advertisement
 agg | aggregate
 algo | algorithm
@@ -18,13 +19,18 @@ attr | attribute
 avail | available
 avg | average
 bcast | broadcast
+bw | bandwidth
 cert | certificate
+chan | channel
 cmd | command
 cntrl | control
+concur | concurrent
 coord | coordinates
 db | database
 descr | description
+down | downstream
 dup | duplicate
+e2e | end-to-end
 encrypt | encryption
 equip | equipment
 ext | extension
@@ -62,6 +68,7 @@ param | parameter
 pct | percent
 pen | private enterprise number
 pol_acct | policy accounting
+pwr | power
 pref | preference
 prec | precedence
 prev | previous
@@ -73,12 +80,19 @@ prov | provisioned
 pub | public
 pwire | pseudowire
 quant | quantization
+rcv | receive
+rcvd | received
 rcvr | receiver
+reassem | reassembled
+reconst | reconstructed
+recover | recovered
 ref | reference
 regex | regular expression
 rel | relative
+repl | replica/replicated
 req | request
 resp | response
+rndtrip | round-trip
 rtt | round-trip time
 seg | segment
 seq | sequence
@@ -86,17 +100,25 @@ sig | signature
 stddev | standard deviation
 stor | storage
 struct | structure
+subscr | subscriber
+svc | service
 sw | software
+temp | temperature
 thresh | threshold
 time | timestamp (since epoch)
 trans | transport
 transact | transaction
 txt | text
+up | upstream
+xmits | transmissions
+xmit | transmit
 xmitr | transmitter
 ucast | unicast
 undef | undefined
+unresp | unresponsive
 util | utilization
 var | variance
 ver | version
+volt | voltage
 
 ^.*Name: "[^.]+".*$

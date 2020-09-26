@@ -98,3 +98,5 @@ app.proc.file.ctime
 app.proc.file.mtime
 
 app.resp_time
+
+app.rndtrip.latency
