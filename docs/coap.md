@@ -20,14 +20,14 @@ coap.version.ver
 coap.type.id
 coap.type.name
 coap.token.size
-coap.code.id
-coap.code.name
 coap.class.id
 coap.class.name
-coap.detail.id
-coap.detail.name
+coap.req.method.id
+coap.req.method.name
+coap.resp.code.id
+coap.resp.code.name
 coap.msg_id
-coap.token
+coap.token.value
 coap.options
 coap.option []
 coap.option.delta

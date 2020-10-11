@@ -93,9 +93,10 @@ rtcp.xr.pdv.neg_pdv.thresh
 rtcp.xr.pdv.neg_pdv.pct
 rtcp.xr.pdv.mean
 
-rtt_avg
-rtt_min
-rtt_max
+rndtrip.latency
+rndtrip.latency_avg
+rndtrip.latency_min
+rndtrip.latency_max
 endpoint_delay
 
 frames_discard

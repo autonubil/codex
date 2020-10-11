@@ -20,7 +20,8 @@ msexch.email.references  (reference)
 msexch.email.subject  (message_subject)
 msexch.email.to  (recipient_address)
 msexch.email.trace  (return_path)
-msexch.encryption
+msexch.encrypt.id
+msexch.encrypt.descr
 msexch.event_id
 msexch.internal_message_id
 msexch.linked_msgid

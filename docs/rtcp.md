@@ -19,6 +19,11 @@ rtcp.report.loss_rate
 rtcp.report.packets_lost
 rtcp.report.highest_seq_num
 rtcp.report.jitter
+rtcp.report.jitter_avg
+rtcp.report.jitter_max
+rtcp.report.jitter_min
+rtcp.report.jitter_samples
+rtcp.report.jitter_sum
 rtcp.report.lsr
 rtcp.report.dlsr
 
@@ -89,17 +94,18 @@ rtcp.xr.stat_summ.ttl_max
 rtcp.xr.stat_summ.ttl_mean
 rtcp.xr.stat_summ.ttl_stddev
 
+https://tools.ietf.org/html/rfc3611
 rtcp.xr.voip.size
 rtcp.xr.voip.ssrc
 rtcp.xr.voip.loss_rate
 rtcp.xr.voip.discard_rate
 rtcp.xr.voip.burst.density
-rtcp.xr.voip.gap.density
 rtcp.xr.voip.burst.duration
+rtcp.xr.voip.gap.density
 rtcp.xr.voip.gap.duration
-rtcp.xr.voip.rtt
-rtcp.xr.voip.esd
-rtcp.xr.voip.latency (calculated from rtt and esd)
+rtcp.xr.voip.network.latency (rtt)
+rtcp.xr.voip.svc.latency (esd)
+rtcp.xr.voip.rndtrip.latency (latency - calculated from rtt and esd)
 rtcp.xr.voip.signal
 rtcp.xr.voip.noise
 rtcp.xr.voip.snr (calculated from signal and noise)
@@ -107,6 +113,7 @@ rtcp.xr.voip.rerl
 rtcp.xr.voip.gmin
 rtcp.xr.voip.r_factor
 rtcp.xr.voip.r_factor_external
+rtcp.xr.voip.r_total (calculated from r_factor and r_factor_external)
 rtcp.xr.voip.mos
 rtcp.xr.voip.mos_lq
 rtcp.xr.voip.mos_cq
@@ -276,6 +283,7 @@ rtcp.xr.mos.payload_type.name
 rtcp.xr.mos.mos
 rtcp.xr.mos.channel
 
+https://tools.ietf.org/html/rfc7294
 rtcp.xr.audio_conceal.meas_type.id
 rtcp.xr.audio_conceal.meas_type.name
 rtcp.xr.audio_conceal.conceal_method.id

@@ -52,6 +52,17 @@ resp.latency_sumsqrs
 resp.latency_var
 resp.samples
 
+network. (network client to server + network server to client)
+network.latency
+network.latency_sum
+network.latency_avg
+network.latency_min
+network.latency_max
+network.latency_stddev
+network.latency_sumsqrs
+network.latency_var
+network.samples
+
 svc. (service/application server-side)
 svc.latency
 svc.latency_sum

@@ -2,10 +2,27 @@
 
 https://tools.ietf.org/html/rfc8684
 
-mptcp.idsn
-mptcp.join.rcvr.token
-mptcp.addr_id
-mptcp.flags
+mptcp.data_seq
+
+mptcp.init_data_seq
+
+mptcp.ip.addr
+
+mptcp.option.data
+mptcp.option.id
+mptcp.option.name
+
+mptcp.rcvr.key
+mptcp.rcvr.token
+
+mptcp.sender.key
+mptcp.sender.random
+mptcp.sender.token
+mptcp.sender.trunc_hmac
+
+mptcp.size
+
+mptcp.subflow_seq
 
 MPTCP Option Format
                      1                   2                   3

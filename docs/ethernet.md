@@ -5,9 +5,9 @@ ethernet.ether_type.name
 
 ethernet.errors.alignment
 ethernet.errors.fcs
-ethernet.errors.sqetest
-ethernet.errors.mac.tx
-ethernet.errors.mac.rx
+ethernet.errors.sqe_test
+ethernet.errors.mac.xmit
+ethernet.errors.mac.rcv
 ethernet.errors.symbol
 ethernet.errors.carrier_sense
 

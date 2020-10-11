@@ -25,14 +25,21 @@ ip.frag.id
 ip.frag.offset
 ip.frag.flags
 
-ip.packet_size
-ip.header_size
-ip.payload_size
+ip.header.sample
+ip.header.size
+ip.packet.sample
+ip.packet.size
+ip.payload.sample
+ip.payload.size
 
 ip.v4.ihl
 ip.v4.checksum
-ip.v4.options
+
+ip.v4.options.bits
+ip.v4.options.tags
 
 ip.v6.flow_label
 ip.v6.next_header
 ip.v6.extension_headers
+
+ip.rndtrip.latency

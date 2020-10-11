@@ -5,17 +5,19 @@ dhcp.op.name
 dhcp.hw_type.id
 dhcp.hw_type.name
 dhcp.hw_addr.size
-dhcp.relay_hops
 dhcp.id
 dhcp.duration
-dhcp.flags
-dhcp.flag.bcast
+dhcp.flags.bits
+dhcp.flags.tags
+dhcp.flags.bcast
 dhcp.client.ip.addr
 dhcp.client.mac.addr
 dhcp.client.host.name
+dhcp.req.ip.addr
 dhcp.offer.ip.addr
 dhcp.next_server.ip.addr
 dhcp.server.name
+dhcp.relay.hops
 dhcp.relay.ip.addr
 dhcp.file
 

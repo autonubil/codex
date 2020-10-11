@@ -10,8 +10,9 @@ flow.in.
 flow.out.
 flow.first.
 flow.last.
+flow.start.
+flow.end.
 
-flow.common_props
 flow.direction.id
 flow.direction.name
 flow.flows
@@ -59,24 +60,29 @@ flow.agg.src.unique_ipv4_addrs
 flow.agg.dst.unique_ipv4_addrs
 flow.agg.src.unique_ipv6_addrs
 flow.agg.dst.unique_ipv6_addrs
-flow.agg.value_dist_method
+flow.agg.value_dist_method.id
+flow.agg.value_dist_method.name
 
 flow.template.id
 flow.template.ie.index
 flow.template.ie.id
-flow.template.ie.data_type
+flow.template.ie.data_type.id
+flow.template.ie.data_type.name
 flow.template.ie.descr
 flow.template.ie.name
 flow.template.ie.range.start
 flow.template.ie.range.end
-flow.template.ie.semantic
-flow.template.ie.unit
-flow.template.ie.pen
-flow.template.anonym.flags
-flow.template.anonym.flag.sc.id
-flow.template.anonym.flag.sc.name
-flow.template.anonym.flag.pma
-flow.template.anonym.flag.lor
+flow.template.ie.semantic.id
+flow.template.ie.semantic.name
+flow.template.ie.unit.id
+flow.template.ie.unit.name
+flow.template.ie.pen.id
+flow.template.ie.pen.name
+flow.template.anonym.flags.bits
+flow.template.anonym.flags.sc.id
+flow.template.anonym.flags.sc.name
+flow.template.anonym.flags.pma
+flow.template.anonym.flags.lor
 flow.template.anonym.tech.id
 flow.template.anonym.tech.name
 flow.template.option_scope
@@ -103,6 +109,7 @@ flow.meter.observ.timestamp
 flow.meter.observ.flows
 flow.meter.observ.conns
 flow.meter.observ.conn_duration_sum
+flow.meter.observ.common_props
 
 flow.meter.select.id
 flow.meter.select.id_flow_flags

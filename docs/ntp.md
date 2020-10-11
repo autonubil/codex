@@ -1,12 +1,15 @@
 # `ntp`
 
-ntp.leap
-ntp.version
+https://tools.ietf.org/html/rfc5905
+
+ntp.leap.id
+ntp.leap.name
+ntp.version.ver
 ntp.mode.id
 ntp.mode.name
 ntp.stratum.id
 ntp.stratum.name
-ntp.poll
+ntp.poll_max
 ntp.precision
 ntp.root_delay
 ntp.root_dispersion

@@ -30,8 +30,8 @@ dnp3.app.cntrl.seq_num
 dnp3.app.func_code.id
 dnp3.app.func_code.name
 dnp3.app.indications
-dnp3.app.obj_range.prefix.id
-dnp3.app.obj_range.prefix.name
-dnp3.app.obj_range.specifier.id
-dnp3.app.obj_range.specifier.name
+dnp3.app.qualifier.obj_prefix.id
+dnp3.app.qualifier.obj_prefix.name
+dnp3.app.qualifier.range_specifier.id
+dnp3.app.qualifier.range_specifier.name
 dnp3.app.objects

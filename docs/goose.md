@@ -15,3 +15,4 @@ goose.apdu.needs_commission
 goose.apdu.dataset_elements
 goose.apdu.payload
 goose.apdu.security
+goose.apdu.cb_ref

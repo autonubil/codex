@@ -28,7 +28,8 @@ tls.algo.block_cipher
 tls.algo.stream_cipher
 tls.algo.msg_auth
 
-tls.compress_method
+tls.compress_method.id
+tls.compress_method.name
 
 tls.sni
 tls.sni_size
@@ -53,7 +54,7 @@ tls.cert.hash
 tls.cert.md5
 tls.cert.sha1
 
-tls.cert.version
+tls.cert.version.ver
 tls.cert.serial_num
 tls.cert.sign.algo.id
 tls.cert.sign.algo.name

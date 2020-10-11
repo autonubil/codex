@@ -16,9 +16,9 @@ arp.src.proto_addr
 arp.dst.proto_addr
 
 arp.timeouts
-arp.msgs_in
-arp.msgs_out
-arp.reqs_in
-arp.reqs_out
-arp.resps_in
-arp.resps_out
+arp.msgs.in
+arp.msgs.out
+arp.reqs.in
+arp.reqs.out
+arp.resps.in
+arp.resps.out

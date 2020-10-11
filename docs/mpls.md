@@ -27,5 +27,6 @@ mpls.payload.sample
 mpls.ip_vpn.route_dist.type.id
 mpls.ip_vpn.route_dist.type.name
 mpls.ip_vpn.route_dist.as.asn
+mpls.ip_vpn.route_dist.as.org
 mpls.ip_vpn.route_dist.ip.addr
 mpls.ip_vpn.route_dist.subfield

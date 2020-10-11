@@ -33,22 +33,22 @@ Attribute | Value
 **Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections)
 **Description** | URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a HTTP redirect, for this operation. This IE contains the URL to which to which the client is redirected by the server.
 
-## `http.resp_time`
+## `http.svc.latency`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.resp_time`
+**IE Name** | `http.svc.latency`
 **Tier** | `common`
 **Data Type** | `unsigned`
 **Semantic** | `quantity`
 **Unit** | `milliseconds`
 **Description** | The time elapsed between the observation of an HTTP request from a client and the corresponding HTTP response from the server. If observed from the client application itself this value is the total round-trip time. However this value may be provided by an observer on the network path between the client and server, and would only represent the time from observer to server and back to the observer.
 
-## `http.rtt`
+## `http.rndtrip.latency`
 
 Attribute | Value
 --- | ---
-**IE Name** | `http.rtt`
+**IE Name** | `http.rndtrip.latency`
 **Tier** | `common`
 **Data Type** | `unsigned`
 **Semantic** | `quantity`

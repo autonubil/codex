@@ -93,6 +93,9 @@ netif.packet_size.in
 netif.packet_size.out
 netif.packet_size.total
 
+netif.lag.group.id
+netif.lag.group.name
+
 netif.ethernet.chipSet
 netif.ethernet.buffer.rcv.overflows
 netif.ethernet.buffer.xmit.overflows

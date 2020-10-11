@@ -28,12 +28,11 @@ imap.req.fetch
 imap.req.store
 imap.req.copy
 imap.req.uid
-imap.req.
 
-smtp.resp.msg
-smtp.resp.status.id
-smtp.resp.status.name
-smtp.resp.detail
+imap.resp.msg
+imap.resp.status.id
+imap.resp.status.name
+imap.resp.detail
 
 imap.resp.starttls
 imap.resp.capability
@@ -49,7 +48,6 @@ imap.resp.subscribe
 imap.resp.unsubscribe
 imap.resp.list
 imap.resp.lsub
-imap.resp.status
 imap.resp.append
 imap.resp.check
 imap.resp.close
@@ -59,4 +57,3 @@ imap.resp.fetch
 imap.resp.store
 imap.resp.copy
 imap.resp.uid
-imap.resp.

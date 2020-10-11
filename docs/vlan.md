@@ -33,5 +33,5 @@ vlan.pbb.i_tag.pcp.id
 vlan.pbb.i_tag.pcp.name
 vlan.pbb.i_tag.dei
 vlan.pbb.i_tag.uca
-vlan.pbb.cust_src_mac.addr
-vlan.pbb.cust_dst_mac.addr
+vlan.pbb.cust.src_mac.addr
+vlan.pbb.cust.dst_mac.addr

@@ -1,11 +1,10 @@
 # `ssdp`
 
-ssdp.http.version
+ssdp.http.version.ver
 
 ssdp.method
 ssdp.host
 ssdp.date
-ssdp.host
 ssdp.cache_control
 ssdp.location
 ssdp.man

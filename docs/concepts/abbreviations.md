@@ -19,12 +19,15 @@ attr | attribute
 avail | available
 avg | average
 bcast | broadcast
+bkwd | backward
 bw | bandwidth
 cert | certificate
 chan | channel
 cmd | command
+compress | compression
 cntrl | control
 concur | concurrent
+consec | consecutive
 coord | coordinates
 db | database
 descr | description
@@ -37,6 +40,7 @@ ext | extension
 frag | fragment
 func | function
 fw | firmware
+fwd | forward
 hw | hardware
 id | identifier
 indef | indefinite
@@ -53,6 +57,7 @@ max | maximum
 mcast | multicast
 meas | measurement
 mem | memory
+mgmt | management
 min | minimum
 msg | message
 net | network
@@ -94,6 +99,7 @@ req | request
 resp | response
 rndtrip | round-trip
 rtt | round-trip time
+rsvd | reserved
 seg | segment
 seq | sequence
 sig | signature

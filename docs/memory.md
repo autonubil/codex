@@ -1,10 +1,11 @@
 # `mem`
 
-mem.total.pct (total amount of memory)
-mem.total.bytes
+mem.total.bytes (total amount of memory)
 
 mem.util.pct (incl. commit, buffers)
+mem.util.pct_max
 mem.util.bytes
+mem.util.bytes_max
 
 mem.commit.pct (committed to processes)
 mem.commit.bytes

@@ -6,10 +6,11 @@ slp.version.ver
 slp.func.id
 slp.func.name
 slp.size
-slp.flags
-slp.flag.o
-slp.flag.f
-slp.flag.r
+slp.flags.bits
+slp.flags.tags
+slp.flags.o
+slp.flags.f
+slp.flags.r
 slp.next_ext_offset
 slp.xid
 slp.lang.size
@@ -55,13 +56,13 @@ slp.reg.attr_list.size
 slp.reg.attr_list.value
 slp.reg.attr.auth_blocks
 slp.reg.attr.auth_block []
-slp.reg.auth_block.struct.id
-slp.reg.auth_block.struct.name
-slp.reg.auth_block.size
-slp.reg.auth_block.time
-slp.reg.auth_block.spi.size
-slp.reg.auth_block.spi.value
-slp.reg.auth_block.block
+slp.reg.attr.auth_block.struct.id
+slp.reg.attr.auth_block.struct.name
+slp.reg.attr.auth_block.size
+slp.reg.attr.auth_block.time
+slp.reg.attr.auth_block.spi.size
+slp.reg.attr.auth_block.spi.value
+slp.reg.attr.auth_block.block
 
 slp.ack.error.id
 slp.ack.error.name

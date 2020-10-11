@@ -17,13 +17,13 @@ tcp.flags.rst
 tcp.flags.syn
 tcp.flags.fin
 
-tcp.flags_init
-tcp.flags_init
-tcp.flags_init
+tcp.flags_init.bits
+tcp.flags_init.tags
+tcp.flags_init.label
 
-tcp.flags_union
-tcp.flags_union
-tcp.flags_union
+tcp.flags_union.bits
+tcp.flags_union.tags
+tcp.flags_union.label
 
 tcp.window_size
 tcp.window_size_min
@@ -131,6 +131,17 @@ tcp.resp.latency_sumsqrs
 tcp.resp.latency_var
 tcp.resp.samples
 
+tcp.network. (network client to server + network server to client)
+tcp.network.latency
+tcp.network.latency_sum
+tcp.network.latency_avg
+tcp.network.latency_min
+tcp.network.latency_max
+tcp.network.latency_stddev
+tcp.network.latency_sumsqrs
+tcp.network.latency_var
+tcp.network.samples
+
 tcp.svc. (service/application server-side)
 tcp.svc.latency
 tcp.svc.latency_sum
@@ -151,6 +162,8 @@ tcp.rndtrip.latency_max
 tcp.rndtrip.latency_stddev
 tcp.rndtrip.latency_sumsqrs
 tcp.rndtrip.latency_var
+tcp.rndtrip.latency_fb (first byte)
+tcp.rndtrip.latency_lb (last byte)
 tcp.rndtrip.samples
 
 tcp.transact. (initial client req to final resp)

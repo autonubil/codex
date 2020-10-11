@@ -1,26 +1,27 @@
 # DNS Information Elements
 
-dns.version
+dns.version.ver
 dns.payload_size
-dns.name_server
-dns.upstream_server
+dns.name_server.ip.addr
+dns.upstream_server.ip.addr
 dns.hosts_file
-dns.resp_time
-dns.rtt
+dns.svc.latency
+dns.rndtrip.latency
 
 dns.tid
 dns.qr.id
 dns.qr.name
 dns.opcode.id
 dns.opcode.name
-dns.flags
-dns.flag.aa
-dns.flag.tc
-dns.flag.rd
-dns.flag.ra
-dns.flag.z
-dns.flag.ad
-dns.flag.cd
+dns.flags.bits
+dns.flags.tags
+dns.flags.aa
+dns.flags.tc
+dns.flags.rd
+dns.flags.ra
+dns.flags.z
+dns.flags.ad
+dns.flags.cd
 dns.rcode.id
 dns.rcode.name
 
@@ -139,9 +140,10 @@ cname.domain (host)
 
 csync.rdata
 csync.soa_serial
-csync.flags
-csync.flag.immediate
-csync.flag.soaminimum
+csync.flags.bits
+csync.flags.tags
+csync.flags.immediate
+csync.flags.soaminimum
 csync.type_bitmap
 
 dhcid.rdata
@@ -353,7 +355,7 @@ opt.data
 opt.rcode_ext.id
 opt.rcode_ext.name
 opt.ver
-opt.flag.do
+opt.flags.do
 opt.z
 
 ptr.rdata
@@ -512,7 +514,7 @@ wins_r.cache_timeout
 wins_r.server.domain (host)
 
 wks.rdata
-wks.ip
+wks.ip.addr
 wks.l4.proto.id
 wks.l4.proto.name
 wks.bitmap
@@ -521,7 +523,7 @@ x25.rdata
 x25.psdn.addr
 
 xpf.rdata
-xpf.ip.ver
+xpf.ip.version.ver
 xpf.l4.proto.id
 xpf.l4.proto.name
 xpf.src.ip.addr

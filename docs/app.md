@@ -48,10 +48,10 @@ app.subcategory.name
 app.group.id
 app.group.name
 
-app.ndpi.proto.id
-app.ndpi.proto.name
-app.ndpi.sub_proto.id
-app.ndpi.sub_proto.name
+app.proto.id
+app.proto.name
+app.sub_proto.id
+app.sub_proto.name
 
 app.attr.p2p
 app.attr.tunnel
@@ -60,9 +60,9 @@ app.attr.encrypt
 app.payload
 
 app.start.timestamp
-app.stop.timestamp
-app.stop.reason.id
-app.stop.reason.name
+app.end.timestamp
+app.end.reason.id
+app.end.reason.name
 
 app.proc.pid
 app.proc.cmdline (full command line)
@@ -97,6 +97,6 @@ app.proc.file.atime
 app.proc.file.ctime
 app.proc.file.mtime
 
-app.resp_time
-
 app.rndtrip.latency
+
+app.svc.latency
