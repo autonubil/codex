@@ -1,40 +1,252 @@
-# `bgp`
+# bgp
 
-bgp.as_path.
-bgp.as_path.prepend
-bgp.as_path.first_as [as]
-bgp.as_path.last_as [as]
-bgp.as_path.hop_1_as [as]
-bgp.as_path.hop_2_as [as]
-bgp.as_path.hop_3_as [as]
-bgp.as_path.hop_4_as [as]
-bgp.as_path.hop_5_as [as]
-bgp.as_path.hop_6_as [as]
-bgp.as_path.hop_7_as [as]
-bgp.as_path.hop_8_as [as]
-bgp.as_path.hop_9_as [as]
-bgp.as_path.hop_10_as [as]
+## bgp.as_path
 
-bgp.next_hop.ip.addr
-bgp.origin.
+### bgp.as_path.prepend
 
-bgp.route_valid.id
-bgp.route_valid.name
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.prepend
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
 
-bgp.pol_acct.traffic_index
+### bgp.as_path.first
 
-bgp.community.value
-bgp.community.id
-bgp.community.name
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.first
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
 
-bgp.community.large.value
-bgp.community.large.as.asn
-bgp.community.large.part1
-bgp.community.large.part2
+### bgp.as_path.last
 
-bgp.community.
-bgp.community.
-bgp.community.
-bgp.community.
-bgp.community.
-bgp.community.
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.last
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_1
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_1
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_2
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_2
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_3
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_3
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_4
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_4
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_5
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_5
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_6
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_6
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_7
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_7
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_8
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_8
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_9
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_9
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.as_path.hop_10
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.hop_10
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+## bgp.next_hop
+
+### bgp.next_hop.ip
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.next_hop.ip
+**Tier** | 
+**Data Type** | object: ip
+**Reference** | 
+**Description** | 
+
+## bgp.route_valid
+
+### bgp.route_valid.id
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.route_valid.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+### bgp.route_valid.name
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.route_valid.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## bgp.pol_acct
+
+### bgp.pol_acct.traffic_index
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.pol_acct.traffic_index
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+## bgp.community
+
+### bgp.community.value
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.community.value
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### bgp.community.id
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.community.id
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### bgp.community.name
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.community.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### bgp.community.as
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.as_path.first
+**Tier** | 
+**Data Type** | object: as
+**Reference** | 
+**Description** | 
+
+### bgp.community.part1
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.community.part1
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### bgp.community.part2
+
+Attribute | Value
+--- | ---
+**IE Name** | bgp.community.part2
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## bgp.origin.

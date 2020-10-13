@@ -2,6 +2,17 @@
 
 The app object contains information elements related to *Applications*.
 
+## app.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.id
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
 ## app.name
 
 Attribute | Value
@@ -31,71 +42,260 @@ Attribute | Value
 **Semantic** | default
 **Description** | The processor architecture for which the application is compliled. Examples include `x86_64`, `i386`, `ARMv8`, etc.
 
-## app.id
-## app.name
 ## app.codename
+
+Attribute | Value
+--- | ---
+**IE Name** | app.codename
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
 ## app.descr
 
-## app.version.ver
+Attribute | Value
+--- | ---
+**IE Name** | app.descr
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
 
-## app.arch
 ## app.vendor
 
-## app.category.id
-## app.category.name
-## app.subcategory.id
-## app.subcategory.name
-## app.group.id
-## app.group.name
+Attribute | Value
+--- | ---
+**IE Name** | app.vendor
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
 
-## app.proto.id
-## app.proto.name
-## app.sub_proto.id
-## app.sub_proto.name
+## app.category
 
-## app.attr.p2p
-## app.attr.tunnel
-## app.attr.encrypt
+### app.category.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.category.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+### app.category.name
+
+Attribute | Value
+--- | ---
+**IE Name** | app.category.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## app.subcategory
+
+### app.subcategory.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.subcategory.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+### app.subcategory.name
+
+Attribute | Value
+--- | ---
+**IE Name** | app.subcategory.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## app.group
+
+### app.group.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.group.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+### app.group.name
+
+Attribute | Value
+--- | ---
+**IE Name** | app.group.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## app.proto
+
+### app.proto.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.proto.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+### app.proto.name
+
+Attribute | Value
+--- | ---
+**IE Name** | app.proto.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## app.sub_proto
+
+### app.sub_proto.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.sub_proto.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+### app.sub_proto.name
+
+Attribute | Value
+--- | ---
+**IE Name** | app.sub_proto.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## app.attr
+
+### app.attr.p2p
+
+Attribute | Value
+--- | ---
+**IE Name** | app.attr.p2p
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Reference** | 
+**Description** | 
+
+### app.attr.tunnel
+
+Attribute | Value
+--- | ---
+**IE Name** | app.attr.tunnel
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Reference** | 
+**Description** | 
+
+### app.attr.encrypt
+
+Attribute | Value
+--- | ---
+**IE Name** | app.attr.encrypt
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Reference** | 
+**Description** | 
 
 ## app.payload
 
-## app.start.timestamp
-## app.end.timestamp
-## app.end.reason.id
-## app.end.reason.name
+Attribute | Value
+--- | ---
+**IE Name** | app.payload
+**Tier** | 
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | 
+**Description** | 
 
-## app.proc.pid
-## app.proc.cmdline (full command line)
-## app.proc.path (the full path to the cmd)
-## app.proc.wd (working directory)
-## app.proc.cmd (name of the binary)
-## app.proc.args (arguments)
-## app.proc.name
-## app.proc.descr
-## app.proc.sig. {hash}
-## app.proc.sig.func.id
-## app.proc.sig.func.name
-## app.proc.sig.value
-## app.proc.start.timestamp
-## app.proc.start.sysuptime
-## app.proc.end.timestamp
-## app.proc.end.sysuptime
-## app.proc.user. {user}
-## app.proc.user.uid
-## app.proc.user.id
-## app.proc.user.name
-## app.proc.user.fullname
-## app.proc.user.org
-## app.proc.user.email
-## app.proc.group. {group}
-## app.proc.group.gid
-## app.proc.group.name
-## app.proc.group.org
-## app.proc.group.email
-## app.proc.file. {file}
-## app.proc.file.atime
-## app.proc.file.ctime
-## app.proc.file.mtime
+### app.start.timestamp
+
+Attribute | Value
+--- | ---
+**IE Name** | app.start.timestamp
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | epochticks
+**Reference** | 
+**Description** | 
+
+### app.end.timestamp
+
+Attribute | Value
+--- | ---
+**IE Name** | app.end.timestamp
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | epochticks
+**Reference** | 
+**Description** | 
+
+### app.end.reason
+
+#### app.end.reason.id
+
+Attribute | Value
+--- | ---
+**IE Name** | app.end.reason.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+#### app.end.reason.name
+
+Attribute | Value
+--- | ---
+**IE Name** | app.end.reason.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## app.proc
+
+Attribute | Value
+--- | ---
+**IE Name** | app.proc
+**Tier** | 
+**Data Type** | object: proc
+**Reference** | 
+**Description** | 
 
 ## app.rndtrip.latency
 

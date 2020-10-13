@@ -1,4 +1,4 @@
-# `version`
+# version
 
 The `version` object contains information elements related to [Semantic Versioning](https://semver.org/) values.
 
@@ -12,68 +12,68 @@ Given a version number *MAJOR.MINOR.PATCH*, increment the:
 
 Additional labels for *pre-release* and *build* metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-## `version.ver`
+## version.ver
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.ver`
-**Tier** | `common`
-**Data Type** | `string`
-**Semantic** | `default`
+**IE Name** | version.ver
+**Tier** | common
+**Data Type** | string
+**Semantic** | default
 **Reference** | [Semantic Versioning](https://semver.org/)
 **Description** | The full semantic version.
 
-## `version.major`
+## version.major
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.major`
-**Tier** | `custom`
-**Data Type** | `integer`
-**Semantic** | `identifier`
+**IE Name** | version.major
+**Tier** | custom
+**Data Type** | integer
+**Semantic** | identifier
 **Reference** | [Semantic Versioning](https://semver.org/)
-**Description** | The `major` value from the semantic version.
+**Description** | The major value from the semantic version.
 
-## `version.minor`
+## version.minor
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.minor`
-**Tier** | `custom`
-**Data Type** | `integer`
-**Semantic** | `identifier`
+**IE Name** | version.minor
+**Tier** | custom
+**Data Type** | integer
+**Semantic** | identifier
 **Reference** | [Semantic Versioning](https://semver.org/)
-**Description** | The `minor` value from the semantic version.
+**Description** | The minor value from the semantic version.
 
-## `version.patch`
+## version.patch
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.patch`
-**Tier** | `custom`
-**Data Type** | `integer`
-**Semantic** | `identifier`
+**IE Name** | version.patch
+**Tier** | custom
+**Data Type** | integer
+**Semantic** | identifier
 **Reference** | [Semantic Versioning](https://semver.org/)
-**Description** | The `patch` value from the semantic version.
+**Description** | The patch value from the semantic version.
 
-## `version.prerel`
+## version.prerel
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.prerel`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
+**IE Name** | version.prerel
+**Tier** | custom
+**Data Type** | string
+**Semantic** | default
 **Reference** | [Semantic Versioning](https://semver.org/)
-**Description** | The `pre-release` value from the semantic version.
+**Description** | The pre-release value from the semantic version.
 
-## `version.build`
+## version.build
 
 Attribute | Value
 --- | ---
-**IE Name** | `version.build`
-**Tier** | `custom`
-**Data Type** | `string`
-**Semantic** | `default`
+**IE Name** | version.build
+**Tier** | custom
+**Data Type** | string
+**Semantic** | default
 **Reference** | [Semantic Versioning](https://semver.org/)
-**Description** | The `build` value from the semantic version.
+**Description** | The build value from the semantic version.

@@ -10,34 +10,39 @@ cert.serial_num
 cert.sign.algo.id
 cert.sign.algo.name
 cert.sign.signature
-cert.issuer. {dn}
-cert.issuer.dn  (distiguished name)
-cert.issuer.c  (country name)
-cert.issuer.cn  (common name)
-cert.issuer.dc  (domain component)
-cert.issuer.e  (email address)
-cert.issuer.l  (locality name)
-cert.issuer.o  (organization name)
-cert.issuer.ou  (organizational unit)
-cert.issuer.pc  (postal code)
-cert.issuer.street  (street address)
-cert.issuer.st  (state or province)
-cert.issuer.uid  (user id)
-cert.issuer.unique_id
+cert.issuer.
+cert.issuer.dn. {dn}
+cert.issuer.dn.dn  (distiguished name)
+cert.issuer.dn.c  (country name)
+cert.issuer.dn.cn  (common name)
+cert.issuer.dn.dc  (domain component)
+cert.issuer.dn.e  (email address)
+cert.issuer.dn.l  (locality name)
+cert.issuer.dn.o  (organization name)
+cert.issuer.dn.ou  (organizational unit)
+cert.issuer.dn.pc  (postal code)
+cert.issuer.dn.serialnumber
+cert.issuer.dn.street  (street address)
+cert.issuer.dn.st  (state or province)
+cert.issuer.dn.uid  (user id)
+cert.issuer.dn.unique_id
 cert.valid.not_before
 cert.valid.not_after
-cert.subject.dn  (distiguished name)
-cert.subject.c  (country name)
-cert.subject.cn  (common name)
-cert.subject.dc  (domain component)
-cert.subject.e  (email address)
-cert.subject.l  (locality name)
-cert.subject.o  (organization name)
-cert.subject.ou  (organizational unit)
-cert.subject.pc  (postal code)
-cert.subject.street  (street address)
-cert.subject.st  (state or province)
-cert.subject.uid  (user id)
+cert.subject.
+cert.subject.dn. {dn}
+cert.subject.dn.dn  (distiguished name)
+cert.subject.dn.c  (country name)
+cert.subject.dn.cn  (common name)
+cert.subject.dn.dc  (domain component)
+cert.subject.dn.e  (email address)
+cert.subject.dn.l  (locality name)
+cert.subject.dn.o  (organization name)
+cert.subject.dn.ou  (organizational unit)
+cert.subject.dn.pc  (postal code)
+cert.subject.dn.serialnumber
+cert.subject.dn.street  (street address)
+cert.subject.dn.st  (state or province)
+cert.subject.dn.uid  (user id)
 cert.subject.pub_key.algo.id
 cert.subject.pub_key.algo.name
 cert.subject.pub_key.size

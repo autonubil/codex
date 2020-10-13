@@ -8,8 +8,7 @@ Attribute | Value
 --- | ---
 **IE Name** | http.version
 **Tier** | common
-**Data Type** | string
-**Semantic** | default
+**Data Type** | object: version
 **Reference** | [RFC 7230, section 2.6: Protocol Versioning](https://tools.ietf.org/html/rfc7230#section-2.6)
 **Description** | HTTP request and response messages include an HTTP protocol version using a `<major>.<minor>` numbering scheme.
 
@@ -877,7 +876,6 @@ Attribute | Value
 **IE Name** | http.req.x_forwarded_host
 **Tier** | common
 **Data Type** | object: host
-**Semantic** | default
 **Reference** | [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host)
 **Description** | The X-Forwarded-Host (XFH) header is a de-facto standard header for identifying the original host requested by the client in the Host HTTP request header.
 
