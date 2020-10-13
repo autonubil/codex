@@ -87,6 +87,8 @@ tls.cert.subject.pc  (postal code)
 tls.cert.subject.street  (street address)
 tls.cert.subject.st  (state or province)
 tls.cert.subject.uid  (user id)
+tls.cert.subject.algo.id
+tls.cert.subject.algo.name
 tls.cert.subject.pub_key.algo.id
 tls.cert.subject.pub_key.algo.name
 tls.cert.subject.pub_key.size

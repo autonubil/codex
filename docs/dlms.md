@@ -3,18 +3,18 @@
 dlms.class.id
 dlms.class.name
 dlms.obis.codes
-dlms.obis.group_a.id
-dlms.obis.group_a.name
-dlms.obis.group_b.id
-dlms.obis.group_b.name
-dlms.obis.group_c.id
-dlms.obis.group_c.name
-dlms.obis.group_d.id
-dlms.obis.group_d.name
-dlms.obis.group_e.id
-dlms.obis.group_e.name
-dlms.obis.group_f.id
-dlms.obis.group_f.name
+dlms.obis.medium.id (A)
+dlms.obis.medium.name
+dlms.obis.chan.id (B)
+dlms.obis.chan.name
+dlms.obis.unit.id (C)
+dlms.obis.unit.name
+dlms.obis.meas.id (D)
+dlms.obis.meas.name
+dlms.obis.tariff.id (E)
+dlms.obis.tariff.name
+dlms.obis.value.id (F)
+dlms.obis.value.name
 dlms.attr.id
 dlms.attr.name
 dlms.type.id

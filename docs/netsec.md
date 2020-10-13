@@ -4,6 +4,10 @@ netsec.action.id
 netsec.action.name
 netsec.action.descr
 
+netsec.policy.id
+netsec.policy.name
+netsec.policy.descr
+
 netsec.reason.id
 netsec.reason.name
 netsec.reason.descr
