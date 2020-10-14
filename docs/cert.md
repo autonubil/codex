@@ -1,81 +1,475 @@
 # `cert`
 
-cert.certificate
-cert.hash
-cert.md5
-cert.sha1
+## cert.certificate
 
-cert.version
-cert.serial_num
-cert.sign.algo.id
-cert.sign.algo.name
-cert.sign.signature
-cert.issuer.
-cert.issuer.dn. {dn}
-cert.issuer.dn.dn  (distiguished name)
-cert.issuer.dn.c  (country name)
-cert.issuer.dn.cn  (common name)
-cert.issuer.dn.dc  (domain component)
-cert.issuer.dn.e  (email address)
-cert.issuer.dn.l  (locality name)
-cert.issuer.dn.o  (organization name)
-cert.issuer.dn.ou  (organizational unit)
-cert.issuer.dn.pc  (postal code)
-cert.issuer.dn.serialnumber
-cert.issuer.dn.street  (street address)
-cert.issuer.dn.st  (state or province)
-cert.issuer.dn.uid  (user id)
-cert.issuer.dn.unique_id
-cert.valid.not_before
-cert.valid.not_after
-cert.subject.
-cert.subject.dn. {dn}
-cert.subject.dn.dn  (distiguished name)
-cert.subject.dn.c  (country name)
-cert.subject.dn.cn  (common name)
-cert.subject.dn.dc  (domain component)
-cert.subject.dn.e  (email address)
-cert.subject.dn.l  (locality name)
-cert.subject.dn.o  (organization name)
-cert.subject.dn.ou  (organizational unit)
-cert.subject.dn.pc  (postal code)
-cert.subject.dn.serialnumber
-cert.subject.dn.street  (street address)
-cert.subject.dn.st  (state or province)
-cert.subject.dn.uid  (user id)
-cert.subject.pub_key.algo.id
-cert.subject.pub_key.algo.name
-cert.subject.pub_key.size
-cert.subject.pub_key.key
-cert.subject.pub_key.modulus
-cert.subject.pub_key.exponent
-cert.subject.unique_id
+Attribute | Value
+--- | ---
+**IE Name** | cert.certificate
+**Tier** | 
+**Data Type** | octetarray
+**Semantic** | x509cert
+**Reference** | 
+**Description** | 
 
-cert.ext.alpn
-cert.ext.auth_key_id
-cert.ext.basic_constraints
-cert.ext.cert_policies
-cert.ext.crl_dist_points
-cert.ext.ext_key_usage
-cert.ext.fresh_crl
-cert.ext.inhibit_any_policy
-cert.ext.issuer_alt_name
-cert.ext.key_usage
-cert.ext.logotype
-cert.ext.name_constraints
-cert.ext.policy_constraints
-cert.ext.policy_maps
-cert.ext.priv_key_usage_period
-cert.ext.subject_alt_name
-cert.ext.subject_directory_attr
-cert.ext.subject_key_id
-cert.ext.thumbprint
-cert.ext.thumbprint_algo
+## cert.hash
 
-cert.pkix.auth_info_access
-cert.pkix.subject_info_access
+Attribute | Value
+--- | ---
+**IE Name** | cert.hash
+**Tier** | 
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | 
+**Description** | 
 
+## cert.md5
 
+Attribute | Value
+--- | ---
+**IE Name** | cert.md5
+**Tier** | 
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.sha1
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.sha1
+**Tier** | 
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.version
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.version
+**Tier** | 
+**Data Type** | object: version
+**Reference** | 
+**Description** | 
+
+## cert.serial_num
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.serial_num
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.sign
+
+### cert.sign.algo
+
+#### cert.sign.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.sign.algo.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+#### cert.sign.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.sign.algo.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.sign.signature
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.sign.signature
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.issuer
+
+### cert.issuer.dn
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.issuer.dn
+**Tier** | core
+**Data Type** | object: dn
+**Reference** | [RFC 4519, section 2.7: distinguishedName](https://tools.ietf.org/html/rfc4519#section-2.7)
+**Description** | Distinguished Name. This attribute a base type from which attributes with DN syntax inherit.
+
+## cert.valid
+
+### cert.valid.not_before
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.valid.not_before
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.valid.not_after
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.valid.not_after
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.subject
+
+### cert.subject.dn
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.issuer.dn
+**Tier** | core
+**Data Type** | object: dn
+**Reference** | [RFC 4519, section 2.7: distinguishedName](https://tools.ietf.org/html/rfc4519#section-2.7)
+**Description** | Distinguished Name. This attribute a base type from which attributes with DN syntax inherit.
+
+### cert.subject.pub_key
+
+#### cert.subject.pub_key.algo
+
+#### cert.subject.pub_key.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.subject.pub_key.algo.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | 
+**Description** | 
+
+#### cert.subject.pub_key.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.subject.pub_key.algo.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+#### cert.subject.pub_key.size
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.subject.pub_key.size
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | quantity
+**Unit** | bytes
+**Reference** | 
+**Description** | 
+
+#### cert.subject.pub_key.key
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.subject.pub_key.key
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+#### cert.subject.pub_key.modulus
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.subject.pub_key.modulus
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+#### cert.subject.pub_key.exponent
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.subject.pub_key.exponent
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.ext
+
+### cert.ext.alpn
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.alpn
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.auth_key_id
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.auth_key_id
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.basic_constraints
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.basic_constraints
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.cert_policies
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.cert_policies
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.crl_dist_points
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.crl_dist_points
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.ext_key_usage
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.ext_key_usage
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.fresh_crl
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.fresh_crl
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.inhibit_any_policy
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.inhibit_any_policy
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.issuer_alt_name
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.issuer_alt_name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.key_usage
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.key_usage
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.logotype
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.logotype
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.name_constraints
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.name_constraints
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.policy_constraints
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.policy_constraints
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.policy_maps
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.policy_maps
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.priv_key_usage_period
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.priv_key_usage_period
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.subject_alt_name
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.subject_alt_name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.subject_directory_attr
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.subject_directory_attr
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.subject_key_id
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.subject_key_id
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.thumbprint
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.thumbprint
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.ext.thumbprint_algo
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.ext.thumbprint_algo
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## cert.pkix
+
+### cert.pkix.auth_info_access
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.pkix.auth_info_access
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### cert.pkix.subject_info_access
+
+Attribute | Value
+--- | ---
+**IE Name** | cert.pkix.subject_info_access
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## Example Certificates
+
+```text
 Certificate:
     Data:
         Version: 3 (0x2)
@@ -122,7 +516,9 @@ Certificate:
 
     Signature Algorithm: sha256WithRSAEncryption
          8b:c3:ed:d1:9d:39:6f:af:40:72:bd:1e:18:5e:30:54:23:35:
+```
 
+```text
 Certificate:
     Data:
         Version: 3 (0x2)
@@ -165,8 +561,9 @@ Certificate:
 
     Signature Algorithm: sha256WithRSAEncryption
          46:2a:ee:5e:bd:ae:01:60:37:31:11:86:71:74:b6:46:49:c8:
+```
 
-
+```text
 Certificate:[16]
     Data:
         Version: 3 (0x2)
@@ -190,9 +587,8 @@ Certificate:[16]
                 Certificate Sign, CRL Sign
             X509v3 Basic Constraints: critical
                 CA:TRUE
-            X509v3 Subject Key Identifier: 
+            X509v3 Subject Key Identifier:
                 60:7B:66:1A:45:0D:97:CA:89:50:2F:7D:04:CD:34:A8:FF:FC:FD:4B
     Signature Algorithm: sha1WithRSAEncryption
          d6:73:e7:7c:4f:76:d0:8d:bf:ec:ba:a2:be:34:c5:28:32:b5:
-
-
+```

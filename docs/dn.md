@@ -68,7 +68,7 @@ Attribute | Value
 **Reference** | 
 **Description** | Email Address. Deprecated in preference to `mail`.
 
-## dn.l  (locality name)
+## dn.l
 
 Attribute | Value
 --- | ---
