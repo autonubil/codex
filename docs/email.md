@@ -1,4 +1,4 @@
-# `email`
+# email
 
 email.trace
 email.resent_date

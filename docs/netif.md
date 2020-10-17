@@ -1,4 +1,4 @@
-# `netif`
+# netif
 
 netif.index
 netif.name
@@ -6,9 +6,49 @@ netif.descr
 netif.alias
 netif.mtu
 netif.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 netif.promisc_mode.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.promisc_mode.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 netif.mac. {mac}
 netif.ip. {ip}
 
@@ -17,9 +57,48 @@ netif.driver.version.ver
 netif.firmware.version.ver
 
 netif.state.oper.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.state.oper.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 netif.state.admin.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.state.admin.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 netif.bandwidth.bw
 netif.bandwidth.prov
@@ -94,7 +173,26 @@ netif.packet_size.out
 netif.packet_size.total
 
 netif.lag.group.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.lag.group.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 netif.ethernet.chipSet
 netif.ethernet.buffer.rcv.overflows
@@ -140,9 +238,49 @@ netif.ethernet.packets.4096_to_9216_bytes.in
 netif.ethernet.packets.9217_to_16383_bytes.in
 
 netif.ethernet.pause.admin.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.ethernet.pause.admin.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 netif.ethernet.pause.oper.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 netif.ethernet.pause.oper.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 netif.ethernet.frames.pause.in
 netif.ethernet.frames.pause.out
 
@@ -183,9 +321,6 @@ netif.pon.bw.assured.avail.up
 netif.pon.bytes.fixed.up
 netif.pon.bytes.assured.up
 netif.pon.bytes.excess.up
-
-
-
 
 netif.util.
 netif.util.

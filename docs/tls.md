@@ -1,4 +1,4 @@
-# `tls`
+# tls
 
 tls.version
     The version of the protocol being employed.  This document
@@ -11,17 +11,77 @@ tls.version
     employed for ClientHello.
 
 tls.handshake.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.handshake.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.random
 tls.sess_id
 tls.size
 tls.key_size
 
 tls.content_type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.content_type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.cipher_suites.size
 tls.cipher_suites.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.cipher_suites.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.algo.key_exch
 tls.algo.auth
 tls.algo.block_cipher
@@ -29,22 +89,120 @@ tls.algo.stream_cipher
 tls.algo.msg_auth
 
 tls.compress_method.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.compress_method.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 tls.sni
 tls.sni_size
 
 tls.ec_curve.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.ec_curve.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.ec_point.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.ec_point.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 tls.ja3
 
 tls.heartbeat.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.heartbeat.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.heartbeat.mode.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.heartbeat.mode.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.heartbeat.size
 tls.heartbeat.payload
 tls.heartbeat.payload_size
@@ -57,7 +215,27 @@ tls.cert.sha1
 tls.cert.version.ver
 tls.cert.serial_num
 tls.cert.sign.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.cert.sign.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.cert.sign.signature
 tls.cert.issuer. {dn}
 tls.cert.issuer.dn  (distiguished name)
@@ -88,9 +266,49 @@ tls.cert.subject.street  (street address)
 tls.cert.subject.st  (state or province)
 tls.cert.subject.uid  (user id)
 tls.cert.subject.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.cert.subject.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.cert.subject.pub_key.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 tls.cert.subject.pub_key.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 tls.cert.subject.pub_key.size
 tls.cert.subject.pub_key.key
 tls.cert.subject.pub_key.modulus

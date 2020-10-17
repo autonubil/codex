@@ -1,4 +1,4 @@
-# `goose`
+# goose
 
 goose.appid
 goose.size

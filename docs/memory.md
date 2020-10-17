@@ -1,4 +1,4 @@
-# `mem`
+# mem
 
 mem.total.bytes (total amount of memory)
 

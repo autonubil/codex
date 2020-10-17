@@ -1,44 +1,5 @@
 # Media Metrics
 
-ITU-T G.107
-
-R:  R Factor
-Ro:  Signal-to-Noise Ratio
-Is:  Simultaneous Impairment Factor
-Id:  Delay Impairment Factor
-SLR:  Send loudness rating (dB)
-RLR:  Receive loudness rating (dB)
-STMR:  Sidetone masking rating (dB)
-LSTR:  Listener sidetone rating (dB)
-Ds:  D-Value of telephone, send side
-Dr:  D-Value of telephone, receive side
-TELR:  Talker echo loudness rating (dB)
-WEPL:  Weighted echo path loss (dB)
-T:  Mean one-way delay of the echo path (ms)
-Tr:  Round-trip delay in a 4-wire loop (ms)
-Ta:  Absolute delay in echo-free connections (ms)
-sT:  Delay sensitivity
-mT:  Minimum perceivable delay (ms)
-qdu:  Number of quantization distortion units
-Ie:  Equipment impairment factor
-Bpl:  Packet-loss robustness factor
-Ppl:  Random packet-loss probability (%)
-BurstR:  Burst ratio
-Nc:  Circuit noise referred to 0 dBr-point (dBm0p)
-Nfor:  Noise floor at the receive side (dBmp)
-Ps:  Room noise at the send side (dB(A))
-Pr:  Room noise at the receive side (dB(A))
-A:  Advantage factor
-
-GoB:  Good or Better
-MOS:  Mean Opinion Score
-MNRU:  Modulated Noise Reference Unit
-OLR:  Overall Loudness Rating
-OPINE:  Overall Performance Index model for Network Evaluation
-PLC:  Packet Loss Concealment
-PoW:  Poor or Worse
-
-
 latency
 
 packets_lost
@@ -86,7 +47,27 @@ media.gap.packet_loss_rate
 media.gap.packet_discard_rate
 
 rtcp.xr.pdv.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 rtcp.xr.pdv.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 rtcp.xr.pdv.pos_pdv.thresh
 rtcp.xr.pdv.pos_pdv.pct
 rtcp.xr.pdv.neg_pdv.thresh
@@ -191,4 +172,43 @@ interval
 cumulative
 sampled
 
-(audio|video|voice|media|rtp|rtcp|mos)
+
+```text
+ITU-T G.107
+
+R:  R Factor
+Ro:  Signal-to-Noise Ratio
+Is:  Simultaneous Impairment Factor
+Id:  Delay Impairment Factor
+SLR:  Send loudness rating (dB)
+RLR:  Receive loudness rating (dB)
+STMR:  Sidetone masking rating (dB)
+LSTR:  Listener sidetone rating (dB)
+Ds:  D-Value of telephone, send side
+Dr:  D-Value of telephone, receive side
+TELR:  Talker echo loudness rating (dB)
+WEPL:  Weighted echo path loss (dB)
+T:  Mean one-way delay of the echo path (ms)
+Tr:  Round-trip delay in a 4-wire loop (ms)
+Ta:  Absolute delay in echo-free connections (ms)
+sT:  Delay sensitivity
+mT:  Minimum perceivable delay (ms)
+qdu:  Number of quantization distortion units
+Ie:  Equipment impairment factor
+Bpl:  Packet-loss robustness factor
+Ppl:  Random packet-loss probability (%)
+BurstR:  Burst ratio
+Nc:  Circuit noise referred to 0 dBr-point (dBm0p)
+Nfor:  Noise floor at the receive side (dBmp)
+Ps:  Room noise at the send side (dB(A))
+Pr:  Room noise at the receive side (dB(A))
+A:  Advantage factor
+
+GoB:  Good or Better
+MOS:  Mean Opinion Score
+MNRU:  Modulated Noise Reference Unit
+OLR:  Overall Loudness Rating
+OPINE:  Overall Performance Index model for Network Evaluation
+PLC:  Packet Loss Concealment
+PoW:  Poor or Worse
+```

@@ -1,9 +1,9 @@
-# `rtsp`
+# rtsp
 
 Real-Time Streaming Protocol (RTSP)
 
-https://tools.ietf.org/html/rfc2326
-https://tools.ietf.org/html/rfc7826
+[https://tools.ietf.org/html/rfc2326](https://tools.ietf.org/html/rfc2326)
+[https://tools.ietf.org/html/rfc7826](https://tools.ietf.org/html/rfc7826)
 
 rtsp.version.ver
 rtsp.url.ref
@@ -15,7 +15,6 @@ rtsp.headers
 rtsp.jitter
 rtsp.packets.in
 rtsp.packets.out
-
 
 rtsp.gen.accept_ranges
 rtsp.gen.cache_control
@@ -38,7 +37,6 @@ rtsp.gen.timestamp
 rtsp.gen.transport
 rtsp.gen.user_agent
 rtsp.gen.via
-
 
 rtsp.req.method
 
@@ -63,7 +61,6 @@ rtsp.req.request_status
 rtsp.req.require
 rtsp.req.terminate_reason
 
-
 rtsp.resp.status
 rtsp.resp.reason_phrase
 
@@ -78,7 +75,6 @@ rtsp.resp.public
 rtsp.resp.retry_after
 rtsp.resp.unsupported
 rtsp.resp.www_authenticate
-
 
 rtsp.entity.allow
 rtsp.entity.content_base

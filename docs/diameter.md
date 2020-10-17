@@ -12,8 +12,28 @@ diameter.flags.e
 diameter.flags.t
 
 diameter.cmd.code
+
+Attribute | Value
+--- | ---
+**IE Name** | .code
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 diameter.cmd.name
 
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+```text
 AA-Request	AAR	265	Diameter NAS Application - RFC 7155
 AA-Answer	AAA	265	Diameter NAS Application - RFC 7155
 Diameter-EAP-Request	DER	268	Diameter EAP Application - RFC 4072
@@ -98,3 +118,4 @@ Reporting-Information-Request	RIR	8388719	S6t per 3GPP TS 29.336
 Reporting-Information-Answer	RIA	8388719	S6t per 3GPP TS 29.336
 NIDD-Information-Request	NIR	8388726	S6t per 3GPP TS 29.336
 NIDD-Information-Answer	NIA	8388726	S6t per 3GPP TS 29.336
+```

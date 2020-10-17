@@ -1,4 +1,4 @@
-# `imap`
+# imap
 
 imap.req.msg
 imap.req.cmd
@@ -31,7 +31,27 @@ imap.req.uid
 
 imap.resp.msg
 imap.resp.status.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 imap.resp.status.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 imap.resp.detail
 
 imap.resp.starttls

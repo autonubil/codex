@@ -1,9 +1,28 @@
-# `sip`
+# sip
 
 sip.version.ver
 
 sip.observ.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 sip.observ.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 sip.svc.latency
 sip.rndtrip.latency
@@ -16,7 +35,26 @@ sip.sess.duration
 sip.sess.duration_ring
 sip.sess.duration_setup
 sip.sess.end_reason.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 sip.sess.end_reason.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 sip.req.datetime
 sip.req.timestamp
@@ -213,7 +251,27 @@ sip.header.content_type
 sip.header.cseq.value
 sip.header.cseq.num
 sip.header.cseq.method.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 sip.header.cseq.method.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 sip.header.date
 sip.header.encryption
 sip.header.error_info

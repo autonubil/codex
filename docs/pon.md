@@ -1,4 +1,4 @@
-# `pon`
+# pon
 
 pon.ont.errors.bip.up
 pon.ont.errors.bip.down
@@ -28,4 +28,3 @@ pon.ont.optical.launch_pwr
 pon.ont.optical.laser.bias
 pon.ont.optical.temp
 pon.ont.optical.chan.id
-

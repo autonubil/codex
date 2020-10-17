@@ -6,6 +6,7 @@ Semantic | Description
 :---|:---
 default | Used to note that no semantics apply to the field. This is the default semantic type of all string data types.
 quantity | A numeric (integral or floating point) value representing a measured value pertaining to the record. This is distinguished from counters that represent an ongoing measured value whose "odometer" reading is captured as part of a given record. This is the default semantic type of all numeric data types.
+percentage | 
 deltacounter | An integral value reporting the value of a counter. Counters are unsigned and wrap back to zero after reaching the limit of the type. Delta counters have an initial value of 0. A delta counter is reset to 0 each time it is exported and/or expires without export.
 totalcounter | An integral value reporting the value of a counter. Counters are unsigned and wrap back to zero after reaching the limit of the type. A total counter counts independently of the export of its value.
 identifier | An integral value that serves as an identifier. Specifically, mathematical operations on two identifiers (aside from the equality operation) are meaningless. Identifiers MUST be one of the signed or unsigned data types.

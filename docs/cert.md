@@ -1,4 +1,4 @@
-# `cert`
+# cert
 
 ## cert.certificate
 

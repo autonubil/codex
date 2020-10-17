@@ -1,4 +1,4 @@
-# `pop3`
+# pop3
 
 pop3.user. {user}
 pop3.user.name

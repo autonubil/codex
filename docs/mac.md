@@ -1,4 +1,4 @@
-# `mac`
+# mac
 
 mac.addr
 mac.oui

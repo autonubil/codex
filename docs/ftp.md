@@ -1,4 +1,4 @@
-# `ftp`
+# ftp
 
 ftp.user [user]
 ftp.password

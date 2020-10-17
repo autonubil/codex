@@ -1,6 +1,7 @@
-# `vxlan`
+# vxlan
 
-https://tools.ietf.org/html/rfc7348
+[https://tools.ietf.org/html/rfc7348](https://tools.ietf.org/html/rfc7348)
+
 vxlan.flags.bits
 vxlan.flags.tags
 vxlan.flags.i

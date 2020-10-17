@@ -1,8 +1,50 @@
-# `icmp`
+# icmp
 
-icmp.version
-icmp.type
-icmp.code
+icmp.version.ver
+icmp.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | icmp.type.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+icmp.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | icmp.type.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+icmp.code.id
+
+Attribute | Value
+--- | ---
+**IE Name** | icmp.code.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+icmp.code.name
+
+Attribute | Value
+--- | ---
+**IE Name** | icmp.code.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 icmp.id
 icmp.seq_num
 icmp.datagram
@@ -34,16 +76,95 @@ icmp.dns.ttl
 icmp.dns.names
 
 icmp.mobile.subtype.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 icmp.mobile.subtype.name
 
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 icmp.echo_ext.local.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 icmp.echo_ext.local.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 icmp.echo_ext.addr_family.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 icmp.echo_ext.addr_family.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 icmp.echo_ext.addr_family.size
 icmp.echo_ext.addr_family.addr
 icmp.echo_ext.state.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 icmp.echo_ext.state.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 icmp.echo_ext.flags
 icmp.echo_ext.flag.active
 icmp.echo_ext.flag.ipv4

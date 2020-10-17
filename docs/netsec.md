@@ -1,4 +1,4 @@
-# `netsec`
+# netsec
 
 netsec.action.id
 netsec.action.name

@@ -1,4 +1,3 @@
-# `system`
+# system
 
 system.cpu. {cpu}
-

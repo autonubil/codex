@@ -1,65 +1,426 @@
-# `dhcp`
+# dhcp
 
-dhcp.op.id
-dhcp.op.name
-dhcp.hw_type.id
-dhcp.hw_type.name
-dhcp.hw_addr.size
-dhcp.id
-dhcp.duration
-dhcp.flags.bits
-dhcp.flags.tags
-dhcp.flags.bcast
-dhcp.client.ip.addr
-dhcp.client.mac.addr
-dhcp.client.host.name
-dhcp.req.ip.addr
-dhcp.offer.ip.addr
-dhcp.next_server.ip.addr
-dhcp.server.name
-dhcp.relay.hops
-dhcp.relay.ip.addr
-dhcp.file
+## dhcp.op
 
-dhcp.pool.id
-dhcp.pool.name
-dhcp.pool.size.config
-dhcp.pool.size.actual
-dhcp.leases.in_grace
-dhcp.leases.active
-dhcp.leases.expire
-dhcp.leases.grace_expire
-dhcp.leases.renew
-dhcp.leases.max
-dhcp.leases.min
-dhcp.leases.avg
-dhcp.offers.sent
-dhcp.offers.accept
-dhcp.reqs.grant
-dhcp.reqs.decline
-dhcp.reqs.timeout
+### dhcp.op.id
 
-dhcp.opt.id
-dhcp.opt.name
-dhcp.opt.msg_type.id
-dhcp.opt.msg_type.name
-dhcp.opt.subnet.mask
-dhcp.opt.time_offset
-dhcp.opt.router.ip.addr[]
-dhcp.opt.time_server.ip.addr[]
-dhcp.opt.name_server.ip.addr[]
-dhcp.opt.domain_server.ip.addr[]
-dhcp.opt.log_server.ip.addr[]
-dhcp.opt.quotes_server.ip.addr[]
-dhcp.opt.lpr_server.ip.addr[]
-dhcp.opt.impress_server.ip.addr[]
-dhcp.opt.rlp_server.ip.addr[]
-dhcp.opt.host.hostname
-dhcp.opt.class_id
-dhcp.opt.param_list
-dhcp.opt.local_domain
-dhcp.opt.ip_lease_time
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.op.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
 
+### dhcp.op.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.op.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+## dhcp.hw_type
+
+### dhcp.hw_type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.hw_type.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+### dhcp.hw_type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.hw_type.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+### dhcp.hw_addr.size
+
+### dhcp.id
+
+### dhcp.duration
+
+## dhcp.flags
+
+### dhcp.flags.bits
+### dhcp.flags.tags
+### dhcp.flags.bcast
+
+## dhcp.client
+
+### dhcp.client.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.client.ip.addr
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.client.mac.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.client.mac.addr
+**Tier** | core
+**Data Type** | macaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.client.host.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.client.host.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.req.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.req.ip.addr
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.offer.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.offer.ip.addr
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.next_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.next_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.server.host.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.server.host.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+## dhcp.relay
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.relay.ip.addr
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.relay.hops
+### dhcp.relay.ip.addr
+
+### dhcp.file
+
+## dhcp.pool
+
+### dhcp.pool.id
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.pool.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+### dhcp.pool.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.pool.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+### dhcp.pool.size
+#### dhcp.pool.size.config
+#### dhcp.pool.size.actual
+
+## dhcp.leases
+### dhcp.leases.total
+### dhcp.leases.in_grace
+### dhcp.leases.active
+### dhcp.leases.expire
+### dhcp.leases.grace_expire
+### dhcp.leases.renew
+### dhcp.leases.max
+### dhcp.leases.min
+### dhcp.leases.avg
+
+## dhcp.offers
+### dhcp.offers.total
+### dhcp.offers.sent
+### dhcp.offers.accept
+
+## dhcp.reqs
+### dhcp.reqs.total
+### dhcp.reqs.grant
+### dhcp.reqs.decline
+### dhcp.reqs.timeout
+
+## dhcp.opt
+
+### dhcp.opt.id
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.id
+**Tier** | common
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the DHCP Option type.
+
+### dhcp.opt.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.name
+**Tier** | common
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the DHCP Option type.
+
+### dhcp.opt.msg_type
+
+#### dhcp.opt.msg_type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.msg_type.id
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+#### dhcp.opt.msg_type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.msg_type.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+### dhcp.opt.ip.subnet.mask
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.ip.subnet.mask
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.time_offset
+
+### dhcp.opt.router.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.router.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.time_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.time_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.name_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.name_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.domain_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.domain_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.log_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.log_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.quotes_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.quotes_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.lpr_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.lpr_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.impress_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.impress_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.rlp_server.ip.addr
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.rlp_server.ip.addr
+**Tier** | core
+**Data Type** | ipaddress[]
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.host.hostname
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.host.hostname
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.class_id
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.class_id
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.param_list
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.param_list
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.local_domain
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.local_domain
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | 
+**Description** | 
+
+### dhcp.opt.ip_lease_time
+
+Attribute | Value
+--- | ---
+**IE Name** | dhcp.opt.ip_lease_time
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | timeticks
+**Reference** | seconds
+**Description** | 
+
+```text
 13:  "Boot File Size",                    // Size of boot file in 512 byte chunks [RFC2132]
 14:  "Merit Dump File",                   // Client to dump and name the file to dump it to [RFC2132]
 15:  "Domain Name",                       // The DNS domain name of the client [RFC2132]
@@ -200,3 +561,4 @@ dhcp.opt.ip_lease_time
 220: "Subnet Allocation",        // Subnet Allocation Option [RFC6656]
 221: "Virtual Subnet Selection", // [RFC6607]
 255: "End",
+```

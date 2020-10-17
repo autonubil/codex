@@ -17,11 +17,21 @@ Additional labels for *pre-release* and *build* metadata are available as extens
 Attribute | Value
 --- | ---
 **IE Name** | version.ver
-**Tier** | common
+**Tier** | core
 **Data Type** | string
 **Semantic** | default
 **Reference** | [Semantic Versioning](https://semver.org/)
 **Description** | The full semantic version.
+
+## version.name
+
+Attribute | Value
+--- | ---
+**IE Name** | version.name
+**Tier** | custom
+**Data Type** | string
+**Semantic** | default
+**Description** | An additional text label of the version.
 
 ## version.major
 

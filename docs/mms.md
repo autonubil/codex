@@ -1,44 +1,112 @@
-# `mms`
+# mms
 
 mms.pdu_type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 mms.pdu_type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 mms.req.invoke_id
 mms.req.confirm_svc.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 mms.req.confirm_svc.name
-mms.req.listOfModifier			SEQUENCE OF Modifier OPTIONAL,
-mms.req.CS-Request-Detail OPTIONAL
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+mms.req.listOfModifier    SEQUENCE OF Modifier OPTIONAL,
+mms.req.CS-Request-Detail    OPTIONAL
 
 
 mms.uncnf.unconfirm_svc.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 mms.uncnf.unconfirm_svc.name
-mms.uncnf.CS-Request-Detail OPTIONAL
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+mms.uncnf.CS-Request-Detail    OPTIONAL
 
 
 mms.resp.invoke_id
 mms.resp.confirm_svc.id
-mms.resp.confirm_svc.name
-mms.resp.CS-Request-Detail OPTIONAL
 
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+mms.resp.confirm_svc.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+mms.resp.CS-Request-Detail    OPTIONAL
 
 mms.error.invoke_id
-mms.error.modifierPosition	[1]	IMPLICIT Unsigned32 OPTIONAL,
-mms.error.serviceError		[2]	IMPLICIT ServiceError
+mms.error.modifierPosition [1] IMPLICIT Unsigned32 OPTIONAL,
+mms.error.serviceError  [2] IMPLICIT ServiceError
 
-
-
-
-
-
-
-
-
-
-
+text
 CS-Request-Detail ::= CHOICE {
 				-- see ISO 9506-2
 				}
-
 
 
 --********************************** COMMON MMS TYPES ***********************************
@@ -83,9 +151,6 @@ ApplicationReference ::= SEQUENCE
 Priority ::= Unsigned8
 
 normalPriority Priority ::= 64
-
-
-
 
 
 -- ************************************ GENERAL *************************************
@@ -1978,7 +2043,3 @@ FileAttributes ::= SEQUENCE {
 	sizeOfFile	[0] IMPLICIT Unsigned32,
 	lastModified	[1] IMPLICIT GeneralizedTime OPTIONAL
 	}
-
-
-
-END

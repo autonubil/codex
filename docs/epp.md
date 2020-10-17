@@ -1,6 +1,6 @@
-# `epp`
+# epp
 
-https://tools.ietf.org/html/rfc5730
+[https://tools.ietf.org/html/rfc5730](https://tools.ietf.org/html/rfc5730)
 
 epp.registrar
 
@@ -52,12 +52,52 @@ epp.cmd.login.svcs.uri []
 epp.cmd.login.svcs.svc_ext.uri
 epp.cmd.logout
 epp.cmd.poll.op.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 epp.cmd.poll.op.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 epp.cmd.poll.msg_id
 epp.cmd.renewinterface
 epp.cmd.transfer.any
 epp.cmd.transfer.op.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 epp.cmd.transfer.op.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 epp.cmd.update
 epp.cmd.ext
 epp.cmd.cl_trid
@@ -69,7 +109,27 @@ epp.resp.result.ext []
 epp.resp.result.ext.value
 epp.resp.result.ext.reason
 epp.resp.result.code.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 epp.resp.result.code.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 epp.resp.msg_q.date
 epp.resp.msg_q.msg
 epp.resp.msg_q.count

@@ -1,6 +1,6 @@
 # `mptcp`
 
-https://tools.ietf.org/html/rfc8684
+[https://tools.ietf.org/html/rfc8684](https://tools.ietf.org/html/rfc8684)
 
 mptcp.data_seq
 
@@ -10,7 +10,26 @@ mptcp.ip.addr
 
 mptcp.option.data
 mptcp.option.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 mptcp.option.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
 
 mptcp.rcvr.key
 mptcp.rcvr.token
@@ -24,6 +43,7 @@ mptcp.size
 
 mptcp.subflow_seq
 
+```text
 MPTCP Option Format
                      1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -174,3 +194,4 @@ Fallback (MP_FAIL) Option
 |                 Data Sequence Number (8 octets)              |
 |                                                              |
 +--------------------------------------------------------------+
+```

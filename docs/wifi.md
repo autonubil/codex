@@ -1,4 +1,4 @@
-# `wifi`
+# wifi
 
 802.11 (Wi-Fi)
 
@@ -10,7 +10,7 @@ wifi.afd.packets_accept
 wifi.afd.bytes_drop
 wifi.afd.bytes_accept
 
-## `wap`
+## wap
 
 Wireless Access Points
 

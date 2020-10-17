@@ -1,4 +1,4 @@
-# `subscriber`
+# subscriber
 
 subscriber.user {user}
 subscriber.info

@@ -1,45 +1,387 @@
-# `ip`
+# ip
 
-ip.addr
-ip.subnet.mask
-ip.subnet.mask_size
-ip.subnet.prefix
-ip.subnet.bcast
+## ip.addr
 
-ip.version.ver
-ip.version.name
-ip.proto.id
-ip.proto.name
-ip.ttl
+Attribute | Value
+--- | ---
+**IE Name** | ip.addr
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Description** | 
 
-ip.tos.id
-ip.tos.name
-ip.prec.id
-ip.prec.name
-ip.dscp.id
-ip.dscp.name
-ip.ecn.id
-ip.ecn.name
+## ip.subnet
 
-ip.frag.id
-ip.frag.offset
-ip.frag.flags
+### ip.subnet.mask
 
-ip.header.sample
-ip.header.size
-ip.packet.sample
-ip.packet.size
-ip.payload.sample
-ip.payload.size
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Description** | 
 
-ip.v4.ihl
-ip.v4.checksum
+### ip.subnet.mask_size
 
-ip.v4.options.bits
-ip.v4.options.tags
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | quantity
+**Unit** | bits
+**Description** | 
 
-ip.v6.flow_label
-ip.v6.next_header
-ip.v6.extension_headers
+### ip.subnet.prefix
 
-ip.rndtrip.latency
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | core
+**Data Type** | ipaddress
+**Semantic** | default
+**Description** | 
+
+### ip.subnet.bcast
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | common
+**Data Type** | ipaddress
+**Semantic** | default
+**Description** | 
+
+## ip.version
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.version
+**Tier** | common
+**Data Type** | object: version
+**Reference** | 
+**Description** | 
+
+## ip.proto
+
+### ip.proto.id
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.proto.id
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the IP Protocol type.
+
+### ip.proto.name
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.proto.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the IP Protocol type.
+
+## ip.ttl
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | quantity
+**Reference** | []()
+**Description** | 
+
+## ip.tos
+
+### ip.tos.id
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.tos.id
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the IP Type of Service (ToS) type.
+
+### ip.tos.name
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.tos.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the Type of Service (ToS) type.
+
+## ip.prec
+
+### ip.prec.id
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.prec.id
+**Tier** | common
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the IP Precedence type.
+
+### ip.prec.name
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.prec.name
+**Tier** | common
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the IP Precedence type.
+
+## ip.dscp
+
+### ip.dscp.id
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.dscp.id
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the IP DSCP type.
+
+### ip.dscp.name
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.dscp.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the IP DSCP type.
+
+## ip.ecn
+
+### ip.ecn.id
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.ecn.id
+**Tier** | core
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the IP ECN type.
+
+### ip.ecn.name
+
+Attribute | Value
+--- | ---
+**IE Name** | ip.ecn.name
+**Tier** | core
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the IP ECN type.
+
+## ip.frag
+
+### ip.frag.id
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | common
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | 
+
+### ip.frag.offset
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+### ip.frag.flags
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+## ip.header
+
+### ip.header.sample
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | common
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | []()
+**Description** | 
+
+### ip.header.size
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | quantity
+**Unit** | bytes
+**Description** | 
+
+## ip.packet
+
+### ip.packet.sample
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | common
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | []()
+**Description** | 
+
+### ip.packet.size
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | quantity
+**Unit** | bytes
+**Description** | 
+
+## ip.payload
+
+### ip.payload.sample
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | common
+**Data Type** | octetarray
+**Semantic** | default
+**Reference** | []()
+**Description** | 
+
+### ip.payload.size
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | quantity
+**Unit** | bytes
+**Description** | 
+
+## ip.v4
+
+### ip.v4.ihl
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+### ip.v4.checksum
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+### ip.v4.options
+
+#### ip.v4.options.bits
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+#### ip.v4.options.tags
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+## ip.v6
+
+### ip.v6.flow_label
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+### ip.v6.next_header
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+### ip.v6.extension_headers
+
+Attribute | Value
+--- | ---
+**IE Name** | 
+**Tier** | 
+**Data Type** | 
+**Semantic** | 
+**Unit** | 
+**Description** | 
+
+### ip.rndtrip.latency

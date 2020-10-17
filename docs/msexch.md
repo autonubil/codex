@@ -1,7 +1,8 @@
-# `msexch`
+# msexch
 
 Microsoft Exchange
-https://docs.microsoft.com/en-us/exchange/mail-flow/transport-logs/message-tracking?view=exchserver-2019
+
+[https://docs.microsoft.com/en-us/exchange/mail-flow/transport-logs/message-tracking?view=exchserver-2019](https://docs.microsoft.com/en-us/exchange/mail-flow/transport-logs/message-tracking?view=exchserver-2019)
 
 
 flow.client.ip.addr  (client_ip)
@@ -21,7 +22,27 @@ msexch.email.subject  (message_subject)
 msexch.email.to  (recipient_address)
 msexch.email.trace  (return_path)
 msexch.encrypt.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 msexch.encrypt.descr
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 msexch.event_id
 msexch.internal_message_id
 msexch.linked_msgid

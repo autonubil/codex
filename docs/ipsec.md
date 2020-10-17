@@ -1,4 +1,4 @@
-# `ipsec`
+# ipsec
 
 ipsec.spi
 ipsec.icv

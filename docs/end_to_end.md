@@ -1,4 +1,4 @@
-# `end-to-end metrics`
+# end-to-end metrics
 
 conns
 conn_rate

@@ -1,4 +1,4 @@
-# `flow`
+# flow
 
 flow.
 
@@ -14,17 +14,97 @@ flow.start.
 flow.end.
 
 flow.direction.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.direction.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.flows
 flow.forwarding.status.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.forwarding.status.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.forwarding.reason.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.forwarding.reason.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.id
 flow.padding_size
 flow.key_indicator
 flow.biflow.direction.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.biflow.direction.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.opaque_octets
 flow.l4.session_scope
 flow.transact.id
@@ -67,24 +147,144 @@ flow.template.id
 flow.template.ie.index
 flow.template.ie.id
 flow.template.ie.data_type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.template.ie.data_type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.template.ie.descr
 flow.template.ie.name
 flow.template.ie.range.start
 flow.template.ie.range.end
 flow.template.ie.semantic.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.template.ie.semantic.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.template.ie.unit.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.template.ie.unit.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.template.ie.pen.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.template.ie.pen.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.template.anonym.flags.bits
 flow.template.anonym.flags.sc.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.template.anonym.flags.sc.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.template.anonym.flags.pma
 flow.template.anonym.flags.lor
 flow.template.anonym.tech.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.template.anonym.tech.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.template.option_scope
 
 flow.meter.proc.pid
@@ -92,9 +292,49 @@ flow.meter.proc.start.timestamp
 flow.meter.proc.end.timestamp
 
 flow.meter.class.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.meter.class.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.meter.class.engine.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.meter.class.engine.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 
 flow.meter.flow_timeout.active
 flow.meter.flow_timeout.idle
@@ -104,7 +344,27 @@ flow.meter.observ.orig_domain.id
 flow.meter.observ.domain.name
 flow.meter.observ.point.id
 flow.meter.observ.point.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.meter.observ.point.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.meter.observ.timestamp
 flow.meter.observ.flows
 flow.meter.observ.conns
@@ -122,7 +382,27 @@ flow.meter.select.selected.packets_total
 flow.meter.select.selected.flows_total
 
 flow.meter.packet_select.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.meter.packet_select.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.meter.packet_select.interval.packets
 flow.meter.packet_select.size.packets
 flow.meter.packet_select.size.time
@@ -130,7 +410,27 @@ flow.meter.packet_select.gap.packets
 flow.meter.packet_select.gap.time
 
 flow.meter.flow_select.algo.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.meter.flow_select.algo.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.meter.flow_select.size.flows
 flow.meter.flow_select.size.time
 flow.meter.flow_select.gap.flows
@@ -170,12 +470,31 @@ flow.meter.packets_drop
 flow.meter.l2.frames_drop
 flow.meter.l2.bytes_drop
 
-
 flow.export.type
 
 flow.export.engine.id
 flow.export.engine.type.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
 flow.export.engine.type.name
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.export.start.timestamp
 
 flow.export.proc.pid
@@ -186,8 +505,50 @@ flow.export.orig_ip.addr {ip}
 flow.export.host {host}
 flow.export.netif.index
 flow.export.netif.name
-flow.export.ip.proto
-flow.export.l4.port"
+flow.export.ip.proto.id
+
+Attribute | Value
+--- | ---
+**IE Name** | flow.export.ip.proto.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+flow.export.ip.proto.name
+
+Attribute | Value
+--- | ---
+**IE Name** | flow.export.ip.proto.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
+flow.export.l4.port.id
+
+Attribute | Value
+--- | ---
+**IE Name** | flow.export.l4.port.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+flow.export.l4.port.name
+
+Attribute | Value
+--- | ---
+**IE Name** | flow.export.l4.port.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.export.sctp.stream_id
 flow.export.sctp.data_record_reliability
 
@@ -198,15 +559,30 @@ flow.export.flows
 flow.export.bytes
 flow.export.msgs
 
-
 flow.collect.ip.addr
-flow.collect.l4.port
+flow.collect.l4.port.id
+
+Attribute | Value
+--- | ---
+**IE Name** | flow.collect.l4.port.id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+flow.collect.l4.port..name
+
+Attribute | Value
+--- | ---
+**IE Name** | flow.collect.l4.port.name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 flow.collect.timestamp
-
-
-
-
-
 
 flow.src.ip {ip}
 flow.src.host {host}

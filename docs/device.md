@@ -1,4 +1,4 @@
-# `device`
+# device
 
 device.id
 device.name

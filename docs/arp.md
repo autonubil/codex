@@ -151,9 +151,9 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | arp.timeouts
-**Tier** | 
-**Data Type** | 
-**Semantic** | 
+**Tier** | common
+**Data Type** | unsigned
+**Semantic** | totalcounter
 **Reference** | 
 **Description** | 
 
@@ -164,22 +164,20 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | arp.msgs.in
-**Tier** | 
+**Tier** | common
 **Data Type** | unsigned
 **Semantic** | totalcounter
-**Reference** | 
-**Description** | 
+**Description** | Total Ingress Messages
 
 ### arp.msgs.out
 
 Attribute | Value
 --- | ---
 **IE Name** | arp.msgs.out
-**Tier** | 
+**Tier** | common
 **Data Type** | unsigned
 **Semantic** | totalcounter
-**Reference** | 
-**Description** | 
+**Description** | Total Egress Messages
 
 ## arp.reqs
 
@@ -188,22 +186,20 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | arp.reqs.in
-**Tier** | 
+**Tier** | common
 **Data Type** | unsigned
 **Semantic** | totalcounter
-**Reference** | 
-**Description** | 
+**Description** | Ingress Requests
 
 ### arp.reqs.out
 
 Attribute | Value
 --- | ---
 **IE Name** | arp.reqs.out
-**Tier** | 
+**Tier** | common
 **Data Type** | unsigned
 **Semantic** | totalcounter
-**Reference** | 
-**Description** | 
+**Description** | Egress Requests
 
 ## arp.resps
 
@@ -212,19 +208,17 @@ Attribute | Value
 Attribute | Value
 --- | ---
 **IE Name** | arp.resps.in
-**Tier** | 
+**Tier** | common
 **Data Type** | unsigned
 **Semantic** | totalcounter
-**Reference** | 
-**Description** | 
+**Description** | Ingress Responses
 
 ### arp.resps.out
 
 Attribute | Value
 --- | ---
 **IE Name** | arp.resps.out
-**Tier** | 
+**Tier** | common
 **Data Type** | unsigned
 **Semantic** | totalcounter
-**Reference** | 
-**Description** | 
+**Description** | Egress Responses
