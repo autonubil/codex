@@ -169,3 +169,30 @@ icmp.echo_ext.flags
 icmp.echo_ext.flag.active
 icmp.echo_ext.flag.ipv4
 icmp.echo_ext.flag.ipv6
+
+icmp.msgs.in - icmpInMsgs
+icmp.msgs.out - icmpOutMsgs
+icmp.errors.in - icmpInErrors
+icmp.errors.out - icmpOutErrors
+icmp.msgs.dst_unreach.in - icmpInDestUnreachs
+icmp.msgs.dst_unreach.out - icmpOutDestUnreachs
+icmp.msgs.time_exceed.in - icmpInTimeExcds
+icmp.msgs.time_exceed.out - icmpOutTimeExcds
+icmp.msgs.param_prob.in - icmpInParmProbs
+icmp.msgs.param_prob.out - icmpOutParmProbs
+icmp.msgs.src_quench.in - icmpInSrcQuenchs
+icmp.msgs.src_quench.out - icmpOutSrcQuenchs
+icmp.msgs.redirect.in - icmpInRedirects
+icmp.msgs.redirect.out - icmpOutRedirects
+icmp.msgs.echo_req.in - icmpInEchos
+icmp.msgs.echo_req.out - icmpOutEchos
+icmp.msgs.echo_reply.in - icmpInEchoReps
+icmp.msgs.echo_reply.out - icmpOutEchoReps
+icmp.msgs.timestamp_req.in - icmpInTimestamps
+icmp.msgs.timestamp_req.out - icmpOutTimestamps
+icmp.msgs.timestamp_reply.in - icmpInTimestampReps
+icmp.msgs.timestamp_reply.out - icmpOutTimestampReps
+icmp.msgs.addr_mask_req.in - icmpInAddrMasks
+icmp.msgs.addr_mask_req.out - icmpOutAddrMasks
+icmp.msgs.addr_mask_reply.in - icmpInAddrMaskReps
+icmp.msgs.addr_mask_reply.out - icmpOutAddrMaskReps

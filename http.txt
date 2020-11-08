@@ -132,7 +132,7 @@ http.req.user_agent.app.version.prerel
 http.req.user_agent.app.version.build
 http.req.user_agent.app.arch
 http.req.user_agent.os.name
-http.req.user_agent.os.category
+http.req.user_agent.os.family
 http.req.user_agent.os.distro
 http.req.user_agent.os.codename
 http.req.user_agent.os.version.ver
@@ -182,7 +182,7 @@ http.req.x_user_agent.app.version.prerel
 http.req.x_user_agent.app.version.build
 http.req.x_user_agent.app.arch
 http.req.x_user_agent.os.name
-http.req.x_user_agent.os.category
+http.req.x_user_agent.os.family
 http.req.x_user_agent.os.distro
 http.req.x_user_agent.os.codename
 http.req.x_user_agent.os.version.ver
@@ -253,7 +253,7 @@ http.resp.server.app.version.prerel
 http.resp.server.app.version.build
 http.resp.server.app.arch
 http.resp.server.os.name
-http.resp.server.os.category
+http.resp.server.os.family
 http.resp.server.os.distro
 http.resp.server.os.codename
 http.resp.server.os.version.ver
@@ -347,7 +347,7 @@ user_agent.app.version.prerel
 user_agent.app.version.build
 user_agent.app.arch
 user_agent.os.name
-user_agent.os.category
+user_agent.os.family
 user_agent.os.distro
 user_agent.os.codename
 user_agent.os.version.ver

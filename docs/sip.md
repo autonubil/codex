@@ -698,7 +698,7 @@ sip.header.user_agent.app.version.prerel
 sip.header.user_agent.app.version.build
 sip.header.user_agent.app.arch
 sip.header.user_agent.os.name
-sip.header.user_agent.os.category
+sip.header.user_agent.os.family
 sip.header.user_agent.os.distro
 sip.header.user_agent.os.codename
 sip.header.user_agent.os.version.ver

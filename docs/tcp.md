@@ -177,11 +177,20 @@ tcp.transact.latency_sumsqrs
 tcp.transact.latency_var
 tcp.transact.samples
 
-CHECK THAT THESE ARE DELETED
-----------
-tcp.handshake_rtt
-tcp.rtt
-  tcp.srt
-  tcp.crt
-tcp.rtt_avg
-tcp.resp_time
+tcp.rto.algo.id - tcpRtoAlgorithm
+tcp.rto.algo.name
+tcp.rto.min - tcpRtoMin
+tcp.rto.max - tcpRtoMax
+tcp.conns.max - tcpMaxConn
+tcp.conns.open_active - tcpActiveOpens
+tcp.conns.open_passive - tcpPassiveOpens
+tcp.conns.fail - tcpAttemptFails
+tcp.conns.reset - tcpEstabResets
+tcp.conns.establish - tcpCurrEstab
+tcp.segs.in - tcpInSegs
+tcp.segs.out - tcpOutSegs
+tcp.segs.retrans - tcpRetransSegs
+
+tcp.errors.in - tcpInErrs
+tcp.errors.chksum.in - tcpInErrs
+tcp.resets.out - tcpOutRsts

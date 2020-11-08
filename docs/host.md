@@ -81,3 +81,12 @@ Attribute | Value
 **Semantic** | default
 **Reference** | [RFC 1034, section 3: DOMAIN NAME SPACE and RESOURCE RECORDS](https://tools.ietf.org/html/rfc1034#section-3)
 **Description** | This information includes all labels from the fully qualified domain name (`host.fqdn`) excluding the final (left-most) label (`host.hostname`).
+
+host.os {os}
+host.cpu {cpu}
+host.memory {memory}
+host.disk {disk}
+host.device {device}
+host.proc {proc}
+host.kernel {kernel}
+host.netif {netif}

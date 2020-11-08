@@ -385,3 +385,33 @@ Attribute | Value
 **Description** | 
 
 ### ip.rndtrip.latency
+
+
+ip.fwd.value - ipForwarding
+ip.fwd.state
+ip.ttl_default - ipDefaultTTL
+
+ip.dgrms.in - ipInReceives
+ip.dgrms.error.addr.in - ipInAddrErrors
+ip.dgrms.error.header.in - ipInHdrErrors
+ip.dgrms.fwd.in - ipForwDatagrams
+ip.dgrms.deliver.in - ipInDelivers
+ip.dgrms.discard.in - ipInDiscards
+ip.dgrms.unkproto.in - ipInUnknownProtos
+
+ip.dgrms.frag.ok.out - ipFragOKs
+ip.dgrms.frag.fail.out - ipFragFails
+ip.dgrms.discard.no_error.out - ipOutDiscards
+ip.dgrms.discard.no_route.out - ipOutNoRoutes
+ip.dgrms.req.out - ipOutRequests
+
+ip.dgrms.reassem.ok - ipReasmOKs
+ip.dgrms.reassem.fail - ipReasmFails
+
+ip.frags.created - ipFragCreates
+ip.frags.reassem.req - ipReasmReqds
+ip.frags.reassem.timeout - ipReasmTimeout
+
+(ip.dgrms.out) - (ipOutRequests + ipForwDatagrams) - ip.dgrms.discard.total
+(ip.dgrms.discard.total.out) - ipFragFails + ipOutDiscards + ipOutNoRoutes
+(ip.dgrms.discard.total) - ip.dgrms.discard.in + ip.dgrms.discard.total.out

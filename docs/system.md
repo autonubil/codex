@@ -1,3 +1,4 @@
 # system
 
-system.cpu. {cpu}
+system.uptime
+

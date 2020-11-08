@@ -1,4 +1,4 @@
-# Semantics
+# Units
 
 This document describes the set of valid data type units.
 
@@ -37,6 +37,11 @@ degrees_K | degrees kelvin, 1.
 
 Unit | Description
 :---|:---
+nanoseconds | 0.000000001
+microseconds | 0.000001
+milliseconds | 0.001
+centiseconds | 0.01
+deciseconds | 0.1
 seconds | 1.
 minutes |
 hours |

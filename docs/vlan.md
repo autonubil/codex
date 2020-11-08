@@ -134,3 +134,14 @@ vlan.pbb.i_tag.dei
 vlan.pbb.i_tag.uca
 vlan.pbb.cust.src_mac.addr
 vlan.pbb.cust.dst_mac.addr
+
+vlan.bytes.in
+vlan.bytes.out
+vlan.packets.ucast.in
+vlan.packets.ucast.out
+vlan.packets.ucast.in
+vlan.packets.ucast.out
+vlan.packets.ucast.in
+vlan.packets.ucast.out
+vlan.packets.discard.in
+vlan.packets.discard.out

@@ -5,6 +5,29 @@ netif.name
 netif.descr
 netif.alias
 netif.mtu
+
+netif.duplex.id
+
+Attribute | Value
+--- | ---
+**IE Name** | .id
+**Tier** | 
+**Data Type** | unsigned
+**Semantic** | identifier
+**Reference** | []()
+**Description** | The enumeratiom ID of the  type.
+
+netif.duplex.state
+
+Attribute | Value
+--- | ---
+**IE Name** | .name
+**Tier** | 
+**Data Type** | string
+**Semantic** | default
+**Reference** | []()
+**Description** | The enumeration name of the  type.
+
 netif.type.id
 
 Attribute | Value

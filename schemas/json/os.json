@@ -41,7 +41,7 @@
         "Windows Server"
       ],
       "title": "distribution",
-      "description": "The distribution of the operating system. This is a subcategory of os.category."
+      "description": "The distribution of the operating system. This is a subcategory of os.family."
     },
     "codename": {
       "type": "string",

@@ -21,3 +21,6 @@ Attribute | Value
 **Semantic** | default
 **Reference** | []()
 **Description** | The enumeration name of the  type.
+
+net.conns.open
+net.conns.max

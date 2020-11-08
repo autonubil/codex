@@ -12,11 +12,11 @@ Attribute | Value
 **Semantic** | default
 **Description** | The full name of the operating system. This may include codename and version. For example, `macOS Catalina 10.15.5`.
 
-## os.category
+## os.family
 
 Attribute | Value
 --- | ---
-**IE Name** | os.category
+**IE Name** | os.family
 **Tier** | common
 **Data Type** | string
 **Semantic** | default
@@ -30,7 +30,7 @@ Attribute | Value
 **Tier** | common
 **Data Type** | string
 **Semantic** | default
-**Description** | The distribution of the operating system. This is a subcategory of os.category. Examples include, `AIX`, `macOS`, `Ubuntu`, `Fedora`, `Windows Server`, etc.
+**Description** | The distribution of the operating system. This is a subcategory of os.family. Examples include, `AIX`, `macOS`, `Ubuntu`, `Fedora`, `Windows Server`, etc.
 
 ## os.codename
 

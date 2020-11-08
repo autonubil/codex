@@ -66,6 +66,8 @@ Attribute | Value
 **Reference** | []()
 **Description** | The enumeration name of the  type.
 
+cpu.freq (freq_MHz)
+
 cpu.cores
 
 Attribute | Value
@@ -106,6 +108,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.util.time
+
 cpu.guest.pct
 
 Attribute | Value
@@ -125,6 +129,8 @@ Attribute | Value
 **Data Type** | unsigned
 **Semantic** | quantity
 **Description** | 
+
+cpu.guest.time
 
 cpu.guest_nice.pct
 
@@ -146,6 +152,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.guest_nice.time
+
 cpu.guest_steal.pct
 
 Attribute | Value
@@ -165,6 +173,8 @@ Attribute | Value
 **Data Type** | unsigned
 **Semantic** | quantity
 **Description** | 
+
+cpu.guest_steal.time
 
 cpu.idle.pct
 
@@ -186,6 +196,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.idle.time
+
 cpu.interrupt.pct
 
 Attribute | Value
@@ -205,6 +217,8 @@ Attribute | Value
 **Data Type** | unsigned
 **Semantic** | quantity
 **Description** | 
+
+cpu.interrupt.time
 
 cpu.iowait.pct
 
@@ -226,6 +240,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.iowait.time
+
 cpu.kernel.pct
 
 Attribute | Value
@@ -245,6 +261,8 @@ Attribute | Value
 **Data Type** | unsigned
 **Semantic** | quantity
 **Description** | 
+
+cpu.kernel.time
 
 cpu.nice.pct
 
@@ -266,6 +284,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.nice.time
+
 cpu.softirq.pct
 
 Attribute | Value
@@ -285,6 +305,8 @@ Attribute | Value
 **Data Type** | unsigned
 **Semantic** | quantity
 **Description** | 
+
+cpu.softirq.time
 
 cpu.steal.pct
 
@@ -306,6 +328,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.steal.time
+
 cpu.system.pct
 
 Attribute | Value
@@ -325,6 +349,8 @@ Attribute | Value
 **Data Type** | unsigned
 **Semantic** | quantity
 **Description** | 
+
+cpu.system.time
 
 cpu.total.pct
 
@@ -346,6 +372,8 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.total.time
+
 cpu.user.pct
 
 Attribute | Value
@@ -366,37 +394,52 @@ Attribute | Value
 **Semantic** | quantity
 **Description** | 
 
+cpu.user.time
 
 cpu.core. {cpu}
 cpu.core.id
 cpu.core.util.pct
 cpu.core.util.ticks
+cpu.core.util.time
 cpu.core.guest.pct
 cpu.core.guest.ticks
+cpu.core.guest.time
 cpu.core.guest_nice.pct
 cpu.core.guest_nice.ticks
+cpu.core.guest_nice.time
 cpu.core.guest_steal.pct
 cpu.core.guest_steal.ticks
+cpu.core.guest_steal.time
 cpu.core.idle.pct
 cpu.core.idle.ticks
+cpu.core.idle.time
 cpu.core.interrupt.pct
 cpu.core.interrupt.ticks
+cpu.core.interrupt.time
 cpu.core.iowait.pct
 cpu.core.iowait.ticks
+cpu.core.iowait.time
 cpu.core.kernel.pct
 cpu.core.kernel.ticks
+cpu.core.kernel.time
 cpu.core.nice.pct
 cpu.core.nice.ticks
+cpu.core.nice.time
 cpu.core.softirq.pct
 cpu.core.softirq.ticks
+cpu.core.softirq.time
 cpu.core.steal.pct
 cpu.core.steal.ticks
+cpu.core.steal.time
 cpu.core.system.pct
 cpu.core.system.ticks
+cpu.core.system.time
 cpu.core.total.pct
 cpu.core.total.ticks
+cpu.core.total.time
 cpu.core.user.pct
 cpu.core.user.ticks
+cpu.core.user.time
 
 cpu.load.1min_avg
 

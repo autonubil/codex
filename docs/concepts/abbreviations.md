@@ -23,6 +23,7 @@ bkwd | backward
 bw | bandwidth
 cert | certificate
 chan | channel
+chksum | checksum
 cmd | command
 compress | compression
 cntrl | control
@@ -30,6 +31,7 @@ concur | concurrent
 consec | consecutive
 coord | coordinates
 db | database
+dgrms | datagrams
 descr | description
 down | downstream
 dup | duplicate
@@ -37,12 +39,15 @@ e2e | end-to-end
 encrypt | encryption
 equip | equipment
 ext | extension
+fails | failures
+fd | file descriptor
 frag | fragment
 func | function
 fw | firmware
 fwd | forward
 hw | hardware
 id | identifier
+impl | implement
 indef | indefinite
 inst | instance
 ip | IP protocol or address
@@ -65,6 +70,7 @@ netif | network interface
 nom | nominal
 obj | object
 ooo | out of order
+op | operation
 opt | option
 org | organization
 orig | original
@@ -72,18 +78,21 @@ oui | organizational unit identifier
 param | parameter
 pct | percent
 pen | private enterprise number
+phys | physical
 pol_acct | policy accounting
-pwr | power
 pref | preference
 prec | precedence
 prev | previous
 prio | priority
 priv | private
+prob | problem
 proc | process
+procs | processes
 proto | protocol
 prov | provisioned
 pub | public
 pwire | pseudowire
+pwr | power
 quant | quantization
 rcv | receive
 rcvd | received

@@ -33,7 +33,7 @@ ssdp.server.app.version.prerel
 ssdp.server.app.version.build
 ssdp.server.app.arch
 ssdp.server.os.name
-ssdp.server.os.category
+ssdp.server.os.family
 ssdp.server.os.distro
 ssdp.server.os.codename
 ssdp.server.os.version.ver
@@ -56,7 +56,7 @@ ssdp.user_agent.app.version.prerel
 ssdp.user_agent.app.version.build
 ssdp.user_agent.app.arch
 ssdp.user_agent.os.name
-ssdp.user_agent.os.category
+ssdp.user_agent.os.family
 ssdp.user_agent.os.distro
 ssdp.user_agent.os.codename
 ssdp.user_agent.os.version.ver
